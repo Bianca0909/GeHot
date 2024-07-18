@@ -95,7 +95,7 @@
               <Color blue="cc" green="33" red="0" type="rgb"/>
             </Property>
             <Property name="horizontalAlignment" type="int" value="0"/>
-            <Property name="text" type="java.lang.String" value="Cadastro de Usu&#xe1;rio"/>
+            <Property name="text" type="java.lang.String" value="Cadastro de Farmaceutico"/>
             <Property name="toolTipText" type="java.lang.String" value=""/>
           </Properties>
         </Component>
@@ -114,28 +114,66 @@
         <DimensionLayout dim="0">
           <Group type="103" groupAlignment="0" attributes="0">
               <Group type="102" attributes="0">
-                  <EmptySpace min="-2" pref="6" max="-2" attributes="0"/>
+                  <EmptySpace max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="0" attributes="0">
-                      <Group type="102" alignment="0" attributes="0">
-                          <Component id="loginField" max="32767" attributes="0"/>
+                      <Group type="102" alignment="1" attributes="0">
+                          <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+                          <Component id="bairroField" min="-2" pref="161" max="-2" attributes="0"/>
                           <EmptySpace max="-2" attributes="0"/>
-                          <Component id="senhaField" min="-2" pref="150" max="-2" attributes="0"/>
-                          <EmptySpace min="-2" pref="424" max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                              <Group type="102" attributes="0">
+                                  <Component id="logradouroLabel" min="-2" pref="72" max="-2" attributes="0"/>
+                                  <EmptySpace min="-2" pref="192" max="-2" attributes="0"/>
+                              </Group>
+                              <Group type="102" attributes="0">
+                                  <Component id="logradouroField" pref="264" max="32767" attributes="0"/>
+                                  <EmptySpace max="-2" attributes="0"/>
+                              </Group>
+                          </Group>
+                          <Group type="103" groupAlignment="0" attributes="0">
+                              <Component id="complementoLabel" min="-2" pref="88" max="-2" attributes="0"/>
+                              <Component id="complementoField" min="-2" pref="310" max="-2" attributes="0"/>
+                          </Group>
+                      </Group>
+                      <Group type="102" alignment="0" attributes="0">
+                          <Group type="103" groupAlignment="0" attributes="0">
+                              <Group type="102" attributes="0">
+                                  <EmptySpace min="-2" pref="2" max="-2" attributes="0"/>
+                                  <Component id="crmField" min="-2" pref="158" max="-2" attributes="0"/>
+                              </Group>
+                              <Component id="crmLabel" alignment="0" min="-2" pref="37" max="-2" attributes="0"/>
+                          </Group>
+                          <EmptySpace max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="0" attributes="0">
+                              <Component id="jLabel1" min="-2" pref="68" max="-2" attributes="0"/>
+                              <Component id="dataInicialField" min="-2" max="-2" attributes="0"/>
+                          </Group>
+                          <EmptySpace max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="0" attributes="0">
+                              <Component id="dataFinalField" min="-2" max="-2" attributes="0"/>
+                              <Component id="jLabel2" min="-2" pref="64" max="-2" attributes="0"/>
+                          </Group>
+                          <EmptySpace max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                              <Component id="jLabel3" pref="82" max="32767" attributes="0"/>
+                              <Component id="cargaHoraria" max="32767" attributes="0"/>
+                          </Group>
+                          <EmptySpace max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="0" attributes="0">
+                              <Group type="102" attributes="0">
+                                  <Component id="loginLabel" min="-2" pref="37" max="-2" attributes="0"/>
+                                  <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+                              </Group>
+                              <Component id="loginField" max="32767" attributes="0"/>
+                          </Group>
+                          <EmptySpace max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="0" attributes="0">
+                              <Component id="senhaLabel" min="-2" pref="37" max="-2" attributes="0"/>
+                              <Component id="senhaField" min="-2" pref="172" max="-2" attributes="0"/>
+                          </Group>
                       </Group>
                       <Group type="102" attributes="0">
                           <Group type="103" groupAlignment="0" attributes="0">
-                              <Group type="102" attributes="0">
-                                  <Component id="bairroField" min="-2" pref="166" max="-2" attributes="0"/>
-                                  <EmptySpace max="-2" attributes="0"/>
-                                  <Group type="103" groupAlignment="0" attributes="0">
-                                      <Component id="logradouroLabel" min="-2" pref="72" max="-2" attributes="0"/>
-                                      <Group type="102" attributes="0">
-                                          <Component id="logradouroField" min="-2" pref="258" max="-2" attributes="0"/>
-                                          <EmptySpace max="-2" attributes="0"/>
-                                          <Component id="complementoField" min="-2" pref="310" max="-2" attributes="0"/>
-                                      </Group>
-                                  </Group>
-                              </Group>
                               <Component id="idLabel" alignment="0" min="-2" pref="37" max="-2" attributes="0"/>
                               <Component id="idField" alignment="0" min="-2" pref="49" max="-2" attributes="0"/>
                               <Group type="102" alignment="0" attributes="0">
@@ -159,28 +197,6 @@
                                   <Component id="cpfCnpjField" min="-2" pref="139" max="-2" attributes="0"/>
                               </Group>
                               <Group type="102" alignment="0" attributes="0">
-                                  <Component id="rgInscricaoEstadualLabel" min="-2" max="-2" attributes="0"/>
-                                  <EmptySpace min="53" pref="53" max="-2" attributes="0"/>
-                                  <Component id="sexoLabel" min="-2" pref="37" max="-2" attributes="0"/>
-                                  <EmptySpace min="94" pref="94" max="-2" attributes="0"/>
-                                  <Component id="tipoSanguineoLabel" min="-2" pref="92" max="-2" attributes="0"/>
-                                  <EmptySpace min="35" pref="35" max="-2" attributes="0"/>
-                                  <Component id="fone1Label" min="-2" pref="43" max="-2" attributes="0"/>
-                                  <EmptySpace min="123" pref="123" max="-2" attributes="0"/>
-                                  <Component id="fone2Label" min="-2" pref="43" max="-2" attributes="0"/>
-                              </Group>
-                              <Group type="102" alignment="0" attributes="0">
-                                  <Component id="rgInscricaoEstadualField" min="-2" pref="161" max="-2" attributes="0"/>
-                                  <EmptySpace min="6" pref="6" max="-2" attributes="0"/>
-                                  <Component id="sexoComboBox" min="-2" pref="113" max="-2" attributes="0"/>
-                                  <EmptySpace min="18" pref="18" max="-2" attributes="0"/>
-                                  <Component id="tipoSanguineoComboBox" min="-2" pref="104" max="-2" attributes="0"/>
-                                  <EmptySpace min="23" pref="23" max="-2" attributes="0"/>
-                                  <Component id="fone1Field" min="-2" pref="148" max="-2" attributes="0"/>
-                                  <EmptySpace min="18" pref="18" max="-2" attributes="0"/>
-                                  <Component id="fone2Field" min="-2" pref="140" max="-2" attributes="0"/>
-                              </Group>
-                              <Group type="102" alignment="0" attributes="0">
                                   <Component id="emailLabel" min="-2" pref="37" max="-2" attributes="0"/>
                                   <EmptySpace min="261" pref="261" max="-2" attributes="0"/>
                                   <Component id="cepLabel" min="-2" pref="43" max="-2" attributes="0"/>
@@ -194,22 +210,39 @@
                                   <EmptySpace min="6" pref="6" max="-2" attributes="0"/>
                                   <Component id="cidadeField" min="-2" pref="310" max="-2" attributes="0"/>
                               </Group>
-                              <Group type="102" alignment="0" attributes="0">
-                                  <Component id="BairroLabel" min="-2" pref="43" max="-2" attributes="0"/>
-                                  <EmptySpace min="-2" pref="382" max="-2" attributes="0"/>
-                                  <Component id="complementoLabel" min="-2" pref="88" max="-2" attributes="0"/>
-                              </Group>
-                              <Group type="102" alignment="0" attributes="0">
-                                  <EmptySpace min="-2" pref="7" max="-2" attributes="0"/>
-                                  <Component id="loginLabel" min="-2" pref="37" max="-2" attributes="0"/>
-                                  <EmptySpace min="-2" pref="128" max="-2" attributes="0"/>
-                                  <Component id="senhaLabel" min="-2" pref="37" max="-2" attributes="0"/>
+                              <Component id="BairroLabel" alignment="0" min="-2" pref="43" max="-2" attributes="0"/>
+                              <Group type="102" attributes="0">
+                                  <Group type="103" groupAlignment="0" attributes="0">
+                                      <Group type="102" alignment="0" attributes="0">
+                                          <Component id="rgInscricaoEstadualLabel" min="-2" max="-2" attributes="0"/>
+                                          <EmptySpace min="53" pref="53" max="-2" attributes="0"/>
+                                          <Component id="sexoLabel" min="-2" pref="37" max="-2" attributes="0"/>
+                                      </Group>
+                                      <Group type="102" alignment="0" attributes="0">
+                                          <Component id="rgInscricaoEstadualField" min="-2" pref="161" max="-2" attributes="0"/>
+                                          <EmptySpace min="6" pref="6" max="-2" attributes="0"/>
+                                          <Component id="sexoComboBox" min="-2" pref="113" max="-2" attributes="0"/>
+                                      </Group>
+                                  </Group>
+                                  <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                                  <Group type="103" groupAlignment="0" attributes="0">
+                                      <Group type="102" alignment="0" attributes="0">
+                                          <Component id="fone1Label" min="-2" pref="43" max="-2" attributes="0"/>
+                                          <EmptySpace min="123" pref="123" max="-2" attributes="0"/>
+                                          <Component id="fone2Label" min="-2" pref="43" max="-2" attributes="0"/>
+                                      </Group>
+                                      <Group type="102" alignment="0" attributes="0">
+                                          <Component id="fone1Field" min="-2" pref="148" max="-2" attributes="0"/>
+                                          <EmptySpace min="18" pref="18" max="-2" attributes="0"/>
+                                          <Component id="fone2Field" min="-2" pref="140" max="-2" attributes="0"/>
+                                      </Group>
+                                  </Group>
                               </Group>
                           </Group>
                           <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
                       </Group>
                   </Group>
-                  <EmptySpace pref="6" max="32767" attributes="0"/>
+                  <EmptySpace max="-2" attributes="0"/>
               </Group>
           </Group>
         </DimensionLayout>
@@ -244,7 +277,6 @@
                   <Group type="103" groupAlignment="0" attributes="0">
                       <Component id="rgInscricaoEstadualLabel" min="-2" max="-2" attributes="0"/>
                       <Component id="sexoLabel" min="-2" max="-2" attributes="0"/>
-                      <Component id="tipoSanguineoLabel" min="-2" max="-2" attributes="0"/>
                       <Component id="fone1Label" min="-2" max="-2" attributes="0"/>
                       <Component id="fone2Label" min="-2" max="-2" attributes="0"/>
                   </Group>
@@ -252,7 +284,6 @@
                   <Group type="103" groupAlignment="0" attributes="0">
                       <Component id="rgInscricaoEstadualField" min="-2" max="-2" attributes="0"/>
                       <Component id="sexoComboBox" min="-2" max="-2" attributes="0"/>
-                      <Component id="tipoSanguineoComboBox" min="-2" max="-2" attributes="0"/>
                       <Component id="fone1Field" min="-2" max="-2" attributes="0"/>
                       <Component id="fone2Field" min="-2" max="-2" attributes="0"/>
                   </Group>
@@ -263,43 +294,61 @@
                       <Component id="CidadeLabel" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace min="-2" pref="6" max="-2" attributes="0"/>
-                  <Group type="103" groupAlignment="0" attributes="0">
-                      <Component id="emailField" min="-2" max="-2" attributes="0"/>
-                      <Component id="cepField" min="-2" max="-2" attributes="0"/>
-                      <Component id="cidadeField" min="-2" max="-2" attributes="0"/>
-                  </Group>
-                  <EmptySpace min="-2" pref="12" max="-2" attributes="0"/>
-                  <Group type="103" groupAlignment="0" attributes="0">
-                      <Group type="103" groupAlignment="3" attributes="0">
-                          <Component id="BairroLabel" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="logradouroLabel" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="1" attributes="0">
+                      <Group type="102" attributes="0">
+                          <Group type="103" groupAlignment="0" attributes="0">
+                              <Component id="emailField" min="-2" max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="3" attributes="0">
+                                  <Component id="cidadeField" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="cepField" alignment="3" min="-2" max="-2" attributes="0"/>
+                              </Group>
+                          </Group>
+                          <Group type="103" groupAlignment="0" attributes="0">
+                              <Group type="102" attributes="0">
+                                  <EmptySpace min="-2" pref="12" max="-2" attributes="0"/>
+                                  <Group type="103" groupAlignment="3" attributes="0">
+                                      <Component id="BairroLabel" alignment="3" min="-2" max="-2" attributes="0"/>
+                                      <Component id="logradouroLabel" alignment="3" min="-2" max="-2" attributes="0"/>
+                                      <Component id="complementoLabel" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  </Group>
+                                  <EmptySpace min="6" pref="6" max="-2" attributes="0"/>
+                                  <Group type="103" groupAlignment="0" attributes="0">
+                                      <Group type="103" groupAlignment="3" attributes="0">
+                                          <Component id="logradouroField" alignment="3" min="-2" max="-2" attributes="0"/>
+                                          <Component id="bairroField" alignment="3" min="-2" max="-2" attributes="0"/>
+                                      </Group>
+                                      <Component id="complementoField" min="-2" max="-2" attributes="0"/>
+                                  </Group>
+                                  <EmptySpace min="12" pref="12" max="-2" attributes="0"/>
+                                  <Component id="crmLabel" min="-2" max="-2" attributes="0"/>
+                                  <EmptySpace max="-2" attributes="0"/>
+                                  <Component id="crmField" min="-2" max="-2" attributes="0"/>
+                              </Group>
+                              <Group type="102" alignment="1" attributes="0">
+                                  <EmptySpace max="-2" attributes="0"/>
+                                  <Component id="senhaLabel" min="-2" max="-2" attributes="0"/>
+                                  <EmptySpace max="-2" attributes="0"/>
+                                  <Component id="senhaField" min="-2" max="-2" attributes="0"/>
+                              </Group>
+                          </Group>
                       </Group>
-                      <Component id="complementoLabel" min="-2" max="-2" attributes="0"/>
-                  </Group>
-                  <EmptySpace min="6" pref="6" max="-2" attributes="0"/>
-                  <Group type="103" groupAlignment="0" attributes="0">
-                      <Group type="103" groupAlignment="3" attributes="0">
-                          <Component id="logradouroField" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="bairroField" alignment="3" min="-2" max="-2" attributes="0"/>
-                      </Group>
-                      <Component id="complementoField" min="-2" max="-2" attributes="0"/>
-                  </Group>
-                  <EmptySpace max="-2" attributes="0"/>
-                  <Group type="103" groupAlignment="0" attributes="0">
-                      <Group type="102" alignment="1" attributes="0">
-                          <Component id="senhaLabel" min="-2" max="-2" attributes="0"/>
-                          <EmptySpace max="32767" attributes="0"/>
-                      </Group>
-                      <Group type="102" alignment="0" attributes="0">
-                          <Component id="loginLabel" min="-2" max="-2" attributes="0"/>
+                      <Group type="102" attributes="0">
+                          <Group type="103" groupAlignment="3" attributes="0">
+                              <Component id="jLabel1" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="jLabel2" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="jLabel3" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="loginLabel" alignment="3" min="-2" max="-2" attributes="0"/>
+                          </Group>
                           <EmptySpace max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="3" attributes="0">
+                              <Component id="dataInicialField" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="dataFinalField" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="cargaHoraria" alignment="3" min="-2" max="-2" attributes="0"/>
                               <Component id="loginField" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="senhaField" alignment="3" min="-2" max="-2" attributes="0"/>
                           </Group>
-                          <EmptySpace pref="12" max="32767" attributes="0"/>
                       </Group>
                   </Group>
+                  <EmptySpace pref="15" max="32767" attributes="0"/>
               </Group>
           </Group>
         </DimensionLayout>
@@ -364,11 +413,6 @@
             <Property name="text" type="java.lang.String" value="Sexo"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JLabel" name="tipoSanguineoLabel">
-          <Properties>
-            <Property name="text" type="java.lang.String" value="Tipo sangu&#xed;neo"/>
-          </Properties>
-        </Component>
         <Component class="javax.swing.JTextField" name="emailField">
         </Component>
         <Component class="javax.swing.JLabel" name="emailLabel">
@@ -431,21 +475,6 @@
         </Component>
         <Component class="javax.swing.JTextField" name="complementoField">
         </Component>
-        <Component class="javax.swing.JComboBox" name="tipoSanguineoComboBox">
-          <Properties>
-            <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
-              <StringArray count="4">
-                <StringItem index="0" value="Item 1"/>
-                <StringItem index="1" value="Item 2"/>
-                <StringItem index="2" value="Item 3"/>
-                <StringItem index="3" value="Item 4"/>
-              </StringArray>
-            </Property>
-          </Properties>
-          <AuxValues>
-            <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
-          </AuxValues>
-        </Component>
         <Component class="javax.swing.JComboBox" name="sexoComboBox">
           <Properties>
             <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
@@ -460,6 +489,13 @@
           <AuxValues>
             <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
           </AuxValues>
+        </Component>
+        <Component class="javax.swing.JLabel" name="crmLabel">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="CRF"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JTextField" name="crmField">
         </Component>
         <Component class="javax.swing.JLabel" name="loginLabel">
           <Properties>
@@ -478,6 +514,30 @@
           <Events>
             <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="senhaFieldActionPerformed"/>
           </Events>
+        </Component>
+        <Component class="javax.swing.JLabel" name="jLabel1">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Data inicial"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JLabel" name="jLabel2">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Data final"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JTextField" name="dataFinalField">
+        </Component>
+        <Component class="javax.swing.JLabel" name="jLabel3">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Carga hor&#xe1;ria"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JTextField" name="cargaHoraria">
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="cargaHorariaActionPerformed"/>
+          </Events>
+        </Component>
+        <Component class="javax.swing.JTextField" name="dataInicialField">
         </Component>
       </SubComponents>
     </Container>
