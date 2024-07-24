@@ -78,9 +78,9 @@
               <Component id="jPaneltitulo" min="-2" max="-2" attributes="0"/>
               <EmptySpace max="-2" attributes="0"/>
               <Component id="jPanelDados" min="-2" max="-2" attributes="0"/>
-              <EmptySpace max="32767" attributes="0"/>
-              <Component id="jPanelBotoes" min="-2" pref="44" max="-2" attributes="0"/>
               <EmptySpace max="-2" attributes="0"/>
+              <Component id="jPanelBotoes" min="-2" pref="44" max="-2" attributes="0"/>
+              <EmptySpace max="32767" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
@@ -89,7 +89,7 @@
     <Container class="javax.swing.JPanel" name="jPaneltitulo">
       <Properties>
         <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-          <Color blue="66" green="ff" red="99" type="rgb"/>
+          <Color blue="ff" green="99" red="33" type="rgb"/>
         </Property>
         <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
           <Border info="org.netbeans.modules.form.compat2.border.BevelBorderInfo">
@@ -117,10 +117,10 @@
               <Font name="Times New Roman" size="14" style="1"/>
             </Property>
             <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-              <Color blue="cc" green="33" red="0" type="rgb"/>
+              <Color blue="ff" green="ff" red="ff" type="rgb"/>
             </Property>
             <Property name="horizontalAlignment" type="int" value="0"/>
-            <Property name="text" type="java.lang.String" value="Cadastro de Enfermeiro"/>
+            <Property name="text" type="java.lang.String" value="Cadastro de M&#xe9;dico"/>
             <Property name="toolTipText" type="java.lang.String" value=""/>
           </Properties>
         </Component>
@@ -599,7 +599,7 @@
         <Component class="javax.swing.JButton" name="jButtonNovo">
           <Properties>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="3" name="/imagens/Create.png"/>
+              <Image iconType="3" name="/br/com/ifsc/hospital/images/Create.png"/>
             </Property>
             <Property name="text" type="java.lang.String" value="Novo"/>
             <Property name="actionCommand" type="java.lang.String" value="1"/>
@@ -617,7 +617,7 @@
         <Component class="javax.swing.JButton" name="jButtonCancelar">
           <Properties>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="3" name="/imagens/Cancel.png"/>
+              <Image iconType="3" name="/br/com/ifsc/hospital/images/Cancel.png"/>
             </Property>
             <Property name="text" type="java.lang.String" value="Cancelar"/>
             <Property name="actionCommand" type="java.lang.String" value="0"/>
@@ -633,7 +633,7 @@
         <Component class="javax.swing.JButton" name="jButtonGravar">
           <Properties>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="3" name="/imagens/Download.png"/>
+              <Image iconType="3" name="/br/com/ifsc/hospital/images/Download.png"/>
             </Property>
             <Property name="text" type="java.lang.String" value="Gravar"/>
             <Property name="actionCommand" type="java.lang.String" value="0"/>
@@ -649,7 +649,7 @@
         <Component class="javax.swing.JButton" name="jButtonBuscar">
           <Properties>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="3" name="/imagens/Find.png"/>
+              <Image iconType="3" name="/br/com/ifsc/hospital/images/Find.png"/>
             </Property>
             <Property name="text" type="java.lang.String" value="Buscar"/>
             <Property name="actionCommand" type="java.lang.String" value="1"/>
@@ -661,7 +661,7 @@
         <Component class="javax.swing.JButton" name="jButtonSair">
           <Properties>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="3" name="/imagens/Exit.png"/>
+              <Image iconType="3" name="/br/com/ifsc/hospital/images/Exit.png"/>
             </Property>
             <Property name="text" type="java.lang.String" value="Sair"/>
             <Property name="actionCommand" type="java.lang.String" value="1"/>

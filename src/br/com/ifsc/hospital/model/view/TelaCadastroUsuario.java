@@ -86,11 +86,11 @@ public class TelaCadastroUsuario extends javax.swing.JDialog {
         setTitle("Título do Form");
         setResizable(false);
 
-        jPaneltitulo.setBackground(new java.awt.Color(153, 255, 102));
+        jPaneltitulo.setBackground(new java.awt.Color(51, 153, 255));
         jPaneltitulo.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
 
         jLabelTitulo.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
-        jLabelTitulo.setForeground(new java.awt.Color(0, 51, 204));
+        jLabelTitulo.setForeground(new java.awt.Color(255, 255, 255));
         jLabelTitulo.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabelTitulo.setText("Cadastro de Usuário");
         jLabelTitulo.setToolTipText("");
@@ -328,21 +328,19 @@ public class TelaCadastroUsuario extends javax.swing.JDialog {
                     .addComponent(complementoField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanelDadosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanelDadosLayout.createSequentialGroup()
-                        .addComponent(senhaLabel)
-                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addComponent(senhaLabel)
                     .addGroup(jPanelDadosLayout.createSequentialGroup()
                         .addComponent(loginLabel)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addGroup(jPanelDadosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(loginField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(senhaField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addContainerGap(12, Short.MAX_VALUE))))
+                            .addComponent(senhaField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                .addContainerGap(12, Short.MAX_VALUE))
         );
 
         jPanelBotoes.setBorder(javax.swing.BorderFactory.createEtchedBorder());
 
-        jButtonNovo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/Create.png"))); // NOI18N
+        jButtonNovo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/br/com/ifsc/hospital/images/Create.png"))); // NOI18N
         jButtonNovo.setText("Novo");
         jButtonNovo.setActionCommand("1");
         jButtonNovo.setMinimumSize(new java.awt.Dimension(67, 25));
@@ -354,7 +352,7 @@ public class TelaCadastroUsuario extends javax.swing.JDialog {
         });
         jPanelBotoes.add(jButtonNovo);
 
-        jButtonCancelar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/Cancel.png"))); // NOI18N
+        jButtonCancelar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/br/com/ifsc/hospital/images/Cancel.png"))); // NOI18N
         jButtonCancelar.setText("Cancelar");
         jButtonCancelar.setActionCommand("0");
         jButtonCancelar.setEnabled(false);
@@ -366,7 +364,7 @@ public class TelaCadastroUsuario extends javax.swing.JDialog {
         });
         jPanelBotoes.add(jButtonCancelar);
 
-        jButtonGravar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/Download.png"))); // NOI18N
+        jButtonGravar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/br/com/ifsc/hospital/images/Download.png"))); // NOI18N
         jButtonGravar.setText("Gravar");
         jButtonGravar.setActionCommand("0");
         jButtonGravar.setEnabled(false);
@@ -378,13 +376,13 @@ public class TelaCadastroUsuario extends javax.swing.JDialog {
         });
         jPanelBotoes.add(jButtonGravar);
 
-        jButtonBuscar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/Find.png"))); // NOI18N
+        jButtonBuscar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/br/com/ifsc/hospital/images/Find.png"))); // NOI18N
         jButtonBuscar.setText("Buscar");
         jButtonBuscar.setActionCommand("1");
         jButtonBuscar.setPreferredSize(new java.awt.Dimension(100, 30));
         jPanelBotoes.add(jButtonBuscar);
 
-        jButtonSair.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/Exit.png"))); // NOI18N
+        jButtonSair.setIcon(new javax.swing.ImageIcon(getClass().getResource("/br/com/ifsc/hospital/images/Exit.png"))); // NOI18N
         jButtonSair.setText("Sair");
         jButtonSair.setActionCommand("1");
         jButtonSair.setPreferredSize(new java.awt.Dimension(100, 30));

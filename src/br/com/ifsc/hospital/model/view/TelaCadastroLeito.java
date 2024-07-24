@@ -55,12 +55,13 @@ public class TelaCadastroLeito extends javax.swing.JDialog {
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         setTitle("Título do Form");
         setResizable(false);
+        getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jPaneltitulo.setBackground(new java.awt.Color(153, 255, 102));
+        jPaneltitulo.setBackground(new java.awt.Color(51, 153, 255));
         jPaneltitulo.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
 
         jLabelTitulo.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
-        jLabelTitulo.setForeground(new java.awt.Color(0, 51, 204));
+        jLabelTitulo.setForeground(new java.awt.Color(255, 255, 255));
         jLabelTitulo.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabelTitulo.setText("Cadastro de Leito");
         jLabelTitulo.setToolTipText("");
@@ -76,7 +77,9 @@ public class TelaCadastroLeito extends javax.swing.JDialog {
             .addComponent(jLabelTitulo, javax.swing.GroupLayout.DEFAULT_SIZE, 39, Short.MAX_VALUE)
         );
 
-        jPanelDados.setBorder(javax.swing.BorderFactory.createEtchedBorder());
+        getContentPane().add(jPaneltitulo, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 762, -1));
+
+        jPanelDados.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
 
         idLabel.setText("Id");
 
@@ -90,8 +93,6 @@ public class TelaCadastroLeito extends javax.swing.JDialog {
         descricaoLabel.setText("Descrição");
 
         statusLabel.setText("Status");
-
-        statusComboBox.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
 
         javax.swing.GroupLayout jPanelDadosLayout = new javax.swing.GroupLayout(jPanelDados);
         jPanelDados.setLayout(jPanelDadosLayout);
@@ -135,12 +136,14 @@ public class TelaCadastroLeito extends javax.swing.JDialog {
                 .addGroup(jPanelDadosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(descricaoField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(statusComboBox, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(17, Short.MAX_VALUE))
+                .addContainerGap(22, Short.MAX_VALUE))
         );
 
-        jPanelBotoes.setBorder(javax.swing.BorderFactory.createEtchedBorder());
+        getContentPane().add(jPanelDados, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 49, 762, 130));
 
-        jButtonNovo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/Create.png"))); // NOI18N
+        jPanelBotoes.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+
+        jButtonNovo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/br/com/ifsc/hospital/images/Create.png"))); // NOI18N
         jButtonNovo.setText("Novo");
         jButtonNovo.setActionCommand("1");
         jButtonNovo.setMinimumSize(new java.awt.Dimension(67, 25));
@@ -152,7 +155,7 @@ public class TelaCadastroLeito extends javax.swing.JDialog {
         });
         jPanelBotoes.add(jButtonNovo);
 
-        jButtonCancelar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/Cancel.png"))); // NOI18N
+        jButtonCancelar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/br/com/ifsc/hospital/images/Cancel.png"))); // NOI18N
         jButtonCancelar.setText("Cancelar");
         jButtonCancelar.setActionCommand("0");
         jButtonCancelar.setEnabled(false);
@@ -164,7 +167,7 @@ public class TelaCadastroLeito extends javax.swing.JDialog {
         });
         jPanelBotoes.add(jButtonCancelar);
 
-        jButtonGravar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/Download.png"))); // NOI18N
+        jButtonGravar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/br/com/ifsc/hospital/images/Download.png"))); // NOI18N
         jButtonGravar.setText("Gravar");
         jButtonGravar.setActionCommand("0");
         jButtonGravar.setEnabled(false);
@@ -176,13 +179,13 @@ public class TelaCadastroLeito extends javax.swing.JDialog {
         });
         jPanelBotoes.add(jButtonGravar);
 
-        jButtonBuscar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/Find.png"))); // NOI18N
+        jButtonBuscar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/br/com/ifsc/hospital/images/Find.png"))); // NOI18N
         jButtonBuscar.setText("Buscar");
         jButtonBuscar.setActionCommand("1");
         jButtonBuscar.setPreferredSize(new java.awt.Dimension(100, 30));
         jPanelBotoes.add(jButtonBuscar);
 
-        jButtonSair.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/Exit.png"))); // NOI18N
+        jButtonSair.setIcon(new javax.swing.ImageIcon(getClass().getResource("/br/com/ifsc/hospital/images/Exit.png"))); // NOI18N
         jButtonSair.setText("Sair");
         jButtonSair.setActionCommand("1");
         jButtonSair.setPreferredSize(new java.awt.Dimension(100, 30));
@@ -193,24 +196,7 @@ public class TelaCadastroLeito extends javax.swing.JDialog {
         });
         jPanelBotoes.add(jButtonSair);
 
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
-        getContentPane().setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPaneltitulo, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-            .addComponent(jPanelBotoes, javax.swing.GroupLayout.DEFAULT_SIZE, 762, Short.MAX_VALUE)
-            .addComponent(jPanelDados, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addComponent(jPaneltitulo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jPanelDados, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jPanelBotoes, javax.swing.GroupLayout.PREFERRED_SIZE, 44, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap())
-        );
+        getContentPane().add(jPanelBotoes, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 180, 762, -1));
 
         pack();
         setLocationRelativeTo(null);
