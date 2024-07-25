@@ -197,8 +197,8 @@
                   </Group>
                   <EmptySpace max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="0" attributes="0">
-                      <Component id="principioAtivoField" alignment="1" min="-2" pref="28" max="-2" attributes="0"/>
-                      <Component id="quantidadeMinimaSpinner" alignment="1" min="-2" pref="28" max="-2" attributes="0"/>
+                      <Component id="quantidadeMinimaSpinner" min="-2" pref="28" max="-2" attributes="0"/>
+                      <Component id="principioAtivoField" min="-2" pref="28" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace max="-2" attributes="0"/>
                   <Component id="jLabel2" min="-2" max="-2" attributes="0"/>

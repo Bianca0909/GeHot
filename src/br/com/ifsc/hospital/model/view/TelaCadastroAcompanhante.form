@@ -155,7 +155,7 @@
         </Component>
         <Component class="javax.swing.JLabel" name="cpfCnpjLabel">
           <Properties>
-            <Property name="text" type="java.lang.String" value="CPF/CNPJ"/>
+            <Property name="text" type="java.lang.String" value="CPF"/>
           </Properties>
           <Constraints>
             <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
@@ -164,6 +164,9 @@
           </Constraints>
         </Component>
         <Component class="javax.swing.JTextField" name="cpfCnpjField">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="  .   .   /    -"/>
+          </Properties>
           <Constraints>
             <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
               <AbsoluteConstraints x="607" y="81" width="139" height="30"/>

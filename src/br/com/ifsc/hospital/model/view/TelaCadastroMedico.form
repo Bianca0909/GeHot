@@ -124,7 +124,7 @@
       </Properties>
       <Constraints>
         <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-          <AbsoluteConstraints x="0" y="49" width="762" height="431"/>
+          <AbsoluteConstraints x="0" y="49" width="762" height="430"/>
         </Constraint>
       </Constraints>
 
@@ -154,7 +154,7 @@
         </Component>
         <Component class="javax.swing.JLabel" name="dataCadastroLabel">
           <Properties>
-            <Property name="text" type="java.lang.String" value="Data de cadastro"/>
+            <Property name="text" type="java.lang.String" value="Data de nascimento"/>
           </Properties>
           <Constraints>
             <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
@@ -171,7 +171,7 @@
           </Events>
           <Constraints>
             <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-              <AbsoluteConstraints x="8" y="28" width="49" height="-1"/>
+              <AbsoluteConstraints x="8" y="28" width="49" height="30"/>
             </Constraint>
           </Constraints>
         </Component>
@@ -181,12 +181,13 @@
           </Events>
           <Constraints>
             <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-              <AbsoluteConstraints x="8" y="84" width="594" height="31"/>
+              <AbsoluteConstraints x="8" y="85" width="594" height="30"/>
             </Constraint>
           </Constraints>
         </Component>
         <Component class="javax.swing.JTextField" name="dataCadastroField">
           <Properties>
+            <Property name="text" type="java.lang.String" value="  /  /"/>
             <Property name="toolTipText" type="java.lang.String" value=""/>
           </Properties>
           <Constraints>
@@ -197,7 +198,7 @@
         </Component>
         <Component class="javax.swing.JLabel" name="cpfCnpjLabel">
           <Properties>
-            <Property name="text" type="java.lang.String" value="CPF/CNPJ"/>
+            <Property name="text" type="java.lang.String" value="CPF"/>
           </Properties>
           <Constraints>
             <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
@@ -206,13 +207,16 @@
           </Constraints>
         </Component>
         <Component class="javax.swing.JTextField" name="cpfCnpjField">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="   .   .   -"/>
+          </Properties>
           <Constraints>
             <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
               <AbsoluteConstraints x="608" y="143" width="139" height="35"/>
             </Constraint>
           </Constraints>
         </Component>
-        <Component class="javax.swing.JTextField" name="rgInscricaoEstadualField">
+        <Component class="javax.swing.JTextField" name="rgField">
           <Constraints>
             <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
               <AbsoluteConstraints x="8" y="212" width="161" height="34"/>
@@ -221,7 +225,7 @@
         </Component>
         <Component class="javax.swing.JLabel" name="rgInscricaoEstadualLabel">
           <Properties>
-            <Property name="text" type="java.lang.String" value="RG/Inscri&#xe7;&#xe3;o Estadual"/>
+            <Property name="text" type="java.lang.String" value="RG"/>
           </Properties>
           <Constraints>
             <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
@@ -243,16 +247,6 @@
           <Constraints>
             <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
               <AbsoluteConstraints x="8" y="143" width="594" height="35"/>
-            </Constraint>
-          </Constraints>
-        </Component>
-        <Component class="javax.swing.JLabel" name="sexoLabel">
-          <Properties>
-            <Property name="text" type="java.lang.String" value="Sexo"/>
-          </Properties>
-          <Constraints>
-            <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-              <AbsoluteConstraints x="175" y="190" width="37" height="-1"/>
             </Constraint>
           </Constraints>
         </Component>
@@ -284,6 +278,9 @@
           </Constraints>
         </Component>
         <Component class="javax.swing.JTextField" name="fone1Field">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="(  )     -     "/>
+          </Properties>
           <Constraints>
             <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
               <AbsoluteConstraints x="450" y="210" width="148" height="30"/>
@@ -301,6 +298,9 @@
           </Constraints>
         </Component>
         <Component class="javax.swing.JTextField" name="fone2Field">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="(  )     -     "/>
+          </Properties>
           <Events>
             <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="fone2FieldActionPerformed"/>
           </Events>
@@ -395,21 +395,6 @@
           <Constraints>
             <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
               <AbsoluteConstraints x="444" y="330" width="310" height="30"/>
-            </Constraint>
-          </Constraints>
-        </Component>
-        <Component class="javax.swing.JComboBox" name="sexoComboBox">
-          <Properties>
-            <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
-              <StringArray count="0"/>
-            </Property>
-          </Properties>
-          <AuxValues>
-            <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
-          </AuxValues>
-          <Constraints>
-            <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-              <AbsoluteConstraints x="175" y="212" width="113" height="34"/>
             </Constraint>
           </Constraints>
         </Component>

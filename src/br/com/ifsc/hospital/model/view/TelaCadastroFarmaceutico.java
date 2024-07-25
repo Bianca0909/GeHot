@@ -41,13 +41,12 @@ public class TelaCadastroFarmaceutico extends javax.swing.JDialog {
         idField = new javax.swing.JTextField();
         nomeField = new javax.swing.JTextField();
         dataCadastroField = new javax.swing.JTextField();
-        cpfCnpjLabel = new javax.swing.JLabel();
-        cpfCnpjField = new javax.swing.JTextField();
-        rgInscricaoEstadualField = new javax.swing.JTextField();
+        cpfLabel = new javax.swing.JLabel();
+        cpfField = new javax.swing.JTextField();
+        rgField = new javax.swing.JTextField();
         rgInscricaoEstadualLabel = new javax.swing.JLabel();
         nomeSocialLabel = new javax.swing.JLabel();
         nomeSocialField = new javax.swing.JTextField();
-        sexoLabel = new javax.swing.JLabel();
         emailField = new javax.swing.JTextField();
         emailLabel = new javax.swing.JLabel();
         fone1Label = new javax.swing.JLabel();
@@ -64,18 +63,17 @@ public class TelaCadastroFarmaceutico extends javax.swing.JDialog {
         logradouroField = new javax.swing.JTextField();
         complementoLabel = new javax.swing.JLabel();
         complementoField = new javax.swing.JTextField();
-        sexoComboBox = new javax.swing.JComboBox<>();
-        crmLabel = new javax.swing.JLabel();
-        crmField = new javax.swing.JTextField();
+        crfLabel = new javax.swing.JLabel();
+        crfField = new javax.swing.JTextField();
         loginLabel = new javax.swing.JLabel();
         loginField = new javax.swing.JTextField();
         senhaLabel = new javax.swing.JLabel();
         senhaField = new javax.swing.JTextField();
-        jLabel1 = new javax.swing.JLabel();
-        jLabel2 = new javax.swing.JLabel();
+        dataInicialLabel = new javax.swing.JLabel();
+        dataFinalLabel = new javax.swing.JLabel();
         dataFinalField = new javax.swing.JTextField();
-        jLabel3 = new javax.swing.JLabel();
-        cargaHoraria = new javax.swing.JTextField();
+        cargaHorariaLabel = new javax.swing.JLabel();
+        cargaHorariaField = new javax.swing.JTextField();
         dataInicialField = new javax.swing.JTextField();
         jPanelBotoes = new javax.swing.JPanel();
         jButtonNovo = new javax.swing.JButton();
@@ -118,12 +116,16 @@ public class TelaCadastroFarmaceutico extends javax.swing.JDialog {
         getContentPane().add(jPaneltitulo, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 760, -1));
 
         jPanelDados.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        jPanelDados.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         nomeLabel.setText("Nome");
+        jPanelDados.add(nomeLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(8, 62, 37, -1));
 
         idLabel.setText("Id");
+        jPanelDados.add(idLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(8, 8, 37, -1));
 
         dataCadastroLabel.setText("Data de cadastro");
+        jPanelDados.add(dataCadastroLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(608, 62, -1, -1));
 
         idField.setEditable(false);
         idField.addActionListener(new java.awt.event.ActionListener() {
@@ -131,258 +133,117 @@ public class TelaCadastroFarmaceutico extends javax.swing.JDialog {
                 idFieldActionPerformed(evt);
             }
         });
+        jPanelDados.add(idField, new org.netbeans.lib.awtextra.AbsoluteConstraints(8, 28, 49, 30));
 
         nomeField.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 nomeFieldActionPerformed(evt);
             }
         });
+        jPanelDados.add(nomeField, new org.netbeans.lib.awtextra.AbsoluteConstraints(8, 84, 594, 32));
 
+        dataCadastroField.setText("  /  /");
         dataCadastroField.setToolTipText("");
+        jPanelDados.add(dataCadastroField, new org.netbeans.lib.awtextra.AbsoluteConstraints(608, 84, 139, 32));
 
-        cpfCnpjLabel.setText("CPF/CNPJ");
+        cpfLabel.setText("CPF");
+        jPanelDados.add(cpfLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(608, 122, 65, -1));
 
-        rgInscricaoEstadualLabel.setText("RG/Inscrição Estadual");
+        cpfField.setText("   .   .   -");
+        jPanelDados.add(cpfField, new org.netbeans.lib.awtextra.AbsoluteConstraints(610, 140, 139, 30));
+        jPanelDados.add(rgField, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 200, 161, 30));
+
+        rgInscricaoEstadualLabel.setText("RG");
+        jPanelDados.add(rgInscricaoEstadualLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 180, -1, -1));
 
         nomeSocialLabel.setText("Nome social");
-
-        sexoLabel.setText("Sexo");
+        jPanelDados.add(nomeSocialLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(8, 122, 75, -1));
+        jPanelDados.add(nomeSocialField, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 140, 594, 30));
+        jPanelDados.add(emailField, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 260, 286, 30));
 
         emailLabel.setText("E-mail");
+        jPanelDados.add(emailLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 240, 37, -1));
 
         fone1Label.setText("Fone 1");
+        jPanelDados.add(fone1Label, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 180, 43, -1));
+
+        fone1Field.setText("(  )     -     ");
+        fone1Field.setToolTipText("");
+        jPanelDados.add(fone1Field, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 200, 148, 30));
 
         fone2Label.setText("Fone 2");
+        jPanelDados.add(fone2Label, new org.netbeans.lib.awtextra.AbsoluteConstraints(590, 180, 43, -1));
 
+        fone2Field.setText("(  )     -     ");
         fone2Field.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 fone2FieldActionPerformed(evt);
             }
         });
+        jPanelDados.add(fone2Field, new org.netbeans.lib.awtextra.AbsoluteConstraints(590, 200, 159, 30));
+        jPanelDados.add(cepField, new org.netbeans.lib.awtextra.AbsoluteConstraints(311, 260, 120, 30));
 
         cepLabel.setText("CEP");
+        jPanelDados.add(cepLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 240, 43, -1));
 
         CidadeLabel.setText("Cidade");
+        jPanelDados.add(CidadeLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 240, 43, -1));
 
         cidadeField.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 cidadeFieldActionPerformed(evt);
             }
         });
+        jPanelDados.add(cidadeField, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 260, 310, 30));
 
         BairroLabel.setText("Bairro");
+        jPanelDados.add(BairroLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 300, 43, -1));
+        jPanelDados.add(bairroField, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 320, 161, 30));
 
         logradouroLabel.setText("Logradouro");
+        jPanelDados.add(logradouroLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 300, 72, -1));
+        jPanelDados.add(logradouroField, new org.netbeans.lib.awtextra.AbsoluteConstraints(174, 320, 260, 30));
 
         complementoLabel.setText("Complemento");
+        jPanelDados.add(complementoLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 300, 88, -1));
+        jPanelDados.add(complementoField, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 320, 310, 30));
 
-        sexoComboBox.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
-
-        crmLabel.setText("CRF");
+        crfLabel.setText("CRF");
+        jPanelDados.add(crfLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 360, 37, -1));
+        jPanelDados.add(crfField, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 380, 160, 30));
 
         loginLabel.setText("Login");
         loginLabel.setToolTipText("");
+        jPanelDados.add(loginLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(408, 360, 37, -1));
+        jPanelDados.add(loginField, new org.netbeans.lib.awtextra.AbsoluteConstraints(408, 380, 165, 30));
 
         senhaLabel.setText("Senha");
+        jPanelDados.add(senhaLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(579, 360, 37, -1));
 
         senhaField.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 senhaFieldActionPerformed(evt);
             }
         });
+        jPanelDados.add(senhaField, new org.netbeans.lib.awtextra.AbsoluteConstraints(579, 380, 172, 30));
 
-        jLabel1.setText("Data inicial");
+        dataInicialLabel.setText("Data inicial");
+        jPanelDados.add(dataInicialLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(176, 360, 68, -1));
 
-        jLabel2.setText("Data final");
+        dataFinalLabel.setText("Data final");
+        jPanelDados.add(dataFinalLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 360, 64, -1));
+        jPanelDados.add(dataFinalField, new org.netbeans.lib.awtextra.AbsoluteConstraints(244, 380, -1, 30));
 
-        jLabel3.setText("Carga horária");
+        cargaHorariaLabel.setText("Carga horária");
+        jPanelDados.add(cargaHorariaLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 360, 82, -1));
 
-        cargaHoraria.addActionListener(new java.awt.event.ActionListener() {
+        cargaHorariaField.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                cargaHorariaActionPerformed(evt);
+                cargaHorariaFieldActionPerformed(evt);
             }
         });
-
-        javax.swing.GroupLayout jPanelDadosLayout = new javax.swing.GroupLayout(jPanelDados);
-        jPanelDados.setLayout(jPanelDadosLayout);
-        jPanelDadosLayout.setHorizontalGroup(
-            jPanelDadosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanelDadosLayout.createSequentialGroup()
-                .addGroup(jPanelDadosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanelDadosLayout.createSequentialGroup()
-                        .addGap(6, 6, 6)
-                        .addComponent(idLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(jPanelDadosLayout.createSequentialGroup()
-                        .addGap(6, 6, 6)
-                        .addComponent(idField, javax.swing.GroupLayout.PREFERRED_SIZE, 49, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(jPanelDadosLayout.createSequentialGroup()
-                        .addGap(6, 6, 6)
-                        .addComponent(nomeLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(563, 563, 563)
-                        .addComponent(dataCadastroLabel))
-                    .addGroup(jPanelDadosLayout.createSequentialGroup()
-                        .addGap(6, 6, 6)
-                        .addComponent(nomeField, javax.swing.GroupLayout.PREFERRED_SIZE, 594, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(6, 6, 6)
-                        .addComponent(dataCadastroField, javax.swing.GroupLayout.PREFERRED_SIZE, 139, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(jPanelDadosLayout.createSequentialGroup()
-                        .addGap(6, 6, 6)
-                        .addComponent(nomeSocialLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 75, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(525, 525, 525)
-                        .addComponent(cpfCnpjLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 65, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(jPanelDadosLayout.createSequentialGroup()
-                        .addGap(8, 8, 8)
-                        .addComponent(nomeSocialField, javax.swing.GroupLayout.PREFERRED_SIZE, 594, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(6, 6, 6)
-                        .addComponent(cpfCnpjField, javax.swing.GroupLayout.PREFERRED_SIZE, 139, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(jPanelDadosLayout.createSequentialGroup()
-                        .addGap(8, 8, 8)
-                        .addComponent(rgInscricaoEstadualLabel)
-                        .addGap(56, 56, 56)
-                        .addComponent(sexoLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(213, 213, 213)
-                        .addComponent(fone1Label, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(117, 117, 117)
-                        .addComponent(fone2Label, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(jPanelDadosLayout.createSequentialGroup()
-                        .addGap(8, 8, 8)
-                        .addComponent(rgInscricaoEstadualField, javax.swing.GroupLayout.PREFERRED_SIZE, 161, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(9, 9, 9)
-                        .addComponent(sexoComboBox, javax.swing.GroupLayout.PREFERRED_SIZE, 113, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(137, 137, 137)
-                        .addComponent(fone1Field, javax.swing.GroupLayout.PREFERRED_SIZE, 148, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(12, 12, 12)
-                        .addComponent(fone2Field, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(jPanelDadosLayout.createSequentialGroup()
-                        .addGap(8, 8, 8)
-                        .addComponent(emailLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(263, 263, 263)
-                        .addComponent(cepLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(87, 87, 87)
-                        .addComponent(CidadeLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(jPanelDadosLayout.createSequentialGroup()
-                        .addGap(8, 8, 8)
-                        .addComponent(emailField, javax.swing.GroupLayout.PREFERRED_SIZE, 286, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(15, 15, 15)
-                        .addComponent(cepField, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(9, 9, 9)
-                        .addComponent(cidadeField, javax.swing.GroupLayout.PREFERRED_SIZE, 310, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(jPanelDadosLayout.createSequentialGroup()
-                        .addGap(8, 8, 8)
-                        .addComponent(BairroLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(117, 117, 117)
-                        .addComponent(logradouroLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 72, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(198, 198, 198)
-                        .addComponent(complementoLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 88, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(jPanelDadosLayout.createSequentialGroup()
-                        .addGap(8, 8, 8)
-                        .addComponent(bairroField, javax.swing.GroupLayout.PREFERRED_SIZE, 161, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(3, 3, 3)
-                        .addComponent(logradouroField, javax.swing.GroupLayout.PREFERRED_SIZE, 260, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(6, 6, 6)
-                        .addComponent(complementoField, javax.swing.GroupLayout.PREFERRED_SIZE, 310, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(jPanelDadosLayout.createSequentialGroup()
-                        .addGap(8, 8, 8)
-                        .addGroup(jPanelDadosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(jPanelDadosLayout.createSequentialGroup()
-                                .addComponent(crmField, javax.swing.GroupLayout.PREFERRED_SIZE, 160, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(4, 4, 4)
-                                .addComponent(dataInicialField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(dataFinalField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGroup(jPanelDadosLayout.createSequentialGroup()
-                                .addComponent(crmLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(129, 129, 129)
-                                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 68, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 64, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addGroup(jPanelDadosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(cargaHoraria, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 82, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addGroup(jPanelDadosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(loginField, javax.swing.GroupLayout.PREFERRED_SIZE, 165, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(loginLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addGroup(jPanelDadosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(senhaLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(senhaField, javax.swing.GroupLayout.PREFERRED_SIZE, 172, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                .addGap(18, 18, 18))
-        );
-        jPanelDadosLayout.setVerticalGroup(
-            jPanelDadosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanelDadosLayout.createSequentialGroup()
-                .addGap(6, 6, 6)
-                .addComponent(idLabel)
-                .addGap(4, 4, 4)
-                .addComponent(idField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(12, 12, 12)
-                .addGroup(jPanelDadosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(nomeLabel)
-                    .addComponent(dataCadastroLabel))
-                .addGap(6, 6, 6)
-                .addGroup(jPanelDadosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(nomeField, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(dataCadastroField, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(6, 6, 6)
-                .addGroup(jPanelDadosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(nomeSocialLabel)
-                    .addComponent(cpfCnpjLabel))
-                .addGap(2, 2, 2)
-                .addGroup(jPanelDadosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(nomeSocialField, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(cpfCnpjField, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(10, 10, 10)
-                .addGroup(jPanelDadosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(rgInscricaoEstadualLabel)
-                    .addComponent(sexoLabel)
-                    .addComponent(fone1Label)
-                    .addComponent(fone2Label))
-                .addGap(4, 4, 4)
-                .addGroup(jPanelDadosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(rgInscricaoEstadualField, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(sexoComboBox, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(fone1Field, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(fone2Field, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(10, 10, 10)
-                .addGroup(jPanelDadosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(emailLabel)
-                    .addComponent(cepLabel)
-                    .addComponent(CidadeLabel))
-                .addGap(4, 4, 4)
-                .addGroup(jPanelDadosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(emailField, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(cepField, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(cidadeField, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(10, 10, 10)
-                .addGroup(jPanelDadosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(BairroLabel)
-                    .addComponent(logradouroLabel)
-                    .addComponent(complementoLabel))
-                .addGap(4, 4, 4)
-                .addGroup(jPanelDadosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(bairroField, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(logradouroField, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(complementoField, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(10, 10, 10)
-                .addGroup(jPanelDadosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(crmLabel)
-                    .addGroup(jPanelDadosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                        .addComponent(jLabel2)
-                        .addComponent(jLabel1)
-                        .addComponent(jLabel3)
-                        .addComponent(loginLabel)
-                        .addComponent(senhaLabel)))
-                .addGap(4, 4, 4)
-                .addGroup(jPanelDadosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(crmField, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(dataInicialField, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(dataFinalField, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(cargaHoraria, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(loginField, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(senhaField, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)))
-        );
+        jPanelDados.add(cargaHorariaField, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 380, 70, 30));
+        jPanelDados.add(dataInicialField, new org.netbeans.lib.awtextra.AbsoluteConstraints(174, 380, -1, 30));
 
         getContentPane().add(jPanelDados, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 50, 760, 430));
 
@@ -483,9 +344,9 @@ public class TelaCadastroFarmaceutico extends javax.swing.JDialog {
         // TODO add your handling code here:
     }//GEN-LAST:event_senhaFieldActionPerformed
 
-    private void cargaHorariaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cargaHorariaActionPerformed
+    private void cargaHorariaFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cargaHorariaFieldActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_cargaHorariaActionPerformed
+    }//GEN-LAST:event_cargaHorariaFieldActionPerformed
 
     /**
      * @param args the command line arguments
@@ -533,20 +394,23 @@ public class TelaCadastroFarmaceutico extends javax.swing.JDialog {
     private javax.swing.JLabel BairroLabel;
     private javax.swing.JLabel CidadeLabel;
     private javax.swing.JTextField bairroField;
-    private javax.swing.JTextField cargaHoraria;
+    private javax.swing.JTextField cargaHorariaField;
+    private javax.swing.JLabel cargaHorariaLabel;
     private javax.swing.JTextField cepField;
     private javax.swing.JLabel cepLabel;
     private javax.swing.JTextField cidadeField;
     private javax.swing.JTextField complementoField;
     private javax.swing.JLabel complementoLabel;
-    private javax.swing.JTextField cpfCnpjField;
-    private javax.swing.JLabel cpfCnpjLabel;
-    private javax.swing.JTextField crmField;
-    private javax.swing.JLabel crmLabel;
+    private javax.swing.JTextField cpfField;
+    private javax.swing.JLabel cpfLabel;
+    private javax.swing.JTextField crfField;
+    private javax.swing.JLabel crfLabel;
     private javax.swing.JTextField dataCadastroField;
     private javax.swing.JLabel dataCadastroLabel;
     private javax.swing.JTextField dataFinalField;
+    private javax.swing.JLabel dataFinalLabel;
     private javax.swing.JTextField dataInicialField;
+    private javax.swing.JLabel dataInicialLabel;
     private javax.swing.JTextField emailField;
     private javax.swing.JLabel emailLabel;
     private javax.swing.JTextField fone1Field;
@@ -560,9 +424,6 @@ public class TelaCadastroFarmaceutico extends javax.swing.JDialog {
     private javax.swing.JButton jButtonGravar;
     private javax.swing.JButton jButtonNovo;
     private javax.swing.JButton jButtonSair;
-    private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabelTitulo;
     private javax.swing.JPanel jPanelBotoes;
     private javax.swing.JPanel jPanelDados;
@@ -577,11 +438,9 @@ public class TelaCadastroFarmaceutico extends javax.swing.JDialog {
     private javax.swing.JLabel nomeLabel;
     private javax.swing.JTextField nomeSocialField;
     private javax.swing.JLabel nomeSocialLabel;
-    private javax.swing.JTextField rgInscricaoEstadualField;
+    private javax.swing.JTextField rgField;
     private javax.swing.JLabel rgInscricaoEstadualLabel;
     private javax.swing.JTextField senhaField;
     private javax.swing.JLabel senhaLabel;
-    private javax.swing.JComboBox<String> sexoComboBox;
-    private javax.swing.JLabel sexoLabel;
     // End of variables declaration//GEN-END:variables
 }

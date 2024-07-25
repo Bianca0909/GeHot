@@ -129,7 +129,7 @@
         </Component>
         <Component class="javax.swing.JLabel" name="dataCadastroLabel">
           <Properties>
-            <Property name="text" type="java.lang.String" value="Data de cadastro"/>
+            <Property name="text" type="java.lang.String" value="Data de nascimento"/>
           </Properties>
           <Constraints>
             <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
@@ -172,7 +172,7 @@
         </Component>
         <Component class="javax.swing.JLabel" name="cpfCnpjLabel">
           <Properties>
-            <Property name="text" type="java.lang.String" value="CPF/CNPJ"/>
+            <Property name="text" type="java.lang.String" value="CPF"/>
           </Properties>
           <Constraints>
             <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
@@ -181,13 +181,16 @@
           </Constraints>
         </Component>
         <Component class="javax.swing.JTextField" name="cpfCnpjField">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="   .   .   -"/>
+          </Properties>
           <Constraints>
             <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
               <AbsoluteConstraints x="608" y="144" width="139" height="31"/>
             </Constraint>
           </Constraints>
         </Component>
-        <Component class="javax.swing.JTextField" name="rgInscricaoEstadualField">
+        <Component class="javax.swing.JTextField" name="rgField">
           <Constraints>
             <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
               <AbsoluteConstraints x="8" y="209" width="161" height="32"/>
@@ -196,7 +199,7 @@
         </Component>
         <Component class="javax.swing.JLabel" name="rgInscricaoEstadualLabel">
           <Properties>
-            <Property name="text" type="java.lang.String" value="RG/Inscri&#xe7;&#xe3;o Estadual"/>
+            <Property name="text" type="java.lang.String" value="RG"/>
           </Properties>
           <Constraints>
             <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
@@ -392,12 +395,7 @@
         <Component class="javax.swing.JComboBox" name="tipoSanguineoComboBox">
           <Properties>
             <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
-              <StringArray count="4">
-                <StringItem index="0" value="Item 1"/>
-                <StringItem index="1" value="Item 2"/>
-                <StringItem index="2" value="Item 3"/>
-                <StringItem index="3" value="Item 4"/>
-              </StringArray>
+              <StringArray count="0"/>
             </Property>
           </Properties>
           <AuxValues>
@@ -412,12 +410,7 @@
         <Component class="javax.swing.JComboBox" name="sexoComboBox">
           <Properties>
             <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
-              <StringArray count="4">
-                <StringItem index="0" value="Item 1"/>
-                <StringItem index="1" value="Item 2"/>
-                <StringItem index="2" value="Item 3"/>
-                <StringItem index="3" value="Item 4"/>
-              </StringArray>
+              <StringArray count="0"/>
             </Property>
           </Properties>
           <AuxValues>

@@ -113,8 +113,10 @@ public class TelaCadastroAcompanhante extends javax.swing.JDialog {
         });
         jPanelDados.add(nomeField, new org.netbeans.lib.awtextra.AbsoluteConstraints(7, 81, 594, 28));
 
-        cpfCnpjLabel.setText("CPF/CNPJ");
+        cpfCnpjLabel.setText("CPF");
         jPanelDados.add(cpfCnpjLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(608, 62, 65, -1));
+
+        cpfCnpjField.setText("  .   .   /    -");
         jPanelDados.add(cpfCnpjField, new org.netbeans.lib.awtextra.AbsoluteConstraints(607, 81, 139, 30));
         jPanelDados.add(emailField, new org.netbeans.lib.awtextra.AbsoluteConstraints(437, 140, 310, 30));
 

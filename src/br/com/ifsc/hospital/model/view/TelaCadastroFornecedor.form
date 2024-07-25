@@ -174,12 +174,7 @@
                           <Group type="102" attributes="0">
                               <Group type="103" groupAlignment="0" attributes="0">
                                   <Component id="rgInscricaoEstadualField" alignment="0" min="-2" pref="161" max="-2" attributes="0"/>
-                                  <Component id="rgInscricaoEstadualLabel" alignment="0" min="-2" max="-2" attributes="0"/>
-                              </Group>
-                              <EmptySpace min="-2" pref="6" max="-2" attributes="0"/>
-                              <Group type="103" groupAlignment="0" attributes="0">
-                                  <Component id="sexoLabel" min="-2" pref="37" max="-2" attributes="0"/>
-                                  <Component id="sexoComboBox" min="-2" pref="113" max="-2" attributes="0"/>
+                                  <Component id="inscricaoEstadualLabel" alignment="0" min="-2" max="-2" attributes="0"/>
                               </Group>
                               <EmptySpace max="32767" attributes="0"/>
                               <Group type="103" groupAlignment="0" attributes="0">
@@ -199,7 +194,7 @@
                               </Group>
                               <EmptySpace max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="0" attributes="0">
-                                  <Component id="cpfCnpjLabel" alignment="0" min="-2" pref="65" max="-2" attributes="0"/>
+                                  <Component id="cnpjLabel" alignment="0" min="-2" pref="65" max="-2" attributes="0"/>
                                   <Component id="cpfCnpjField" alignment="0" min="-2" pref="139" max="-2" attributes="0"/>
                               </Group>
                           </Group>
@@ -231,7 +226,7 @@
                           <EmptySpace min="6" pref="6" max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="0" attributes="0">
                               <Group type="102" alignment="0" attributes="0">
-                                  <Component id="cpfCnpjLabel" min="-2" max="-2" attributes="0"/>
+                                  <Component id="cnpjLabel" min="-2" max="-2" attributes="0"/>
                                   <EmptySpace max="-2" attributes="0"/>
                                   <Group type="103" groupAlignment="3" attributes="0">
                                       <Component id="cpfCnpjField" alignment="3" min="-2" pref="31" max="-2" attributes="0"/>
@@ -241,15 +236,9 @@
                               <Component id="nomeSocialLabel" alignment="0" min="-2" max="-2" attributes="0"/>
                           </Group>
                           <EmptySpace max="-2" attributes="0"/>
-                          <Group type="103" groupAlignment="3" attributes="0">
-                              <Component id="rgInscricaoEstadualLabel" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="sexoLabel" alignment="3" min="-2" max="-2" attributes="0"/>
-                          </Group>
+                          <Component id="inscricaoEstadualLabel" min="-2" max="-2" attributes="0"/>
                           <EmptySpace max="-2" attributes="0"/>
-                          <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                              <Component id="sexoComboBox" pref="32" max="32767" attributes="0"/>
-                              <Component id="rgInscricaoEstadualField" max="32767" attributes="0"/>
-                          </Group>
+                          <Component id="rgInscricaoEstadualField" min="-2" pref="32" max="-2" attributes="0"/>
                       </Group>
                       <Group type="102" attributes="0">
                           <Group type="103" groupAlignment="0" attributes="0">
@@ -343,16 +332,19 @@
             <Property name="text" type="java.lang.String" value="  /  /    "/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JLabel" name="cpfCnpjLabel">
+        <Component class="javax.swing.JLabel" name="cnpjLabel">
           <Properties>
-            <Property name="text" type="java.lang.String" value="CPF"/>
+            <Property name="text" type="java.lang.String" value="CNPJ"/>
           </Properties>
         </Component>
         <Component class="javax.swing.JTextField" name="cpfCnpjField">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="  .   .   /    -"/>
+          </Properties>
         </Component>
         <Component class="javax.swing.JTextField" name="rgInscricaoEstadualField">
         </Component>
-        <Component class="javax.swing.JLabel" name="rgInscricaoEstadualLabel">
+        <Component class="javax.swing.JLabel" name="inscricaoEstadualLabel">
           <Properties>
             <Property name="text" type="java.lang.String" value="Inscri&#xe7;&#xe3;o Estadual"/>
           </Properties>
@@ -363,11 +355,6 @@
           </Properties>
         </Component>
         <Component class="javax.swing.JTextField" name="nomeSocialField">
-        </Component>
-        <Component class="javax.swing.JLabel" name="sexoLabel">
-          <Properties>
-            <Property name="text" type="java.lang.String" value="Sexo"/>
-          </Properties>
         </Component>
         <Component class="javax.swing.JTextField" name="emailField">
         </Component>
@@ -436,21 +423,6 @@
           </Properties>
         </Component>
         <Component class="javax.swing.JTextField" name="complementoField">
-        </Component>
-        <Component class="javax.swing.JComboBox" name="sexoComboBox">
-          <Properties>
-            <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
-              <StringArray count="4">
-                <StringItem index="0" value="Item 1"/>
-                <StringItem index="1" value="Item 2"/>
-                <StringItem index="2" value="Item 3"/>
-                <StringItem index="3" value="Item 4"/>
-              </StringArray>
-            </Property>
-          </Properties>
-          <AuxValues>
-            <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
-          </AuxValues>
         </Component>
         <Component class="javax.swing.JLabel" name="jLabel1">
           <Properties>

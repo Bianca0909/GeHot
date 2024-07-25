@@ -37,7 +37,6 @@ public class TelaCadastroEnfermeiro extends javax.swing.JDialog {
         jPanelDados = new javax.swing.JPanel();
         nomeLabel = new javax.swing.JLabel();
         idLabel = new javax.swing.JLabel();
-        dataCadastroLabel = new javax.swing.JLabel();
         idField = new javax.swing.JTextField();
         nomeField = new javax.swing.JTextField();
         dataCadastroField = new javax.swing.JTextField();
@@ -47,7 +46,6 @@ public class TelaCadastroEnfermeiro extends javax.swing.JDialog {
         rgInscricaoEstadualLabel = new javax.swing.JLabel();
         nomeSocialLabel = new javax.swing.JLabel();
         nomeSocialField = new javax.swing.JTextField();
-        sexoLabel = new javax.swing.JLabel();
         emailField = new javax.swing.JTextField();
         emailLabel = new javax.swing.JLabel();
         fone1Label = new javax.swing.JLabel();
@@ -64,19 +62,19 @@ public class TelaCadastroEnfermeiro extends javax.swing.JDialog {
         logradouroField = new javax.swing.JTextField();
         complementoLabel = new javax.swing.JLabel();
         complementoField = new javax.swing.JTextField();
-        sexoComboBox = new javax.swing.JComboBox<>();
         crmLabel = new javax.swing.JLabel();
-        crmField = new javax.swing.JTextField();
+        creField = new javax.swing.JTextField();
         loginLabel = new javax.swing.JLabel();
         loginField = new javax.swing.JTextField();
         senhaLabel = new javax.swing.JLabel();
         senhaField = new javax.swing.JTextField();
         jLabel2 = new javax.swing.JLabel();
-        jTextField1 = new javax.swing.JTextField();
+        dataInicialField = new javax.swing.JTextField();
         jLabel3 = new javax.swing.JLabel();
-        jTextField2 = new javax.swing.JTextField();
+        dataFinalField = new javax.swing.JTextField();
         jLabel4 = new javax.swing.JLabel();
-        jTextField3 = new javax.swing.JTextField();
+        cargaHorarioField = new javax.swing.JTextField();
+        dataNascimentoLabel = new javax.swing.JLabel();
         jPanelBotoes = new javax.swing.JPanel();
         jButtonNovo = new javax.swing.JButton();
         jButtonCancelar = new javax.swing.JButton();
@@ -91,6 +89,7 @@ public class TelaCadastroEnfermeiro extends javax.swing.JDialog {
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         setTitle("Título do Form");
         setResizable(false);
+        getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jPaneltitulo.setBackground(new java.awt.Color(51, 153, 255));
         jPaneltitulo.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
@@ -105,12 +104,14 @@ public class TelaCadastroEnfermeiro extends javax.swing.JDialog {
         jPaneltitulo.setLayout(jPaneltituloLayout);
         jPaneltituloLayout.setHorizontalGroup(
             jPaneltituloLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jLabelTitulo, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(jLabelTitulo, javax.swing.GroupLayout.DEFAULT_SIZE, 746, Short.MAX_VALUE)
         );
         jPaneltituloLayout.setVerticalGroup(
             jPaneltituloLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addComponent(jLabelTitulo, javax.swing.GroupLayout.DEFAULT_SIZE, 39, Short.MAX_VALUE)
         );
+
+        getContentPane().add(jPaneltitulo, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 750, -1));
 
         jPanelDados.setBorder(javax.swing.BorderFactory.createEtchedBorder());
         jPanelDados.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -120,9 +121,6 @@ public class TelaCadastroEnfermeiro extends javax.swing.JDialog {
 
         idLabel.setText("Id");
         jPanelDados.add(idLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(8, 8, 37, -1));
-
-        dataCadastroLabel.setText("Data de cadastro");
-        jPanelDados.add(dataCadastroLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(608, 62, -1, -1));
 
         idField.setEditable(false);
         idField.addActionListener(new java.awt.event.ActionListener() {
@@ -140,14 +138,16 @@ public class TelaCadastroEnfermeiro extends javax.swing.JDialog {
         jPanelDados.add(nomeField, new org.netbeans.lib.awtextra.AbsoluteConstraints(8, 84, 594, 30));
 
         dataCadastroField.setText("  /  /    ");
-        jPanelDados.add(dataCadastroField, new org.netbeans.lib.awtextra.AbsoluteConstraints(608, 84, 139, 30));
+        jPanelDados.add(dataCadastroField, new org.netbeans.lib.awtextra.AbsoluteConstraints(608, 84, 130, 30));
 
-        cpfCnpjLabel.setText("CPF/CNPJ");
+        cpfCnpjLabel.setText("CPF");
         jPanelDados.add(cpfCnpjLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(608, 120, 65, -1));
-        jPanelDados.add(cpfCnpjField, new org.netbeans.lib.awtextra.AbsoluteConstraints(608, 140, 139, 30));
+
+        cpfCnpjField.setText("   .   .   -");
+        jPanelDados.add(cpfCnpjField, new org.netbeans.lib.awtextra.AbsoluteConstraints(608, 140, 130, 30));
         jPanelDados.add(rgInscricaoEstadualField, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 200, 161, 30));
 
-        rgInscricaoEstadualLabel.setText("RG/Inscrição Estadual");
+        rgInscricaoEstadualLabel.setText("RG");
         jPanelDados.add(rgInscricaoEstadualLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 180, -1, -1));
 
         nomeSocialLabel.setText("Nome social");
@@ -159,9 +159,6 @@ public class TelaCadastroEnfermeiro extends javax.swing.JDialog {
             }
         });
         jPanelDados.add(nomeSocialField, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 140, 594, 28));
-
-        sexoLabel.setText("Sexo");
-        jPanelDados.add(sexoLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 180, 37, -1));
         jPanelDados.add(emailField, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 260, 286, 30));
 
         emailLabel.setText("E-mail");
@@ -210,11 +207,9 @@ public class TelaCadastroEnfermeiro extends javax.swing.JDialog {
         jPanelDados.add(complementoLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 300, 88, -1));
         jPanelDados.add(complementoField, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 320, 300, 30));
 
-        jPanelDados.add(sexoComboBox, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 200, 113, 30));
-
         crmLabel.setText("CRE");
         jPanelDados.add(crmLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 360, 37, -1));
-        jPanelDados.add(crmField, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 380, 150, 30));
+        jPanelDados.add(creField, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 380, 150, 30));
 
         loginLabel.setText("Login");
         loginLabel.setToolTipText("");
@@ -233,15 +228,20 @@ public class TelaCadastroEnfermeiro extends javax.swing.JDialog {
 
         jLabel2.setText("Data inicial");
         jPanelDados.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 360, 69, -1));
-        jPanelDados.add(jTextField1, new org.netbeans.lib.awtextra.AbsoluteConstraints(169, 380, 70, 30));
+        jPanelDados.add(dataInicialField, new org.netbeans.lib.awtextra.AbsoluteConstraints(169, 380, 70, 30));
 
         jLabel3.setText("Data final");
         jPanelDados.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 360, 58, -1));
-        jPanelDados.add(jTextField2, new org.netbeans.lib.awtextra.AbsoluteConstraints(244, 380, 70, 30));
+        jPanelDados.add(dataFinalField, new org.netbeans.lib.awtextra.AbsoluteConstraints(244, 380, 70, 30));
 
         jLabel4.setText("Carga horária");
         jPanelDados.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 360, 80, -1));
-        jPanelDados.add(jTextField3, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 380, 80, 30));
+        jPanelDados.add(cargaHorarioField, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 380, 80, 30));
+
+        dataNascimentoLabel.setText("Data de nascimento");
+        jPanelDados.add(dataNascimentoLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(610, 60, -1, -1));
+
+        getContentPane().add(jPanelDados, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 49, 750, 424));
 
         jPanelBotoes.setBorder(javax.swing.BorderFactory.createEtchedBorder());
 
@@ -298,23 +298,7 @@ public class TelaCadastroEnfermeiro extends javax.swing.JDialog {
         });
         jPanelBotoes.add(jButtonSair);
 
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
-        getContentPane().setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPaneltitulo, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-            .addComponent(jPanelBotoes, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-            .addComponent(jPanelDados, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addComponent(jPaneltitulo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jPanelDados, javax.swing.GroupLayout.DEFAULT_SIZE, 429, Short.MAX_VALUE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jPanelBotoes, javax.swing.GroupLayout.PREFERRED_SIZE, 44, javax.swing.GroupLayout.PREFERRED_SIZE))
-        );
+        getContentPane().add(jPanelBotoes, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 476, 750, -1));
 
         pack();
         setLocationRelativeTo(null);
@@ -406,6 +390,7 @@ public class TelaCadastroEnfermeiro extends javax.swing.JDialog {
     private javax.swing.JLabel BairroLabel;
     private javax.swing.JLabel CidadeLabel;
     private javax.swing.JTextField bairroField;
+    private javax.swing.JTextField cargaHorarioField;
     private javax.swing.JTextField cepField;
     private javax.swing.JLabel cepLabel;
     private javax.swing.JTextField cidadeField;
@@ -413,10 +398,12 @@ public class TelaCadastroEnfermeiro extends javax.swing.JDialog {
     private javax.swing.JLabel complementoLabel;
     private javax.swing.JTextField cpfCnpjField;
     private javax.swing.JLabel cpfCnpjLabel;
-    private javax.swing.JTextField crmField;
+    private javax.swing.JTextField creField;
     private javax.swing.JLabel crmLabel;
     private javax.swing.JTextField dataCadastroField;
-    private javax.swing.JLabel dataCadastroLabel;
+    private javax.swing.JTextField dataFinalField;
+    private javax.swing.JTextField dataInicialField;
+    private javax.swing.JLabel dataNascimentoLabel;
     private javax.swing.JTextField emailField;
     private javax.swing.JLabel emailLabel;
     private javax.swing.JTextField fone1Field;
@@ -439,9 +426,6 @@ public class TelaCadastroEnfermeiro extends javax.swing.JDialog {
     private javax.swing.JPanel jPaneltitulo;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JTextArea jTextArea1;
-    private javax.swing.JTextField jTextField1;
-    private javax.swing.JTextField jTextField2;
-    private javax.swing.JTextField jTextField3;
     private javax.swing.JTextField loginField;
     private javax.swing.JLabel loginLabel;
     private javax.swing.JTextField logradouroField;
@@ -454,7 +438,5 @@ public class TelaCadastroEnfermeiro extends javax.swing.JDialog {
     private javax.swing.JLabel rgInscricaoEstadualLabel;
     private javax.swing.JTextField senhaField;
     private javax.swing.JLabel senhaLabel;
-    private javax.swing.JComboBox<String> sexoComboBox;
-    private javax.swing.JLabel sexoLabel;
     // End of variables declaration//GEN-END:variables
 }

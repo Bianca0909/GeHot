@@ -41,13 +41,12 @@ public class TelaCadastroFornecedor extends javax.swing.JDialog {
         idField = new javax.swing.JTextField();
         nomeField = new javax.swing.JTextField();
         dataCadastroField = new javax.swing.JTextField();
-        cpfCnpjLabel = new javax.swing.JLabel();
+        cnpjLabel = new javax.swing.JLabel();
         cpfCnpjField = new javax.swing.JTextField();
         rgInscricaoEstadualField = new javax.swing.JTextField();
-        rgInscricaoEstadualLabel = new javax.swing.JLabel();
+        inscricaoEstadualLabel = new javax.swing.JLabel();
         nomeSocialLabel = new javax.swing.JLabel();
         nomeSocialField = new javax.swing.JTextField();
-        sexoLabel = new javax.swing.JLabel();
         emailField = new javax.swing.JTextField();
         emailLabel = new javax.swing.JLabel();
         fone1Label = new javax.swing.JLabel();
@@ -64,7 +63,6 @@ public class TelaCadastroFornecedor extends javax.swing.JDialog {
         logradouroField = new javax.swing.JTextField();
         complementoLabel = new javax.swing.JLabel();
         complementoField = new javax.swing.JTextField();
-        sexoComboBox = new javax.swing.JComboBox<>();
         jLabel1 = new javax.swing.JLabel();
         contatoField = new javax.swing.JTextField();
         jPanelBotoes = new javax.swing.JPanel();
@@ -125,13 +123,13 @@ public class TelaCadastroFornecedor extends javax.swing.JDialog {
 
         dataCadastroField.setText("  /  /    ");
 
-        cpfCnpjLabel.setText("CPF");
+        cnpjLabel.setText("CNPJ");
 
-        rgInscricaoEstadualLabel.setText("Inscrição Estadual");
+        cpfCnpjField.setText("  .   .   /    -");
+
+        inscricaoEstadualLabel.setText("Inscrição Estadual");
 
         nomeSocialLabel.setText("Nome Fantasia");
-
-        sexoLabel.setText("Sexo");
 
         emailLabel.setText("E-mail");
 
@@ -163,8 +161,6 @@ public class TelaCadastroFornecedor extends javax.swing.JDialog {
         logradouroLabel.setText("Logradouro");
 
         complementoLabel.setText("Complemento");
-
-        sexoComboBox.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
 
         jLabel1.setText("Contato");
 
@@ -221,11 +217,7 @@ public class TelaCadastroFornecedor extends javax.swing.JDialog {
                         .addGroup(jPanelDadosLayout.createSequentialGroup()
                             .addGroup(jPanelDadosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                 .addComponent(rgInscricaoEstadualField, javax.swing.GroupLayout.PREFERRED_SIZE, 161, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addComponent(rgInscricaoEstadualLabel))
-                            .addGap(6, 6, 6)
-                            .addGroup(jPanelDadosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                .addComponent(sexoLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addComponent(sexoComboBox, javax.swing.GroupLayout.PREFERRED_SIZE, 113, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addComponent(inscricaoEstadualLabel))
                             .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                             .addGroup(jPanelDadosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                 .addComponent(fone1Field, javax.swing.GroupLayout.PREFERRED_SIZE, 148, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -240,7 +232,7 @@ public class TelaCadastroFornecedor extends javax.swing.JDialog {
                                 .addComponent(nomeSocialField, javax.swing.GroupLayout.PREFERRED_SIZE, 594, javax.swing.GroupLayout.PREFERRED_SIZE))
                             .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                             .addGroup(jPanelDadosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                .addComponent(cpfCnpjLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 65, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(cnpjLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 65, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addComponent(cpfCnpjField, javax.swing.GroupLayout.PREFERRED_SIZE, 139, javax.swing.GroupLayout.PREFERRED_SIZE)))))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
@@ -264,20 +256,16 @@ public class TelaCadastroFornecedor extends javax.swing.JDialog {
                         .addGap(6, 6, 6)
                         .addGroup(jPanelDadosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(jPanelDadosLayout.createSequentialGroup()
-                                .addComponent(cpfCnpjLabel)
+                                .addComponent(cnpjLabel)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addGroup(jPanelDadosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                                     .addComponent(cpfCnpjField, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addComponent(nomeSocialField, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)))
                             .addComponent(nomeSocialLabel))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addGroup(jPanelDadosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(rgInscricaoEstadualLabel)
-                            .addComponent(sexoLabel))
+                        .addComponent(inscricaoEstadualLabel)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addGroup(jPanelDadosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(sexoComboBox, javax.swing.GroupLayout.DEFAULT_SIZE, 32, Short.MAX_VALUE)
-                            .addComponent(rgInscricaoEstadualField)))
+                        .addComponent(rgInscricaoEstadualField, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(jPanelDadosLayout.createSequentialGroup()
                         .addGroup(jPanelDadosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(fone1Label)
@@ -479,11 +467,11 @@ public class TelaCadastroFornecedor extends javax.swing.JDialog {
     private javax.swing.JTextField cepField;
     private javax.swing.JLabel cepLabel;
     private javax.swing.JTextField cidadeField;
+    private javax.swing.JLabel cnpjLabel;
     private javax.swing.JTextField complementoField;
     private javax.swing.JLabel complementoLabel;
     private javax.swing.JTextField contatoField;
     private javax.swing.JTextField cpfCnpjField;
-    private javax.swing.JLabel cpfCnpjLabel;
     private javax.swing.JTextField dataCadastroField;
     private javax.swing.JLabel dataCadastroLabel;
     private javax.swing.JTextField emailField;
@@ -494,6 +482,7 @@ public class TelaCadastroFornecedor extends javax.swing.JDialog {
     private javax.swing.JLabel fone2Label;
     private javax.swing.JTextField idField;
     private javax.swing.JLabel idLabel;
+    private javax.swing.JLabel inscricaoEstadualLabel;
     private javax.swing.JButton jButtonBuscar;
     private javax.swing.JButton jButtonCancelar;
     private javax.swing.JButton jButtonGravar;
@@ -513,8 +502,5 @@ public class TelaCadastroFornecedor extends javax.swing.JDialog {
     private javax.swing.JTextField nomeSocialField;
     private javax.swing.JLabel nomeSocialLabel;
     private javax.swing.JTextField rgInscricaoEstadualField;
-    private javax.swing.JLabel rgInscricaoEstadualLabel;
-    private javax.swing.JComboBox<String> sexoComboBox;
-    private javax.swing.JLabel sexoLabel;
     // End of variables declaration//GEN-END:variables
 }

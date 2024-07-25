@@ -45,11 +45,10 @@ public class TelaCadastroMedico extends javax.swing.JDialog {
         dataCadastroField = new javax.swing.JTextField();
         cpfCnpjLabel = new javax.swing.JLabel();
         cpfCnpjField = new javax.swing.JTextField();
-        rgInscricaoEstadualField = new javax.swing.JTextField();
+        rgField = new javax.swing.JTextField();
         rgInscricaoEstadualLabel = new javax.swing.JLabel();
         nomeSocialLabel = new javax.swing.JLabel();
         nomeSocialField = new javax.swing.JTextField();
-        sexoLabel = new javax.swing.JLabel();
         emailField = new javax.swing.JTextField();
         emailLabel = new javax.swing.JLabel();
         fone1Label = new javax.swing.JLabel();
@@ -66,7 +65,6 @@ public class TelaCadastroMedico extends javax.swing.JDialog {
         logradouroField = new javax.swing.JTextField();
         complementoLabel = new javax.swing.JLabel();
         complementoField = new javax.swing.JTextField();
-        sexoComboBox = new javax.swing.JComboBox<>();
         crmLabel = new javax.swing.JLabel();
         crmField = new javax.swing.JTextField();
         loginLabel = new javax.swing.JLabel();
@@ -133,7 +131,7 @@ public class TelaCadastroMedico extends javax.swing.JDialog {
         idLabel.setText("Id");
         jPanelDados.add(idLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(8, 8, 37, -1));
 
-        dataCadastroLabel.setText("Data de cadastro");
+        dataCadastroLabel.setText("Data de nascimento");
         jPanelDados.add(dataCadastroLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(608, 62, -1, -1));
 
         idField.setEditable(false);
@@ -142,32 +140,32 @@ public class TelaCadastroMedico extends javax.swing.JDialog {
                 idFieldActionPerformed(evt);
             }
         });
-        jPanelDados.add(idField, new org.netbeans.lib.awtextra.AbsoluteConstraints(8, 28, 49, -1));
+        jPanelDados.add(idField, new org.netbeans.lib.awtextra.AbsoluteConstraints(8, 28, 49, 30));
 
         nomeField.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 nomeFieldActionPerformed(evt);
             }
         });
-        jPanelDados.add(nomeField, new org.netbeans.lib.awtextra.AbsoluteConstraints(8, 84, 594, 31));
+        jPanelDados.add(nomeField, new org.netbeans.lib.awtextra.AbsoluteConstraints(8, 85, 594, 30));
 
+        dataCadastroField.setText("  /  /");
         dataCadastroField.setToolTipText("");
         jPanelDados.add(dataCadastroField, new org.netbeans.lib.awtextra.AbsoluteConstraints(608, 84, 139, 31));
 
-        cpfCnpjLabel.setText("CPF/CNPJ");
+        cpfCnpjLabel.setText("CPF");
         jPanelDados.add(cpfCnpjLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(608, 121, 65, -1));
-        jPanelDados.add(cpfCnpjField, new org.netbeans.lib.awtextra.AbsoluteConstraints(608, 143, 139, 35));
-        jPanelDados.add(rgInscricaoEstadualField, new org.netbeans.lib.awtextra.AbsoluteConstraints(8, 212, 161, 34));
 
-        rgInscricaoEstadualLabel.setText("RG/Inscrição Estadual");
+        cpfCnpjField.setText("   .   .   -");
+        jPanelDados.add(cpfCnpjField, new org.netbeans.lib.awtextra.AbsoluteConstraints(608, 143, 139, 35));
+        jPanelDados.add(rgField, new org.netbeans.lib.awtextra.AbsoluteConstraints(8, 212, 161, 34));
+
+        rgInscricaoEstadualLabel.setText("RG");
         jPanelDados.add(rgInscricaoEstadualLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(8, 190, -1, -1));
 
         nomeSocialLabel.setText("Nome social");
         jPanelDados.add(nomeSocialLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(8, 121, 75, -1));
         jPanelDados.add(nomeSocialField, new org.netbeans.lib.awtextra.AbsoluteConstraints(8, 143, 594, 35));
-
-        sexoLabel.setText("Sexo");
-        jPanelDados.add(sexoLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(175, 190, 37, -1));
         jPanelDados.add(emailField, new org.netbeans.lib.awtextra.AbsoluteConstraints(8, 274, 286, 30));
 
         emailLabel.setText("E-mail");
@@ -175,11 +173,14 @@ public class TelaCadastroMedico extends javax.swing.JDialog {
 
         fone1Label.setText("Fone 1");
         jPanelDados.add(fone1Label, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 190, 43, -1));
+
+        fone1Field.setText("(  )     -     ");
         jPanelDados.add(fone1Field, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 210, 148, 30));
 
         fone2Label.setText("Fone 2");
         jPanelDados.add(fone2Label, new org.netbeans.lib.awtextra.AbsoluteConstraints(610, 190, 43, -1));
 
+        fone2Field.setText("(  )     -     ");
         fone2Field.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 fone2FieldActionPerformed(evt);
@@ -213,8 +214,6 @@ public class TelaCadastroMedico extends javax.swing.JDialog {
         jPanelDados.add(complementoLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 310, 88, -1));
         jPanelDados.add(complementoField, new org.netbeans.lib.awtextra.AbsoluteConstraints(444, 330, 310, 30));
 
-        jPanelDados.add(sexoComboBox, new org.netbeans.lib.awtextra.AbsoluteConstraints(175, 212, 113, 34));
-
         crmLabel.setText("CRM");
         jPanelDados.add(crmLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(8, 364, 37, -1));
         jPanelDados.add(crmField, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 386, 158, 30));
@@ -246,7 +245,7 @@ public class TelaCadastroMedico extends javax.swing.JDialog {
         jPanelDados.add(cargaHoraria, new org.netbeans.lib.awtextra.AbsoluteConstraints(318, 386, 99, 30));
         jPanelDados.add(dataInicialField, new org.netbeans.lib.awtextra.AbsoluteConstraints(174, 386, -1, 30));
 
-        getContentPane().add(jPanelDados, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 49, 762, 431));
+        getContentPane().add(jPanelDados, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 49, 762, 430));
 
         jPanelBotoes.setBorder(javax.swing.BorderFactory.createEtchedBorder());
 
@@ -437,11 +436,9 @@ public class TelaCadastroMedico extends javax.swing.JDialog {
     private javax.swing.JLabel nomeLabel;
     private javax.swing.JTextField nomeSocialField;
     private javax.swing.JLabel nomeSocialLabel;
-    private javax.swing.JTextField rgInscricaoEstadualField;
+    private javax.swing.JTextField rgField;
     private javax.swing.JLabel rgInscricaoEstadualLabel;
     private javax.swing.JTextField senhaField;
     private javax.swing.JLabel senhaLabel;
-    private javax.swing.JComboBox<String> sexoComboBox;
-    private javax.swing.JLabel sexoLabel;
     // End of variables declaration//GEN-END:variables
 }
