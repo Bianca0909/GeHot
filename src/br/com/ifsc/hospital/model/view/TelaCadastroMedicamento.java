@@ -106,8 +106,6 @@ public class TelaCadastroMedicamento extends javax.swing.JDialog {
 
         jLabel2.setText("Laboratório");
 
-        jComboBox2.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
-
         jLabel4.setText("Código de barras");
 
         jLabel6.setText("Observação");
