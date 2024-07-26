@@ -97,14 +97,14 @@ public class TelaCadastroAla extends javax.swing.JDialog {
 
         labelDescricao.setText("Descrição");
         jPanelDados.add(labelDescricao, new org.netbeans.lib.awtextra.AbsoluteConstraints(8, 62, 60, -1));
-        jPanelDados.add(idDescricao, new org.netbeans.lib.awtextra.AbsoluteConstraints(8, 84, 610, 38));
+        jPanelDados.add(idDescricao, new org.netbeans.lib.awtextra.AbsoluteConstraints(8, 84, 610, 30));
 
         statusLabel.setText("Status");
         jPanelDados.add(statusLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(636, 62, 37, -1));
 
-        jPanelDados.add(statusComboBox, new org.netbeans.lib.awtextra.AbsoluteConstraints(630, 84, 122, 40));
+        jPanelDados.add(statusComboBox, new org.netbeans.lib.awtextra.AbsoluteConstraints(630, 84, 122, 30));
 
-        getContentPane().add(jPanelDados, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 49, 760, 130));
+        getContentPane().add(jPanelDados, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 49, 760, 120));
 
         jPanelBotoes.setBorder(javax.swing.BorderFactory.createEtchedBorder());
 
@@ -161,7 +161,7 @@ public class TelaCadastroAla extends javax.swing.JDialog {
         });
         jPanelBotoes.add(jButtonSair);
 
-        getContentPane().add(jPanelBotoes, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 180, 760, -1));
+        getContentPane().add(jPanelBotoes, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 170, 760, -1));
 
         pack();
         setLocationRelativeTo(null);
