@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package br.com.ifsc.hospital.model.view;
+package br.com.ifsc.hospital.view;
 
 import br.com.ifsc.hospital.utilities.Utilities;
 
@@ -313,6 +313,7 @@ public class TelaCadastroFornecedor extends javax.swing.JDialog {
         jButtonNovo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/br/com/ifsc/hospital/images/Create.png"))); // NOI18N
         jButtonNovo.setText("Novo");
         jButtonNovo.setActionCommand("1");
+        jButtonNovo.setEnabled(false);
         jButtonNovo.setMinimumSize(new java.awt.Dimension(67, 25));
         jButtonNovo.setPreferredSize(new java.awt.Dimension(100, 30));
         jButtonNovo.addActionListener(new java.awt.event.ActionListener() {
@@ -325,7 +326,6 @@ public class TelaCadastroFornecedor extends javax.swing.JDialog {
         jButtonCancelar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/br/com/ifsc/hospital/images/Cancel.png"))); // NOI18N
         jButtonCancelar.setText("Cancelar");
         jButtonCancelar.setActionCommand("0");
-        jButtonCancelar.setEnabled(false);
         jButtonCancelar.setPreferredSize(new java.awt.Dimension(100, 30));
         jButtonCancelar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -337,7 +337,6 @@ public class TelaCadastroFornecedor extends javax.swing.JDialog {
         jButtonGravar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/br/com/ifsc/hospital/images/Download.png"))); // NOI18N
         jButtonGravar.setText("Gravar");
         jButtonGravar.setActionCommand("0");
-        jButtonGravar.setEnabled(false);
         jButtonGravar.setPreferredSize(new java.awt.Dimension(100, 30));
         jButtonGravar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -349,6 +348,7 @@ public class TelaCadastroFornecedor extends javax.swing.JDialog {
         jButtonBuscar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/br/com/ifsc/hospital/images/Find.png"))); // NOI18N
         jButtonBuscar.setText("Buscar");
         jButtonBuscar.setActionCommand("1");
+        jButtonBuscar.setEnabled(false);
         jButtonBuscar.setPreferredSize(new java.awt.Dimension(100, 30));
         jPanelBotoes.add(jButtonBuscar);
 

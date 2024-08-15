@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package br.com.ifsc.hospital.model.view;
+package br.com.ifsc.hospital.view;
 
 import br.com.ifsc.hospital.utilities.Utilities;
 
@@ -11,12 +11,12 @@ import br.com.ifsc.hospital.utilities.Utilities;
  *
  * @author professor
  */
-public class TelaCadastroFarmaceutico extends javax.swing.JDialog {
+public class TelaCadastroUsuario extends javax.swing.JDialog {
 
     /**
      * Creates new form ModeloCadastral_2024
      */
-    public TelaCadastroFarmaceutico(java.awt.Frame parent, boolean modal) {
+    public TelaCadastroUsuario(java.awt.Frame parent, boolean modal) {
         super(parent, modal);
         initComponents();
     }
@@ -41,7 +41,7 @@ public class TelaCadastroFarmaceutico extends javax.swing.JDialog {
         idField = new javax.swing.JTextField();
         nomeField = new javax.swing.JTextField();
         dataCadastroField = new javax.swing.JTextField();
-        cpfLabel = new javax.swing.JLabel();
+        cpfCnpjLabel = new javax.swing.JLabel();
         cpfField = new javax.swing.JTextField();
         rgField = new javax.swing.JTextField();
         rgInscricaoEstadualLabel = new javax.swing.JLabel();
@@ -63,18 +63,10 @@ public class TelaCadastroFarmaceutico extends javax.swing.JDialog {
         logradouroField = new javax.swing.JTextField();
         complementoLabel = new javax.swing.JLabel();
         complementoField = new javax.swing.JTextField();
-        crfLabel = new javax.swing.JLabel();
-        crfField = new javax.swing.JTextField();
         loginLabel = new javax.swing.JLabel();
         loginField = new javax.swing.JTextField();
         senhaLabel = new javax.swing.JLabel();
         senhaField = new javax.swing.JTextField();
-        dataInicialLabel = new javax.swing.JLabel();
-        dataFinalLabel = new javax.swing.JLabel();
-        dataFinalField = new javax.swing.JTextField();
-        cargaHorariaLabel = new javax.swing.JLabel();
-        cargaHorariaField = new javax.swing.JTextField();
-        dataInicialField = new javax.swing.JTextField();
         jPanelBotoes = new javax.swing.JPanel();
         jButtonNovo = new javax.swing.JButton();
         jButtonCancelar = new javax.swing.JButton();
@@ -97,25 +89,23 @@ public class TelaCadastroFarmaceutico extends javax.swing.JDialog {
         jLabelTitulo.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
         jLabelTitulo.setForeground(new java.awt.Color(255, 255, 255));
         jLabelTitulo.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabelTitulo.setText("Cadastro de Farmaceutico");
+        jLabelTitulo.setText("Cadastro de Usuário");
         jLabelTitulo.setToolTipText("");
 
         javax.swing.GroupLayout jPaneltituloLayout = new javax.swing.GroupLayout(jPaneltitulo);
         jPaneltitulo.setLayout(jPaneltituloLayout);
         jPaneltituloLayout.setHorizontalGroup(
             jPaneltituloLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPaneltituloLayout.createSequentialGroup()
-                .addComponent(jLabelTitulo, javax.swing.GroupLayout.DEFAULT_SIZE, 750, Short.MAX_VALUE)
-                .addContainerGap())
+            .addComponent(jLabelTitulo, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         jPaneltituloLayout.setVerticalGroup(
             jPaneltituloLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addComponent(jLabelTitulo, javax.swing.GroupLayout.DEFAULT_SIZE, 39, Short.MAX_VALUE)
         );
 
-        getContentPane().add(jPaneltitulo, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 760, -1));
+        getContentPane().add(jPaneltitulo, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 762, -1));
 
-        jPanelDados.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        jPanelDados.setBorder(javax.swing.BorderFactory.createEtchedBorder());
         jPanelDados.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         nomeLabel.setText("Nome");
@@ -133,46 +123,45 @@ public class TelaCadastroFarmaceutico extends javax.swing.JDialog {
                 idFieldActionPerformed(evt);
             }
         });
-        jPanelDados.add(idField, new org.netbeans.lib.awtextra.AbsoluteConstraints(8, 28, 49, 30));
+        jPanelDados.add(idField, new org.netbeans.lib.awtextra.AbsoluteConstraints(8, 28, 49, 28));
 
         nomeField.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 nomeFieldActionPerformed(evt);
             }
         });
-        jPanelDados.add(nomeField, new org.netbeans.lib.awtextra.AbsoluteConstraints(8, 84, 594, 32));
+        jPanelDados.add(nomeField, new org.netbeans.lib.awtextra.AbsoluteConstraints(8, 84, 594, 33));
 
         dataCadastroField.setText("  /  /");
         dataCadastroField.setToolTipText("");
-        jPanelDados.add(dataCadastroField, new org.netbeans.lib.awtextra.AbsoluteConstraints(608, 84, 139, 32));
+        jPanelDados.add(dataCadastroField, new org.netbeans.lib.awtextra.AbsoluteConstraints(608, 84, 139, 33));
 
-        cpfLabel.setText("CPF");
-        jPanelDados.add(cpfLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(608, 122, 65, -1));
+        cpfCnpjLabel.setText("CPF");
+        jPanelDados.add(cpfCnpjLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(608, 123, 65, -1));
 
         cpfField.setText("   .   .   -");
-        jPanelDados.add(cpfField, new org.netbeans.lib.awtextra.AbsoluteConstraints(610, 140, 139, 30));
-        jPanelDados.add(rgField, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 200, 161, 30));
+        jPanelDados.add(cpfField, new org.netbeans.lib.awtextra.AbsoluteConstraints(608, 145, 139, 31));
+        jPanelDados.add(rgField, new org.netbeans.lib.awtextra.AbsoluteConstraints(8, 210, 161, 31));
 
         rgInscricaoEstadualLabel.setText("RG");
-        jPanelDados.add(rgInscricaoEstadualLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 180, -1, -1));
+        jPanelDados.add(rgInscricaoEstadualLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(8, 188, -1, -1));
 
         nomeSocialLabel.setText("Nome social");
-        jPanelDados.add(nomeSocialLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(8, 122, 75, -1));
-        jPanelDados.add(nomeSocialField, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 140, 594, 30));
-        jPanelDados.add(emailField, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 260, 286, 30));
+        jPanelDados.add(nomeSocialLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(8, 123, 75, -1));
+        jPanelDados.add(nomeSocialField, new org.netbeans.lib.awtextra.AbsoluteConstraints(8, 145, 594, 31));
+        jPanelDados.add(emailField, new org.netbeans.lib.awtextra.AbsoluteConstraints(8, 269, 286, 30));
 
         emailLabel.setText("E-mail");
-        jPanelDados.add(emailLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 240, 37, -1));
+        jPanelDados.add(emailLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(8, 247, 37, -1));
 
         fone1Label.setText("Fone 1");
-        jPanelDados.add(fone1Label, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 180, 43, -1));
+        jPanelDados.add(fone1Label, new org.netbeans.lib.awtextra.AbsoluteConstraints(447, 188, 43, -1));
 
         fone1Field.setText("(  )     -     ");
-        fone1Field.setToolTipText("");
-        jPanelDados.add(fone1Field, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 200, 148, 30));
+        jPanelDados.add(fone1Field, new org.netbeans.lib.awtextra.AbsoluteConstraints(447, 210, 148, 30));
 
         fone2Label.setText("Fone 2");
-        jPanelDados.add(fone2Label, new org.netbeans.lib.awtextra.AbsoluteConstraints(590, 180, 43, -1));
+        jPanelDados.add(fone2Label, new org.netbeans.lib.awtextra.AbsoluteConstraints(607, 188, 43, -1));
 
         fone2Field.setText("(  )     -     ");
         fone2Field.addActionListener(new java.awt.event.ActionListener() {
@@ -180,78 +169,63 @@ public class TelaCadastroFarmaceutico extends javax.swing.JDialog {
                 fone2FieldActionPerformed(evt);
             }
         });
-        jPanelDados.add(fone2Field, new org.netbeans.lib.awtextra.AbsoluteConstraints(590, 200, 159, 30));
-        jPanelDados.add(cepField, new org.netbeans.lib.awtextra.AbsoluteConstraints(311, 260, 120, 30));
+        jPanelDados.add(fone2Field, new org.netbeans.lib.awtextra.AbsoluteConstraints(607, 210, 140, 30));
+        jPanelDados.add(cepField, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 270, 130, 30));
 
         cepLabel.setText("CEP");
-        jPanelDados.add(cepLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 240, 43, -1));
+        jPanelDados.add(cepLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(306, 247, 43, -1));
 
         CidadeLabel.setText("Cidade");
-        jPanelDados.add(CidadeLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 240, 43, -1));
+        jPanelDados.add(CidadeLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 250, 43, -1));
 
         cidadeField.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 cidadeFieldActionPerformed(evt);
             }
         });
-        jPanelDados.add(cidadeField, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 260, 310, 30));
+        jPanelDados.add(cidadeField, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 270, 310, 30));
 
         BairroLabel.setText("Bairro");
-        jPanelDados.add(BairroLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 300, 43, -1));
-        jPanelDados.add(bairroField, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 320, 161, 30));
+        jPanelDados.add(BairroLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 310, 43, -1));
+        jPanelDados.add(bairroField, new org.netbeans.lib.awtextra.AbsoluteConstraints(8, 330, 166, 30));
 
         logradouroLabel.setText("Logradouro");
-        jPanelDados.add(logradouroLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 300, 72, -1));
-        jPanelDados.add(logradouroField, new org.netbeans.lib.awtextra.AbsoluteConstraints(174, 320, 260, 30));
+        jPanelDados.add(logradouroLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 310, 72, -1));
+
+        logradouroField.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                logradouroFieldActionPerformed(evt);
+            }
+        });
+        jPanelDados.add(logradouroField, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 330, 258, 30));
 
         complementoLabel.setText("Complemento");
-        jPanelDados.add(complementoLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 300, 88, -1));
-        jPanelDados.add(complementoField, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 320, 310, 30));
-
-        crfLabel.setText("CRF");
-        jPanelDados.add(crfLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 360, 37, -1));
-        jPanelDados.add(crfField, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 380, 160, 30));
+        jPanelDados.add(complementoLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 310, 88, -1));
+        jPanelDados.add(complementoField, new org.netbeans.lib.awtextra.AbsoluteConstraints(444, 330, 310, 30));
 
         loginLabel.setText("Login");
         loginLabel.setToolTipText("");
-        jPanelDados.add(loginLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(408, 360, 37, -1));
-        jPanelDados.add(loginField, new org.netbeans.lib.awtextra.AbsoluteConstraints(408, 380, 165, 30));
+        jPanelDados.add(loginLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 370, 37, -1));
+        jPanelDados.add(loginField, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 390, 160, 30));
 
         senhaLabel.setText("Senha");
-        jPanelDados.add(senhaLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(579, 360, 37, -1));
+        jPanelDados.add(senhaLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 370, 37, -1));
 
         senhaField.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 senhaFieldActionPerformed(evt);
             }
         });
-        jPanelDados.add(senhaField, new org.netbeans.lib.awtextra.AbsoluteConstraints(579, 380, 172, 30));
+        jPanelDados.add(senhaField, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 390, 150, 30));
 
-        dataInicialLabel.setText("Data inicial");
-        jPanelDados.add(dataInicialLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(176, 360, 68, -1));
+        getContentPane().add(jPanelDados, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 49, 760, 430));
 
-        dataFinalLabel.setText("Data final");
-        jPanelDados.add(dataFinalLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 360, 64, -1));
-        jPanelDados.add(dataFinalField, new org.netbeans.lib.awtextra.AbsoluteConstraints(244, 380, -1, 30));
-
-        cargaHorariaLabel.setText("Carga horária");
-        jPanelDados.add(cargaHorariaLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 360, 82, -1));
-
-        cargaHorariaField.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                cargaHorariaFieldActionPerformed(evt);
-            }
-        });
-        jPanelDados.add(cargaHorariaField, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 380, 70, 30));
-        jPanelDados.add(dataInicialField, new org.netbeans.lib.awtextra.AbsoluteConstraints(174, 380, -1, 30));
-
-        getContentPane().add(jPanelDados, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 50, 760, 430));
-
-        jPanelBotoes.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        jPanelBotoes.setBorder(javax.swing.BorderFactory.createEtchedBorder());
 
         jButtonNovo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/br/com/ifsc/hospital/images/Create.png"))); // NOI18N
         jButtonNovo.setText("Novo");
         jButtonNovo.setActionCommand("1");
+        jButtonNovo.setEnabled(false);
         jButtonNovo.setMinimumSize(new java.awt.Dimension(67, 25));
         jButtonNovo.setPreferredSize(new java.awt.Dimension(100, 30));
         jButtonNovo.addActionListener(new java.awt.event.ActionListener() {
@@ -264,7 +238,6 @@ public class TelaCadastroFarmaceutico extends javax.swing.JDialog {
         jButtonCancelar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/br/com/ifsc/hospital/images/Cancel.png"))); // NOI18N
         jButtonCancelar.setText("Cancelar");
         jButtonCancelar.setActionCommand("0");
-        jButtonCancelar.setEnabled(false);
         jButtonCancelar.setPreferredSize(new java.awt.Dimension(100, 30));
         jButtonCancelar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -276,7 +249,6 @@ public class TelaCadastroFarmaceutico extends javax.swing.JDialog {
         jButtonGravar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/br/com/ifsc/hospital/images/Download.png"))); // NOI18N
         jButtonGravar.setText("Gravar");
         jButtonGravar.setActionCommand("0");
-        jButtonGravar.setEnabled(false);
         jButtonGravar.setPreferredSize(new java.awt.Dimension(100, 30));
         jButtonGravar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -288,6 +260,7 @@ public class TelaCadastroFarmaceutico extends javax.swing.JDialog {
         jButtonBuscar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/br/com/ifsc/hospital/images/Find.png"))); // NOI18N
         jButtonBuscar.setText("Buscar");
         jButtonBuscar.setActionCommand("1");
+        jButtonBuscar.setEnabled(false);
         jButtonBuscar.setPreferredSize(new java.awt.Dimension(100, 30));
         jPanelBotoes.add(jButtonBuscar);
 
@@ -302,7 +275,7 @@ public class TelaCadastroFarmaceutico extends javax.swing.JDialog {
         });
         jPanelBotoes.add(jButtonSair);
 
-        getContentPane().add(jPanelBotoes, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 480, 760, -1));
+        getContentPane().add(jPanelBotoes, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 480, 762, -1));
 
         pack();
         setLocationRelativeTo(null);
@@ -344,9 +317,9 @@ public class TelaCadastroFarmaceutico extends javax.swing.JDialog {
         // TODO add your handling code here:
     }//GEN-LAST:event_senhaFieldActionPerformed
 
-    private void cargaHorariaFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cargaHorariaFieldActionPerformed
+    private void logradouroFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_logradouroFieldActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_cargaHorariaFieldActionPerformed
+    }//GEN-LAST:event_logradouroFieldActionPerformed
 
     /**
      * @param args the command line arguments
@@ -365,13 +338,13 @@ public class TelaCadastroFarmaceutico extends javax.swing.JDialog {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(TelaCadastroFarmaceutico.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(TelaCadastroUsuario.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(TelaCadastroFarmaceutico.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(TelaCadastroUsuario.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(TelaCadastroFarmaceutico.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(TelaCadastroUsuario.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(TelaCadastroFarmaceutico.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(TelaCadastroUsuario.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
         //</editor-fold>
 
@@ -394,23 +367,15 @@ public class TelaCadastroFarmaceutico extends javax.swing.JDialog {
     private javax.swing.JLabel BairroLabel;
     private javax.swing.JLabel CidadeLabel;
     private javax.swing.JTextField bairroField;
-    private javax.swing.JTextField cargaHorariaField;
-    private javax.swing.JLabel cargaHorariaLabel;
     private javax.swing.JTextField cepField;
     private javax.swing.JLabel cepLabel;
     private javax.swing.JTextField cidadeField;
     private javax.swing.JTextField complementoField;
     private javax.swing.JLabel complementoLabel;
+    private javax.swing.JLabel cpfCnpjLabel;
     private javax.swing.JTextField cpfField;
-    private javax.swing.JLabel cpfLabel;
-    private javax.swing.JTextField crfField;
-    private javax.swing.JLabel crfLabel;
     private javax.swing.JTextField dataCadastroField;
     private javax.swing.JLabel dataCadastroLabel;
-    private javax.swing.JTextField dataFinalField;
-    private javax.swing.JLabel dataFinalLabel;
-    private javax.swing.JTextField dataInicialField;
-    private javax.swing.JLabel dataInicialLabel;
     private javax.swing.JTextField emailField;
     private javax.swing.JLabel emailLabel;
     private javax.swing.JTextField fone1Field;
