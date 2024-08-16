@@ -147,6 +147,7 @@ public class TelaCadastroAcompanhante extends javax.swing.JDialog {
         jButtonNovo.setActionCommand("1");
         jButtonNovo.setMinimumSize(new java.awt.Dimension(67, 25));
         jButtonNovo.setPreferredSize(new java.awt.Dimension(100, 30));
+        jButtonNovo.setRolloverSelectedIcon(new javax.swing.ImageIcon(getClass().getResource("/br/com/ifsc/hospital/images/Create.png"))); // NOI18N
         jButtonNovo.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButtonNovoActionPerformed(evt);
@@ -159,6 +160,7 @@ public class TelaCadastroAcompanhante extends javax.swing.JDialog {
         jButtonCancelar.setActionCommand("0");
         jButtonCancelar.setEnabled(false);
         jButtonCancelar.setPreferredSize(new java.awt.Dimension(100, 30));
+        jButtonCancelar.setSelectedIcon(new javax.swing.ImageIcon(getClass().getResource("/br/com/ifsc/hospital/images/Cancel.png"))); // NOI18N
         jButtonCancelar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButtonCancelarActionPerformed(evt);
@@ -171,6 +173,7 @@ public class TelaCadastroAcompanhante extends javax.swing.JDialog {
         jButtonGravar.setActionCommand("0");
         jButtonGravar.setEnabled(false);
         jButtonGravar.setPreferredSize(new java.awt.Dimension(100, 30));
+        jButtonGravar.setSelectedIcon(new javax.swing.ImageIcon(getClass().getResource("/br/com/ifsc/hospital/images/Download.png"))); // NOI18N
         jButtonGravar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButtonGravarActionPerformed(evt);
@@ -182,12 +185,14 @@ public class TelaCadastroAcompanhante extends javax.swing.JDialog {
         jButtonBuscar.setText("Buscar");
         jButtonBuscar.setActionCommand("1");
         jButtonBuscar.setPreferredSize(new java.awt.Dimension(100, 30));
+        jButtonBuscar.setSelectedIcon(new javax.swing.ImageIcon(getClass().getResource("/br/com/ifsc/hospital/images/Find.png"))); // NOI18N
         jPanelBotoes.add(jButtonBuscar);
 
         jButtonSair.setIcon(new javax.swing.ImageIcon(getClass().getResource("/br/com/ifsc/hospital/images/Exit.png"))); // NOI18N
         jButtonSair.setText("Sair");
         jButtonSair.setActionCommand("1");
         jButtonSair.setPreferredSize(new java.awt.Dimension(100, 30));
+        jButtonSair.setSelectedIcon(new javax.swing.ImageIcon(getClass().getResource("/br/com/ifsc/hospital/images/Exit.png"))); // NOI18N
         jButtonSair.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButtonSairActionPerformed(evt);

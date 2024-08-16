@@ -68,12 +68,6 @@ public class TelaCadastroEnfermeiro extends javax.swing.JDialog {
         loginField = new javax.swing.JTextField();
         senhaLabel = new javax.swing.JLabel();
         senhaField = new javax.swing.JTextField();
-        jLabel2 = new javax.swing.JLabel();
-        dataInicialField = new javax.swing.JTextField();
-        jLabel3 = new javax.swing.JLabel();
-        dataFinalField = new javax.swing.JTextField();
-        jLabel4 = new javax.swing.JLabel();
-        cargaHorarioField = new javax.swing.JTextField();
         dataNascimentoLabel = new javax.swing.JLabel();
         jPanelBotoes = new javax.swing.JPanel();
         jButtonNovo = new javax.swing.JButton();
@@ -213,30 +207,24 @@ public class TelaCadastroEnfermeiro extends javax.swing.JDialog {
 
         loginLabel.setText("Login");
         loginLabel.setToolTipText("");
-        jPanelDados.add(loginLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 360, 37, -1));
-        jPanelDados.add(loginField, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 380, 170, 30));
+        jPanelDados.add(loginLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 360, 37, -1));
+
+        loginField.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                loginFieldActionPerformed(evt);
+            }
+        });
+        jPanelDados.add(loginField, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 380, 170, 30));
 
         senhaLabel.setText("Senha");
-        jPanelDados.add(senhaLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(590, 360, 37, -1));
+        jPanelDados.add(senhaLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 360, 37, -1));
 
         senhaField.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 senhaFieldActionPerformed(evt);
             }
         });
-        jPanelDados.add(senhaField, new org.netbeans.lib.awtextra.AbsoluteConstraints(590, 380, 150, 30));
-
-        jLabel2.setText("Data inicial");
-        jPanelDados.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 360, 69, -1));
-        jPanelDados.add(dataInicialField, new org.netbeans.lib.awtextra.AbsoluteConstraints(169, 380, 70, 30));
-
-        jLabel3.setText("Data final");
-        jPanelDados.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 360, 58, -1));
-        jPanelDados.add(dataFinalField, new org.netbeans.lib.awtextra.AbsoluteConstraints(244, 380, 70, 30));
-
-        jLabel4.setText("Carga horária");
-        jPanelDados.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 360, 80, -1));
-        jPanelDados.add(cargaHorarioField, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 380, 80, 30));
+        jPanelDados.add(senhaField, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 380, 150, 30));
 
         dataNascimentoLabel.setText("Data de nascimento");
         jPanelDados.add(dataNascimentoLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(610, 60, -1, -1));
@@ -344,6 +332,10 @@ public class TelaCadastroEnfermeiro extends javax.swing.JDialog {
         // TODO add your handling code here:
     }//GEN-LAST:event_nomeSocialFieldActionPerformed
 
+    private void loginFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_loginFieldActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_loginFieldActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -390,7 +382,6 @@ public class TelaCadastroEnfermeiro extends javax.swing.JDialog {
     private javax.swing.JLabel BairroLabel;
     private javax.swing.JLabel CidadeLabel;
     private javax.swing.JTextField bairroField;
-    private javax.swing.JTextField cargaHorarioField;
     private javax.swing.JTextField cepField;
     private javax.swing.JLabel cepLabel;
     private javax.swing.JTextField cidadeField;
@@ -401,8 +392,6 @@ public class TelaCadastroEnfermeiro extends javax.swing.JDialog {
     private javax.swing.JTextField creField;
     private javax.swing.JLabel crmLabel;
     private javax.swing.JTextField dataCadastroField;
-    private javax.swing.JTextField dataFinalField;
-    private javax.swing.JTextField dataInicialField;
     private javax.swing.JLabel dataNascimentoLabel;
     private javax.swing.JTextField emailField;
     private javax.swing.JLabel emailLabel;
@@ -417,9 +406,6 @@ public class TelaCadastroEnfermeiro extends javax.swing.JDialog {
     private javax.swing.JButton jButtonGravar;
     private javax.swing.JButton jButtonNovo;
     private javax.swing.JButton jButtonSair;
-    private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel3;
-    private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabelTitulo;
     private javax.swing.JPanel jPanelBotoes;
     private javax.swing.JPanel jPanelDados;

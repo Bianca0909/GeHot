@@ -69,12 +69,6 @@ public class TelaCadastroFarmaceutico extends javax.swing.JDialog {
         loginField = new javax.swing.JTextField();
         senhaLabel = new javax.swing.JLabel();
         senhaField = new javax.swing.JTextField();
-        dataInicialLabel = new javax.swing.JLabel();
-        dataFinalLabel = new javax.swing.JLabel();
-        dataFinalField = new javax.swing.JTextField();
-        cargaHorariaLabel = new javax.swing.JLabel();
-        cargaHorariaField = new javax.swing.JTextField();
-        dataInicialField = new javax.swing.JTextField();
         jPanelBotoes = new javax.swing.JPanel();
         jButtonNovo = new javax.swing.JButton();
         jButtonCancelar = new javax.swing.JButton();
@@ -214,36 +208,18 @@ public class TelaCadastroFarmaceutico extends javax.swing.JDialog {
 
         loginLabel.setText("Login");
         loginLabel.setToolTipText("");
-        jPanelDados.add(loginLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(408, 360, 37, -1));
-        jPanelDados.add(loginField, new org.netbeans.lib.awtextra.AbsoluteConstraints(408, 380, 165, 30));
+        jPanelDados.add(loginLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 360, 37, -1));
+        jPanelDados.add(loginField, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 380, 165, 30));
 
         senhaLabel.setText("Senha");
-        jPanelDados.add(senhaLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(579, 360, 37, -1));
+        jPanelDados.add(senhaLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 360, 37, -1));
 
         senhaField.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 senhaFieldActionPerformed(evt);
             }
         });
-        jPanelDados.add(senhaField, new org.netbeans.lib.awtextra.AbsoluteConstraints(579, 380, 172, 30));
-
-        dataInicialLabel.setText("Data inicial");
-        jPanelDados.add(dataInicialLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(176, 360, 68, -1));
-
-        dataFinalLabel.setText("Data final");
-        jPanelDados.add(dataFinalLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 360, 64, -1));
-        jPanelDados.add(dataFinalField, new org.netbeans.lib.awtextra.AbsoluteConstraints(244, 380, -1, 30));
-
-        cargaHorariaLabel.setText("Carga horária");
-        jPanelDados.add(cargaHorariaLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 360, 82, -1));
-
-        cargaHorariaField.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                cargaHorariaFieldActionPerformed(evt);
-            }
-        });
-        jPanelDados.add(cargaHorariaField, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 380, 70, 30));
-        jPanelDados.add(dataInicialField, new org.netbeans.lib.awtextra.AbsoluteConstraints(174, 380, -1, 30));
+        jPanelDados.add(senhaField, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 380, 172, 30));
 
         getContentPane().add(jPanelDados, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 50, 760, 430));
 
@@ -344,10 +320,6 @@ public class TelaCadastroFarmaceutico extends javax.swing.JDialog {
         // TODO add your handling code here:
     }//GEN-LAST:event_senhaFieldActionPerformed
 
-    private void cargaHorariaFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cargaHorariaFieldActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_cargaHorariaFieldActionPerformed
-
     /**
      * @param args the command line arguments
      */
@@ -394,8 +366,6 @@ public class TelaCadastroFarmaceutico extends javax.swing.JDialog {
     private javax.swing.JLabel BairroLabel;
     private javax.swing.JLabel CidadeLabel;
     private javax.swing.JTextField bairroField;
-    private javax.swing.JTextField cargaHorariaField;
-    private javax.swing.JLabel cargaHorariaLabel;
     private javax.swing.JTextField cepField;
     private javax.swing.JLabel cepLabel;
     private javax.swing.JTextField cidadeField;
@@ -407,10 +377,6 @@ public class TelaCadastroFarmaceutico extends javax.swing.JDialog {
     private javax.swing.JLabel crfLabel;
     private javax.swing.JTextField dataCadastroField;
     private javax.swing.JLabel dataCadastroLabel;
-    private javax.swing.JTextField dataFinalField;
-    private javax.swing.JLabel dataFinalLabel;
-    private javax.swing.JTextField dataInicialField;
-    private javax.swing.JLabel dataInicialLabel;
     private javax.swing.JTextField emailField;
     private javax.swing.JLabel emailLabel;
     private javax.swing.JTextField fone1Field;
