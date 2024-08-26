@@ -336,7 +336,7 @@ public class TelaCadastroMedico extends javax.swing.JDialog {
     }//GEN-LAST:event_senhaFieldActionPerformed
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        TelaCadastroJornada telaCadastroJornada = new TelaCadastroJornada(null, true);
+        TelaCadastroJornadaTrabalho telaCadastroJornada = new TelaCadastroJornadaTrabalho(null, true);
         telaCadastroJornada.setVisible(true);
     }//GEN-LAST:event_jButton1ActionPerformed
 

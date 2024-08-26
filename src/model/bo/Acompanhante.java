@@ -80,4 +80,9 @@ public class Acompanhante {
     public void setStatus(String status) {
         this.status = status;
     }      
+
+    @Override
+    public String toString() {
+        return "Acompanhante{" + "id=" + id + ", nome=" + nome + ", grauParentesco=" + grauParentesco + ", cpf=" + cpf + ", fone=" + fone + ", email=" + email + ", status=" + status + "}\n";
+    }
 }

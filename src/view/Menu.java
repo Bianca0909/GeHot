@@ -1,16 +1,13 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package view;
 
+import controller.ControllerCadastroAcompanhante;
+import controller.ControllerCadastroAla;
 import controller.ControllerCadastroLaboratorio;
+import controller.ControllerCadastroMedicamento;
+import controller.ControllerCadastroPaciente;
+import controller.ControllerCadastroQuarto;
+import controller.ControllerTelaCadastroLeito;
 
-/**
- *
- * @author aluno
- */
 public class Menu extends javax.swing.JFrame {
 
     /**
@@ -52,8 +49,11 @@ public class Menu extends javax.swing.JFrame {
         jMenuItem9 = new javax.swing.JMenuItem();
         jSeparator9 = new javax.swing.JPopupMenu.Separator();
         jMenuItem10 = new javax.swing.JMenuItem();
+        jSeparator10 = new javax.swing.JPopupMenu.Separator();
         jMenuItem11 = new javax.swing.JMenuItem();
+        jSeparator11 = new javax.swing.JPopupMenu.Separator();
         jMenuItem13 = new javax.swing.JMenuItem();
+        jSeparator12 = new javax.swing.JPopupMenu.Separator();
         jMenu2 = new javax.swing.JMenu();
         jMenu3 = new javax.swing.JMenu();
 
@@ -105,6 +105,11 @@ public class Menu extends javax.swing.JFrame {
 
         jMenuItem5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/Male.png"))); // NOI18N
         jMenuItem5.setText("Acompanhante");
+        jMenuItem5.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItem5ActionPerformed(evt);
+            }
+        });
         jMenu1.add(jMenuItem5);
         jMenu1.add(jSeparator4);
 
@@ -135,6 +140,11 @@ public class Menu extends javax.swing.JFrame {
 
         jMenuItem8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/Blue key.png"))); // NOI18N
         jMenuItem8.setText("Ala");
+        jMenuItem8.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItem8ActionPerformed(evt);
+            }
+        });
         jMenu1.add(jMenuItem8);
         jMenu1.add(jSeparator8);
 
@@ -156,14 +166,27 @@ public class Menu extends javax.swing.JFrame {
             }
         });
         jMenu1.add(jMenuItem10);
+        jMenu1.add(jSeparator10);
 
         jMenuItem11.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/icons8-pílula-16.png"))); // NOI18N
         jMenuItem11.setText("Medicamento");
+        jMenuItem11.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItem11ActionPerformed(evt);
+            }
+        });
         jMenu1.add(jMenuItem11);
+        jMenu1.add(jSeparator11);
 
         jMenuItem13.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/Key.png"))); // NOI18N
         jMenuItem13.setText("Quarto");
+        jMenuItem13.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItem13ActionPerformed(evt);
+            }
+        });
         jMenu1.add(jMenuItem13);
+        jMenu1.add(jSeparator12);
 
         jMenuBar1.add(jMenu1);
 
@@ -192,8 +215,7 @@ public class Menu extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jMenuItem1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem1ActionPerformed
-       TelaCadastroEnfermeiro telaCadastroEnfermeiro = new TelaCadastroEnfermeiro(null, false);
-       
+
     }//GEN-LAST:event_jMenuItem1ActionPerformed
 
     private void jMenuItem2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem2ActionPerformed
@@ -201,7 +223,9 @@ public class Menu extends javax.swing.JFrame {
     }//GEN-LAST:event_jMenuItem2ActionPerformed
 
     private void jMenuItem3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem3ActionPerformed
-        // TODO add your handling code here:
+        TelaCadastroPaciente telaCadastroPaciente = new TelaCadastroPaciente(null, false);
+        ControllerCadastroPaciente controllerCadastroLaboratorio = new ControllerCadastroPaciente(telaCadastroPaciente);
+        telaCadastroPaciente.setVisible(true);
     }//GEN-LAST:event_jMenuItem3ActionPerformed
 
     private void jMenuItem4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem4ActionPerformed
@@ -220,9 +244,35 @@ public class Menu extends javax.swing.JFrame {
     }//GEN-LAST:event_jMenuItem9ActionPerformed
 
     private void jMenuItem10ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem10ActionPerformed
-        // TODO add your handling code here:
+       TelaCadastroLeito telaCadastroLeito = new TelaCadastroLeito(null, true);
+       ControllerTelaCadastroLeito controllerCadastroLeito = new ControllerTelaCadastroLeito(telaCadastroLeito);
+       telaCadastroLeito.setVisible(true);
     }//GEN-LAST:event_jMenuItem10ActionPerformed
 
+    private void jMenuItem5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem5ActionPerformed
+        TelaCadastroAcompanhante telaCadastroAcompanhante = new TelaCadastroAcompanhante(null, true);
+        ControllerCadastroAcompanhante controllerCadastroAcompanhante = new ControllerCadastroAcompanhante(telaCadastroAcompanhante);
+        telaCadastroAcompanhante.setVisible(true);
+    }//GEN-LAST:event_jMenuItem5ActionPerformed
+
+    private void jMenuItem8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem8ActionPerformed
+        TelaCadastroAla telaCadastroAla = new TelaCadastroAla(null, true);
+        ControllerCadastroAla controllerCadastroAla = new ControllerCadastroAla(telaCadastroAla);
+        telaCadastroAla.setVisible(true);
+    }//GEN-LAST:event_jMenuItem8ActionPerformed
+
+    private void jMenuItem13ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem13ActionPerformed
+      TelaCadastroQuarto telaCadastroQuarto = new TelaCadastroQuarto(null, true);
+      ControllerCadastroQuarto controllerCadastroQuarto = new ControllerCadastroQuarto(telaCadastroQuarto);
+      telaCadastroQuarto.setVisible(true);
+    }//GEN-LAST:event_jMenuItem13ActionPerformed
+
+    private void jMenuItem11ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem11ActionPerformed
+      TelaCadastroMedicamento telaCadastroMedicamento = new TelaCadastroMedicamento(null, true);
+      ControllerCadastroMedicamento controllerCadastroMedicamento = new ControllerCadastroMedicamento(telaCadastroMedicamento);
+      telaCadastroMedicamento.setVisible(true);
+    }//GEN-LAST:event_jMenuItem11ActionPerformed
+    
     /**
      * @param args the command line arguments
      */
@@ -277,6 +327,9 @@ public class Menu extends javax.swing.JFrame {
     private javax.swing.JMenuItem jMenuItem9;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPopupMenu.Separator jSeparator1;
+    private javax.swing.JPopupMenu.Separator jSeparator10;
+    private javax.swing.JPopupMenu.Separator jSeparator11;
+    private javax.swing.JPopupMenu.Separator jSeparator12;
     private javax.swing.JPopupMenu.Separator jSeparator2;
     private javax.swing.JPopupMenu.Separator jSeparator3;
     private javax.swing.JPopupMenu.Separator jSeparator4;

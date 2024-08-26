@@ -5,7 +5,15 @@
  */
 package view;
 
-import utilities.Utilities;
+import enums.StatusCadastroEnum;
+import javax.swing.DefaultComboBoxModel;
+import javax.swing.JButton;
+import javax.swing.JComboBox;
+import javax.swing.JLabel;
+import javax.swing.JPanel;
+import javax.swing.JScrollPane;
+import javax.swing.JTextArea;
+import javax.swing.JTextField;
 
 /**
  *
@@ -19,6 +27,215 @@ public class TelaCadastroAcompanhante extends javax.swing.JDialog {
     public TelaCadastroAcompanhante(java.awt.Frame parent, boolean modal) {
         super(parent, modal);
         initComponents();
+        loadComboBox();
+    }
+
+    public JTextField getCpfCnpjField() {
+        return cpfCnpjField;
+    }
+
+    public void setCpfCnpjField(JTextField cpfCnpjField) {
+        this.cpfCnpjField = cpfCnpjField;
+    }
+
+    public JLabel getCpfCnpjLabel() {
+        return cpfCnpjLabel;
+    }
+
+    public void setCpfCnpjLabel(JLabel cpfCnpjLabel) {
+        this.cpfCnpjLabel = cpfCnpjLabel;
+    }
+
+    public JTextField getEmailField() {
+        return emailField;
+    }
+
+    public void setEmailField(JTextField emailField) {
+        this.emailField = emailField;
+    }
+
+    public JLabel getEmailLabel() {
+        return emailLabel;
+    }
+
+    public void setEmailLabel(JLabel emailLabel) {
+        this.emailLabel = emailLabel;
+    }
+
+    public JTextField getFone1Field() {
+        return fone1Field;
+    }
+
+    public void setFone1Field(JTextField fone1Field) {
+        this.fone1Field = fone1Field;
+    }
+
+    public JLabel getFone1Label() {
+        return fone1Label;
+    }
+
+    public void setFone1Label(JLabel fone1Label) {
+        this.fone1Label = fone1Label;
+    }
+
+    public JTextField getIdField() {
+        return idField;
+    }
+
+    public void setIdField(JTextField idField) {
+        this.idField = idField;
+    }
+
+    public JLabel getIdLabel() {
+        return idLabel;
+    }
+
+    public void setIdLabel(JLabel idLabel) {
+        this.idLabel = idLabel;
+    }
+
+    public JButton getjButtonBuscar() {
+        return jButtonBuscar;
+    }
+
+    public void setjButtonBuscar(JButton jButtonBuscar) {
+        this.jButtonBuscar = jButtonBuscar;
+    }
+
+    public JButton getjButtonCancelar() {
+        return jButtonCancelar;
+    }
+
+    public void setjButtonCancelar(JButton jButtonCancelar) {
+        this.jButtonCancelar = jButtonCancelar;
+    }
+
+    public JButton getjButtonGravar() {
+        return jButtonGravar;
+    }
+
+    public void setjButtonGravar(JButton jButtonGravar) {
+        this.jButtonGravar = jButtonGravar;
+    }
+
+    public JButton getjButtonNovo() {
+        return jButtonNovo;
+    }
+
+    public void setjButtonNovo(JButton jButtonNovo) {
+        this.jButtonNovo = jButtonNovo;
+    }
+
+    public JButton getjButtonSair() {
+        return jButtonSair;
+    }
+
+    public void setjButtonSair(JButton jButtonSair) {
+        this.jButtonSair = jButtonSair;
+    }
+
+    public JComboBox<StatusCadastroEnum> getStatusComboBox() {
+        return statusComboBox;
+    }
+
+    public void setStatusComboBox(JComboBox<StatusCadastroEnum> statusComboBox) {
+        this.statusComboBox = statusComboBox;
+    }
+
+    public JLabel getjLabel1() {
+        return jLabel1;
+    }
+
+    public void setjLabel1(JLabel jLabel1) {
+        this.jLabel1 = jLabel1;
+    }
+
+    public JLabel getjLabel2() {
+        return jLabel2;
+    }
+
+    public void setjLabel2(JLabel jLabel2) {
+        this.jLabel2 = jLabel2;
+    }
+
+    public JLabel getjLabelTitulo() {
+        return jLabelTitulo;
+    }
+
+    public void setjLabelTitulo(JLabel jLabelTitulo) {
+        this.jLabelTitulo = jLabelTitulo;
+    }
+
+    public JPanel getjPanelBotoes() {
+        return jPanelBotoes;
+    }
+
+    public void setjPanelBotoes(JPanel jPanelBotoes) {
+        this.jPanelBotoes = jPanelBotoes;
+    }
+
+    public JPanel getjPanelDados() {
+        return jPanelDados;
+    }
+
+    public void setjPanelDados(JPanel jPanelDados) {
+        this.jPanelDados = jPanelDados;
+    }
+
+    public JPanel getjPaneltitulo() {
+        return jPaneltitulo;
+    }
+
+    public void setjPaneltitulo(JPanel jPaneltitulo) {
+        this.jPaneltitulo = jPaneltitulo;
+    }
+
+    public JScrollPane getjScrollPane1() {
+        return jScrollPane1;
+    }
+
+    public void setjScrollPane1(JScrollPane jScrollPane1) {
+        this.jScrollPane1 = jScrollPane1;
+    }
+
+    public JTextArea getjTextArea1() {
+        return jTextArea1;
+    }
+
+    public void setjTextArea1(JTextArea jTextArea1) {
+        this.jTextArea1 = jTextArea1;
+    }
+
+    public JTextField getjTextField1() {
+        return grauParentescoField;
+    }
+
+    public void setjTextField1(JTextField jTextField1) {
+        this.grauParentescoField = jTextField1;
+    }
+
+    public JTextField getNomeField() {
+        return nomeField;
+    }
+
+    public void setNomeField(JTextField nomeField) {
+        this.nomeField = nomeField;
+    }
+
+    public JLabel getNomeLabel() {
+        return nomeLabel;
+    }
+
+    public void setNomeLabel(JLabel nomeLabel) {
+        this.nomeLabel = nomeLabel;
+    }
+
+    public JTextField getGrauParentescoField() {
+        return grauParentescoField;
+    }
+
+    public void setGrauParentescoField(JTextField grauParentescoField) {
+        this.grauParentescoField = grauParentescoField;
     }
 
     /**
@@ -46,9 +263,9 @@ public class TelaCadastroAcompanhante extends javax.swing.JDialog {
         fone1Label = new javax.swing.JLabel();
         fone1Field = new javax.swing.JTextField();
         jLabel1 = new javax.swing.JLabel();
-        jTextField1 = new javax.swing.JTextField();
+        grauParentescoField = new javax.swing.JTextField();
         jLabel2 = new javax.swing.JLabel();
-        jComboBox1 = new javax.swing.JComboBox<>();
+        statusComboBox = new javax.swing.JComboBox<>();
         jPanelBotoes = new javax.swing.JPanel();
         jButtonNovo = new javax.swing.JButton();
         jButtonCancelar = new javax.swing.JButton();
@@ -99,6 +316,7 @@ public class TelaCadastroAcompanhante extends javax.swing.JDialog {
         jPanelDados.add(idLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(8, 8, 37, -1));
 
         idField.setEditable(false);
+        idField.setEnabled(false);
         idField.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 idFieldActionPerformed(evt);
@@ -131,12 +349,23 @@ public class TelaCadastroAcompanhante extends javax.swing.JDialog {
 
         jLabel1.setText("Grau de parentesco");
         jPanelDados.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(8, 118, 113, -1));
-        jPanelDados.add(jTextField1, new org.netbeans.lib.awtextra.AbsoluteConstraints(8, 140, 269, 30));
+
+        grauParentescoField.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                grauParentescoFieldActionPerformed(evt);
+            }
+        });
+        jPanelDados.add(grauParentescoField, new org.netbeans.lib.awtextra.AbsoluteConstraints(8, 140, 269, 30));
 
         jLabel2.setText("Status");
         jPanelDados.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(71, 8, 37, -1));
 
-        jPanelDados.add(jComboBox1, new org.netbeans.lib.awtextra.AbsoluteConstraints(69, 28, 113, 30));
+        statusComboBox.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                statusComboBoxActionPerformed(evt);
+            }
+        });
+        jPanelDados.add(statusComboBox, new org.netbeans.lib.awtextra.AbsoluteConstraints(69, 28, 113, 30));
 
         getContentPane().add(jPanelDados, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 49, 770, 180));
 
@@ -202,19 +431,19 @@ public class TelaCadastroAcompanhante extends javax.swing.JDialog {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButtonNovoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonNovoActionPerformed
-        Utilities.ativaDesativa(true, jPanelBotoes);
+//        Utilities.ativaDesativa(true, jPanelBotoes);
     }//GEN-LAST:event_jButtonNovoActionPerformed
 
     private void jButtonCancelarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonCancelarActionPerformed
-        Utilities.ativaDesativa(false, jPanelBotoes);
+//        Utilities.ativaDesativa(false, jPanelBotoes);
     }//GEN-LAST:event_jButtonCancelarActionPerformed
 
     private void jButtonGravarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonGravarActionPerformed
-        Utilities.ativaDesativa(false, jPanelBotoes);
+//        Utilities.ativaDesativa(false, jPanelBotoes);
     }//GEN-LAST:event_jButtonGravarActionPerformed
 
     private void jButtonSairActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonSairActionPerformed
-        dispose();
+//        dispose();
     }//GEN-LAST:event_jButtonSairActionPerformed
 
     private void idFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_idFieldActionPerformed
@@ -225,6 +454,18 @@ public class TelaCadastroAcompanhante extends javax.swing.JDialog {
         // TODO add your handling code here:
     }//GEN-LAST:event_nomeFieldActionPerformed
 
+    private void grauParentescoFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_grauParentescoFieldActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_grauParentescoFieldActionPerformed
+
+    private void statusComboBoxActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_statusComboBoxActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_statusComboBoxActionPerformed
+
+    private void loadComboBox() {
+        statusComboBox.setModel(new DefaultComboBoxModel<>(StatusCadastroEnum.values()));
+    }
+  
     /**
      * @param args the command line arguments
      */
@@ -274,6 +515,7 @@ public class TelaCadastroAcompanhante extends javax.swing.JDialog {
     private javax.swing.JLabel emailLabel;
     private javax.swing.JTextField fone1Field;
     private javax.swing.JLabel fone1Label;
+    private javax.swing.JTextField grauParentescoField;
     private javax.swing.JTextField idField;
     private javax.swing.JLabel idLabel;
     private javax.swing.JButton jButtonBuscar;
@@ -281,7 +523,6 @@ public class TelaCadastroAcompanhante extends javax.swing.JDialog {
     private javax.swing.JButton jButtonGravar;
     private javax.swing.JButton jButtonNovo;
     private javax.swing.JButton jButtonSair;
-    private javax.swing.JComboBox<String> jComboBox1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabelTitulo;
@@ -290,8 +531,8 @@ public class TelaCadastroAcompanhante extends javax.swing.JDialog {
     private javax.swing.JPanel jPaneltitulo;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JTextArea jTextArea1;
-    private javax.swing.JTextField jTextField1;
     private javax.swing.JTextField nomeField;
     private javax.swing.JLabel nomeLabel;
+    private javax.swing.JComboBox<StatusCadastroEnum> statusComboBox;
     // End of variables declaration//GEN-END:variables
 }

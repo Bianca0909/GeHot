@@ -50,5 +50,11 @@ public class Quarto {
 	public void setAla(Ala ala) {
 		this.ala = ala;
 	}
+
+    @Override
+    public String toString() {
+        return "Quarto{" + "id=" + id + ", descricao=" + descricao + ", status=" + status + ", ala=" + ala + "}\n";
+    }
 	
+        
 }

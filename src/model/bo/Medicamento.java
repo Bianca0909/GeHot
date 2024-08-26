@@ -8,17 +8,21 @@ public class Medicamento {
     private String principioAtivo;
     private float qtdMinima;
     private String status;
+    private Laboratorio laboratorio;
+    private String codigoBarras;
     
     public Medicamento(){
         
     }
 
-    public Medicamento(Integer id, String descricaoMedicamento, String principioAtivo, float qtdMinima, String status) {
+    public Medicamento(Integer id, String descricaoMedicamento, String principioAtivo, float qtdMinima, String status, Laboratorio laboratorio, String codigoBarras) {
         this.id = id;
         this.descricaoMedicamento = descricaoMedicamento;
         this.principioAtivo = principioAtivo;
         this.qtdMinima = qtdMinima;
         this.status = status;
+        this.laboratorio = laboratorio;
+        this.codigoBarras = codigoBarras;
     }
 
     public Integer getId() {
@@ -60,5 +64,20 @@ public class Medicamento {
     public void setStatus(String status) {
         this.status = status;
     }
-        
+
+    public Laboratorio getLaboratorio() {
+        return laboratorio;
+    }
+
+    public void setLaboratorio(Laboratorio laboratorio) {
+        this.laboratorio = laboratorio;
+    }
+
+    public String getCodigoBarras() {
+        return codigoBarras;
+    }
+
+    public void setCodigoBarras(String codigoBarras) {
+        this.codigoBarras = codigoBarras;
+    }
 }

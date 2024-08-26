@@ -1,59 +1,27 @@
 /*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JDialog.java to edit this template
  */
 package view;
 
-import enums.StatusCadastroEnum;
-import javax.swing.DefaultComboBoxModel;
-import utilities.Utilities;
 import javax.swing.JButton;
-import javax.swing.JComboBox;
+import javax.swing.JFormattedTextField;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
-import javax.swing.JScrollPane;
-import javax.swing.JTextArea;
 import javax.swing.JTextField;
 
 /**
  *
- * @author professor
+ * @author Bianca
  */
-public class TelaCadastroLaboratorio extends javax.swing.JDialog {
+public class TelaCadastroJornadaTrabalho extends javax.swing.JDialog {
 
     /**
-     * Creates new form ModeloCadastral_2024
+     * Creates new form TelaCadastroJornada
      */
-    public TelaCadastroLaboratorio(java.awt.Frame parent, boolean modal) {
+    public TelaCadastroJornadaTrabalho(java.awt.Frame parent, boolean modal) {
         super(parent, modal);
         initComponents();
-        loadComboBox();
-    }
-
-    
-    public JTextField getContatoField() {
-        return contatoField;
-    }
-
-    public void setContatoField(JTextField contatoField) {
-        this.contatoField = contatoField;
-    }
-
-    public JTextField getIdField() {
-        return idField;
-    }
-
-    public void setIdField(JTextField idField) {
-        this.idField = idField;
-    }
-
-    public JLabel getIdLabel() {
-        return idLabel;
-    }
-
-    public void setIdLabel(JLabel idLabel) {
-        this.idLabel = idLabel;
     }
 
     public JButton getjButtonBuscar() {
@@ -96,12 +64,29 @@ public class TelaCadastroLaboratorio extends javax.swing.JDialog {
         this.jButtonSair = jButtonSair;
     }
 
-    public JComboBox<StatusCadastroEnum> getjComboStatus() {
-        return jComboStatus;
+    public JPanel getjPanelBotoes() {
+        return jPanelBotoes;
     }
 
-    public void setjComboStatus(JComboBox<StatusCadastroEnum> jComboStatus) {
-        this.jComboStatus = jComboStatus;
+    public void setjPanelBotoes(JPanel jPanelBotoes) {
+        this.jPanelBotoes = jPanelBotoes;
+    }
+
+    
+    public JFormattedTextField getjFormattedTextField1() {
+        return jFormattedTextField1;
+    }
+
+    public void setjFormattedTextField1(JFormattedTextField jFormattedTextField1) {
+        this.jFormattedTextField1 = jFormattedTextField1;
+    }
+
+    public JFormattedTextField getjFormattedTextField2() {
+        return jFormattedTextField2;
+    }
+
+    public void setjFormattedTextField2(JFormattedTextField jFormattedTextField2) {
+        this.jFormattedTextField2 = jFormattedTextField2;
     }
 
     public JLabel getjLabel1() {
@@ -120,6 +105,22 @@ public class TelaCadastroLaboratorio extends javax.swing.JDialog {
         this.jLabel2 = jLabel2;
     }
 
+    public JLabel getjLabel3() {
+        return jLabel3;
+    }
+
+    public void setjLabel3(JLabel jLabel3) {
+        this.jLabel3 = jLabel3;
+    }
+
+    public JLabel getjLabel4() {
+        return jLabel4;
+    }
+
+    public void setjLabel4(JLabel jLabel4) {
+        this.jLabel4 = jLabel4;
+    }
+
     public JLabel getjLabelTitulo() {
         return jLabelTitulo;
     }
@@ -128,20 +129,12 @@ public class TelaCadastroLaboratorio extends javax.swing.JDialog {
         this.jLabelTitulo = jLabelTitulo;
     }
 
-    public JPanel getjPanelBotoes() {
-        return jPanelBotoes;
-    }
-
-    public void setjPanelBotoes(JPanel jPanelBotoes) {
-        this.jPanelBotoes = jPanelBotoes;
-    }
-
-    public JPanel getjPanelDados() {
+    public JPanel getjPanel1() {
         return jPanelDados;
     }
 
-    public void setjPanelDados(JPanel jPanelDados) {
-        this.jPanelDados = jPanelDados;
+    public void setjPanel1(JPanel jPanel1) {
+        this.jPanelDados = jPanel1;
     }
 
     public JPanel getjPaneltitulo() {
@@ -152,41 +145,21 @@ public class TelaCadastroLaboratorio extends javax.swing.JDialog {
         this.jPaneltitulo = jPaneltitulo;
     }
 
-    public JScrollPane getjScrollPane1() {
-        return jScrollPane1;
+    public JTextField getjTextField1() {
+        return jTextField1;
     }
 
-    public void setjScrollPane1(JScrollPane jScrollPane1) {
-        this.jScrollPane1 = jScrollPane1;
+    public void setjTextField1(JTextField jTextField1) {
+        this.jTextField1 = jTextField1;
     }
 
-    public JTextArea getjTextArea1() {
-        return jTextArea1;
+    public JTextField getjTextField2() {
+        return jTextField2;
     }
 
-    public void setjTextArea1(JTextArea jTextArea1) {
-        this.jTextArea1 = jTextArea1;
+    public void setjTextField2(JTextField jTextField2) {
+        this.jTextField2 = jTextField2;
     }
-
-    public JTextField getNomeField() {
-        return nomeField;
-    }
-
-    public void setNomeField(JTextField nomeField) {
-        this.nomeField = nomeField;
-    }
-
-    public JLabel getNomeLabel() {
-        return nomeLabel;
-    }
-
-    public void setNomeLabel(JLabel nomeLabel) {
-        this.nomeLabel = nomeLabel;
-    }
-
-
-
- 
 
     
     /**
@@ -198,19 +171,17 @@ public class TelaCadastroLaboratorio extends javax.swing.JDialog {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jScrollPane1 = new javax.swing.JScrollPane();
-        jTextArea1 = new javax.swing.JTextArea();
+        jPanelDados = new javax.swing.JPanel();
         jPaneltitulo = new javax.swing.JPanel();
         jLabelTitulo = new javax.swing.JLabel();
-        jPanelDados = new javax.swing.JPanel();
-        nomeLabel = new javax.swing.JLabel();
-        idLabel = new javax.swing.JLabel();
-        idField = new javax.swing.JTextField();
-        nomeField = new javax.swing.JTextField();
         jLabel1 = new javax.swing.JLabel();
-        contatoField = new javax.swing.JTextField();
         jLabel2 = new javax.swing.JLabel();
-        jComboStatus = new javax.swing.JComboBox<>();
+        jTextField1 = new javax.swing.JTextField();
+        jFormattedTextField1 = new javax.swing.JFormattedTextField();
+        jLabel3 = new javax.swing.JLabel();
+        jFormattedTextField2 = new javax.swing.JFormattedTextField();
+        jLabel4 = new javax.swing.JLabel();
+        jTextField2 = new javax.swing.JTextField();
         jPanelBotoes = new javax.swing.JPanel();
         jButtonNovo = new javax.swing.JButton();
         jButtonCancelar = new javax.swing.JButton();
@@ -218,14 +189,10 @@ public class TelaCadastroLaboratorio extends javax.swing.JDialog {
         jButtonBuscar = new javax.swing.JButton();
         jButtonSair = new javax.swing.JButton();
 
-        jTextArea1.setColumns(20);
-        jTextArea1.setRows(5);
-        jScrollPane1.setViewportView(jTextArea1);
-
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
-        setTitle("Título do Form");
-        setResizable(false);
-        getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jPanelDados.setBorder(javax.swing.BorderFactory.createEtchedBorder());
+        jPanelDados.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jPaneltitulo.setBackground(new java.awt.Color(51, 153, 255));
         jPaneltitulo.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
@@ -233,62 +200,43 @@ public class TelaCadastroLaboratorio extends javax.swing.JDialog {
         jLabelTitulo.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
         jLabelTitulo.setForeground(new java.awt.Color(255, 255, 255));
         jLabelTitulo.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabelTitulo.setText("Cadastro de Laboratório");
+        jLabelTitulo.setText("Jornada de trabalho");
         jLabelTitulo.setToolTipText("");
 
         javax.swing.GroupLayout jPaneltituloLayout = new javax.swing.GroupLayout(jPaneltitulo);
         jPaneltitulo.setLayout(jPaneltituloLayout);
         jPaneltituloLayout.setHorizontalGroup(
             jPaneltituloLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jLabelTitulo, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(jLabelTitulo, javax.swing.GroupLayout.DEFAULT_SIZE, 466, Short.MAX_VALUE)
         );
         jPaneltituloLayout.setVerticalGroup(
             jPaneltituloLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addComponent(jLabelTitulo, javax.swing.GroupLayout.DEFAULT_SIZE, 39, Short.MAX_VALUE)
         );
 
-        getContentPane().add(jPaneltitulo, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 698, -1));
+        jPanelDados.add(jPaneltitulo, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 470, -1));
 
-        jPanelDados.setBorder(javax.swing.BorderFactory.createEtchedBorder());
-        jPanelDados.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+        jLabel1.setText("Data inicial");
+        jPanelDados.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 120, -1, -1));
 
-        nomeLabel.setText("Nome fantasia");
-        jPanelDados.add(nomeLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(8, 62, 520, -1));
+        jLabel2.setText("Id");
+        jPanelDados.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 60, -1, -1));
 
-        idLabel.setText("Id");
-        jPanelDados.add(idLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(8, 8, 37, -1));
+        jTextField1.setEditable(false);
+        jPanelDados.add(jTextField1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 80, 30, 30));
 
-        idField.setEditable(false);
-        idField.setEnabled(false);
-        idField.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                idFieldActionPerformed(evt);
-            }
-        });
-        jPanelDados.add(idField, new org.netbeans.lib.awtextra.AbsoluteConstraints(8, 28, 49, -1));
+        jFormattedTextField1.setText("  /  /");
+        jPanelDados.add(jFormattedTextField1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 140, 60, 30));
 
-        nomeField.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                nomeFieldActionPerformed(evt);
-            }
-        });
-        jPanelDados.add(nomeField, new org.netbeans.lib.awtextra.AbsoluteConstraints(8, 84, 557, 30));
+        jLabel3.setText("Data final");
+        jPanelDados.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 120, -1, -1));
 
-        jLabel1.setText("Contato");
-        jPanelDados.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(8, 118, 54, -1));
-        jPanelDados.add(contatoField, new org.netbeans.lib.awtextra.AbsoluteConstraints(8, 140, 161, 30));
+        jFormattedTextField2.setText("  /  /");
+        jPanelDados.add(jFormattedTextField2, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 140, 60, 30));
 
-        jLabel2.setText("Status");
-        jPanelDados.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(571, 62, 37, -1));
-
-        jComboStatus.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jComboStatusActionPerformed(evt);
-            }
-        });
-        jPanelDados.add(jComboStatus, new org.netbeans.lib.awtextra.AbsoluteConstraints(571, 84, 120, 30));
-
-        getContentPane().add(jPanelDados, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 49, 698, 180));
+        jLabel4.setText("Carga horária");
+        jPanelDados.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 120, -1, -1));
+        jPanelDados.add(jTextField2, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 140, 60, 30));
 
         jPanelBotoes.setBorder(javax.swing.BorderFactory.createEtchedBorder());
 
@@ -303,7 +251,6 @@ public class TelaCadastroLaboratorio extends javax.swing.JDialog {
             }
         });
         jPanelBotoes.add(jButtonNovo);
-        jButtonNovo.getAccessibleContext().setAccessibleDescription("");
 
         jButtonCancelar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/Cancel.png"))); // NOI18N
         jButtonCancelar.setText("Cancelar");
@@ -344,44 +291,41 @@ public class TelaCadastroLaboratorio extends javax.swing.JDialog {
         });
         jPanelBotoes.add(jButtonSair);
 
-        getContentPane().add(jPanelBotoes, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 230, 698, -1));
+        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
+        getContentPane().setLayout(layout);
+        layout.setHorizontalGroup(
+            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(jPanelBotoes, javax.swing.GroupLayout.PREFERRED_SIZE, 429, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addComponent(jPanelDados, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE)
+        );
+        layout.setVerticalGroup(
+            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(layout.createSequentialGroup()
+                .addComponent(jPanelDados, javax.swing.GroupLayout.PREFERRED_SIZE, 181, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jPanelBotoes, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap())
+        );
 
         pack();
-        setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButtonNovoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonNovoActionPerformed
-//        Utilities.ativaDesativa(true, jPainelBotoes);
+        //        Utilities.ativaDesativa(true, jPainelBotoes);
     }//GEN-LAST:event_jButtonNovoActionPerformed
 
     private void jButtonCancelarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonCancelarActionPerformed
-//        Utilities.ativaDesativa(false, jPainelBotoes);
+        //        Utilities.ativaDesativa(false, jPainelBotoes);
     }//GEN-LAST:event_jButtonCancelarActionPerformed
 
     private void jButtonGravarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonGravarActionPerformed
-//        Utilities.ativaDesativa(false, jPainelBotoes);
+        //        Utilities.ativaDesativa(false, jPainelBotoes);
     }//GEN-LAST:event_jButtonGravarActionPerformed
 
     private void jButtonSairActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonSairActionPerformed
-//        dispose();
+        //        dispose();
     }//GEN-LAST:event_jButtonSairActionPerformed
 
-    private void idFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_idFieldActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_idFieldActionPerformed
-
-    private void nomeFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_nomeFieldActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_nomeFieldActionPerformed
-
-    private void jComboStatusActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboStatusActionPerformed
-       
-    }//GEN-LAST:event_jComboStatusActionPerformed
-
-    
-    private void loadComboBox() {
-        jComboStatus.setModel(new DefaultComboBoxModel<>(StatusCadastroEnum.values()));
-    }
     /**
      * @param args the command line arguments
      */
@@ -399,20 +343,21 @@ public class TelaCadastroLaboratorio extends javax.swing.JDialog {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(TelaCadastroLaboratorio.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(TelaCadastroJornadaTrabalho.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(TelaCadastroLaboratorio.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(TelaCadastroJornadaTrabalho.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(TelaCadastroLaboratorio.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(TelaCadastroJornadaTrabalho.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(TelaCadastroLaboratorio.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(TelaCadastroJornadaTrabalho.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
+        //</editor-fold>
         //</editor-fold>
 
         /* Create and display the dialog */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                TelaCadastroLaboratorio dialog = new TelaCadastroLaboratorio(new javax.swing.JFrame(), true);
+                TelaCadastroJornadaTrabalho dialog = new TelaCadastroJornadaTrabalho(new javax.swing.JFrame(), true);
                 dialog.addWindowListener(new java.awt.event.WindowAdapter() {
                     @Override
                     public void windowClosing(java.awt.event.WindowEvent e) {
@@ -425,24 +370,22 @@ public class TelaCadastroLaboratorio extends javax.swing.JDialog {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JTextField contatoField;
-    private javax.swing.JTextField idField;
-    private javax.swing.JLabel idLabel;
     private javax.swing.JButton jButtonBuscar;
     private javax.swing.JButton jButtonCancelar;
     private javax.swing.JButton jButtonGravar;
     private javax.swing.JButton jButtonNovo;
     private javax.swing.JButton jButtonSair;
-    private javax.swing.JComboBox<StatusCadastroEnum> jComboStatus;
+    private javax.swing.JFormattedTextField jFormattedTextField1;
+    private javax.swing.JFormattedTextField jFormattedTextField2;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabelTitulo;
     private javax.swing.JPanel jPanelBotoes;
     private javax.swing.JPanel jPanelDados;
     private javax.swing.JPanel jPaneltitulo;
-    private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JTextArea jTextArea1;
-    private javax.swing.JTextField nomeField;
-    private javax.swing.JLabel nomeLabel;
+    private javax.swing.JTextField jTextField1;
+    private javax.swing.JTextField jTextField2;
     // End of variables declaration//GEN-END:variables
 }

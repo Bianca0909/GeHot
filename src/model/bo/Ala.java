@@ -40,5 +40,11 @@ public class Ala {
 	public void setStatus(String status) {
 		this.status = status;
 	}
+
+    @Override
+    public String toString() {
+        return "Ala{" + "id=" + id + ", descricao=" + descricao + ", status=" + status + "}\n";
+    }
 	
+        
 }
