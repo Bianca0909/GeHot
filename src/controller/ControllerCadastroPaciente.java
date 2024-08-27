@@ -52,7 +52,7 @@ public class ControllerCadastroPaciente implements ActionListener {
             paciente.setEmail(this.telaCadastroPaciente.getEmailField().getText());
             paciente.setCep(this.telaCadastroPaciente.getCepField().getText());
             paciente.setCidade(this.telaCadastroPaciente.getCidadeField().getText());
-            paciente.setCidade(this.telaCadastroPaciente.getBairroField().getText());
+            paciente.setBairro(this.telaCadastroPaciente.getBairroField().getText());
             paciente.setLogradouro(this.telaCadastroPaciente.getLogradouroField().getText());
             paciente.setComplemento(this.telaCadastroPaciente.getComplementoField().getText());
             

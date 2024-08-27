@@ -190,7 +190,7 @@
                           <Group type="102" attributes="0">
                               <Group type="103" groupAlignment="0" attributes="0">
                                   <Component id="nomeSocialLabel" min="-2" pref="90" max="-2" attributes="0"/>
-                                  <Component id="nomeSocialField" alignment="0" min="-2" pref="594" max="-2" attributes="0"/>
+                                  <Component id="nomeFantasiaField" alignment="0" min="-2" pref="594" max="-2" attributes="0"/>
                               </Group>
                               <EmptySpace max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="0" attributes="0">
@@ -230,7 +230,7 @@
                                   <EmptySpace max="-2" attributes="0"/>
                                   <Group type="103" groupAlignment="3" attributes="0">
                                       <Component id="cpfCnpjField" alignment="3" min="-2" pref="31" max="-2" attributes="0"/>
-                                      <Component id="nomeSocialField" alignment="3" min="-2" pref="31" max="-2" attributes="0"/>
+                                      <Component id="nomeFantasiaField" alignment="3" min="-2" pref="31" max="-2" attributes="0"/>
                                   </Group>
                               </Group>
                               <Component id="nomeSocialLabel" alignment="0" min="-2" max="-2" attributes="0"/>
@@ -354,7 +354,10 @@
             <Property name="text" type="java.lang.String" value="Nome Fantasia"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JTextField" name="nomeSocialField">
+        <Component class="javax.swing.JTextField" name="nomeFantasiaField">
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="nomeFantasiaFieldActionPerformed"/>
+          </Events>
         </Component>
         <Component class="javax.swing.JTextField" name="emailField">
         </Component>

@@ -1,53 +1,61 @@
 package model.bo;
 
 public class Farmaceutico extends Pessoa {
-	
-	private String cfr;
-	private String senha;
-	private String login;
-	private String nomeSocial;
-	
-	public Farmaceutico(Integer id, String nome, String fone1, String fone2, String email, String cpfCnpj,
-			String rgInscricaoEstadual, String dataCadastro, String cep, String cidade, String bairro,
-			String logradouro, String complemento, String cfr, String senha, String login, String nomeSocial) {
-		super(id, nome, fone1, fone2, email, cpfCnpj, rgInscricaoEstadual, dataCadastro, cep, cidade, bairro,
-				logradouro, complemento);
-		this.cfr = cfr;
-		this.senha = senha;
-		this.login = login;
-		this.nomeSocial = nomeSocial;
-	}
 
-	public String getCfr() {
-		return cfr;
-	}
+    private String cfr;
+    private String senha;
+    private String login;
+    private String nomeSocial;
 
-	public void setCfr(String cfr) {
-		this.cfr = cfr;
-	}
+    public Farmaceutico() {
+    }
 
-	public String getSenha() {
-		return senha;
-	}
+    public Farmaceutico(Integer id, String nome, String fone1, String fone2, String email, String cpfCnpj,
+            String rgInscricaoEstadual, String dataCadastro, String cep, String cidade, String bairro,
+            String logradouro, String complemento, String cfr, String senha, String login, String nomeSocial) {
+        super(id, nome, fone1, fone2, email, cpfCnpj, rgInscricaoEstadual, dataCadastro, cep, cidade, bairro,
+                logradouro, complemento);
+        this.cfr = cfr;
+        this.senha = senha;
+        this.login = login;
+        this.nomeSocial = nomeSocial;
+    }
 
-	public void setSenha(String senha) {
-		this.senha = senha;
-	}
+    public String getCfr() {
+        return cfr;
+    }
 
-	public String getLogin() {
-		return login;
-	}
+    public void setCfr(String cfr) {
+        this.cfr = cfr;
+    }
 
-	public void setLogin(String login) {
-		this.login = login;
-	}
+    public String getSenha() {
+        return senha;
+    }
 
-	public String getNomeSocial() {
-		return nomeSocial;
-	}
+    public void setSenha(String senha) {
+        this.senha = senha;
+    }
 
-	public void setNomeSocial(String nomeSocial) {
-		this.nomeSocial = nomeSocial;
-	}
-	
+    public String getLogin() {
+        return login;
+    }
+
+    public void setLogin(String login) {
+        this.login = login;
+    }
+
+    public String getNomeSocial() {
+        return nomeSocial;
+    }
+
+    public void setNomeSocial(String nomeSocial) {
+        this.nomeSocial = nomeSocial;
+    }
+
+    @Override
+    public String toString() {
+        return "Farmaceutico{" + "cfr=" + cfr + ", senha=" + senha + ", login=" + login + ", nomeSocial=" + nomeSocial + '}';
+    }
+
 }

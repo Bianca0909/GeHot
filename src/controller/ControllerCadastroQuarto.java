@@ -3,7 +3,6 @@ package controller;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import javax.swing.JOptionPane;
-import model.bo.Ala;
 import model.bo.Quarto;
 import utilities.Utilities;
 import view.TelaCadastroQuarto;

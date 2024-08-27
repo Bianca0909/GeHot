@@ -53,4 +53,9 @@ public class Enfermeiro extends Pessoa {
         this.nomeSocial = nomeSocial;
     }
 
+    @Override
+    public String toString() {
+        return "Enfermeiro{" + "cre=" + cre + ", senha=" + senha + ", login=" + login + ", nomeSocial=" + nomeSocial + '}';
+    }
+
 }

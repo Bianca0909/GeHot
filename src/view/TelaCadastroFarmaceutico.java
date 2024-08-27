@@ -5,6 +5,12 @@
  */
 package view;
 
+import javax.swing.JButton;
+import javax.swing.JLabel;
+import javax.swing.JPanel;
+import javax.swing.JScrollPane;
+import javax.swing.JTextArea;
+import javax.swing.JTextField;
 import utilities.Utilities;
 
 /**
@@ -21,6 +27,367 @@ public class TelaCadastroFarmaceutico extends javax.swing.JDialog {
         initComponents();
     }
 
+    public JLabel getBairroLabel() {
+        return BairroLabel;
+    }
+
+    public void setBairroLabel(JLabel BairroLabel) {
+        this.BairroLabel = BairroLabel;
+    }
+
+    public JLabel getCidadeLabel() {
+        return CidadeLabel;
+    }
+
+    public void setCidadeLabel(JLabel CidadeLabel) {
+        this.CidadeLabel = CidadeLabel;
+    }
+
+    public JTextField getBairroField() {
+        return bairroField;
+    }
+
+    public void setBairroField(JTextField bairroField) {
+        this.bairroField = bairroField;
+    }
+
+    public JTextField getCepField() {
+        return cepField;
+    }
+
+    public void setCepField(JTextField cepField) {
+        this.cepField = cepField;
+    }
+
+    public JLabel getCepLabel() {
+        return cepLabel;
+    }
+
+    public void setCepLabel(JLabel cepLabel) {
+        this.cepLabel = cepLabel;
+    }
+
+    public JTextField getCidadeField() {
+        return cidadeField;
+    }
+
+    public void setCidadeField(JTextField cidadeField) {
+        this.cidadeField = cidadeField;
+    }
+
+    public JTextField getComplementoField() {
+        return complementoField;
+    }
+
+    public void setComplementoField(JTextField complementoField) {
+        this.complementoField = complementoField;
+    }
+
+    public JLabel getComplementoLabel() {
+        return complementoLabel;
+    }
+
+    public void setComplementoLabel(JLabel complementoLabel) {
+        this.complementoLabel = complementoLabel;
+    }
+
+    public JTextField getCpfField() {
+        return cpfField;
+    }
+
+    public void setCpfField(JTextField cpfField) {
+        this.cpfField = cpfField;
+    }
+
+    public JLabel getCpfLabel() {
+        return cpfLabel;
+    }
+
+    public void setCpfLabel(JLabel cpfLabel) {
+        this.cpfLabel = cpfLabel;
+    }
+
+    public JTextField getCrfField() {
+        return crfField;
+    }
+
+    public void setCrfField(JTextField crfField) {
+        this.crfField = crfField;
+    }
+
+    public JLabel getCrfLabel() {
+        return crfLabel;
+    }
+
+    public void setCrfLabel(JLabel crfLabel) {
+        this.crfLabel = crfLabel;
+    }
+
+    public JTextField getDataCadastroField() {
+        return dataCadastroField;
+    }
+
+    public void setDataCadastroField(JTextField dataCadastroField) {
+        this.dataCadastroField = dataCadastroField;
+    }
+
+    public JLabel getDataCadastroLabel() {
+        return dataCadastroLabel;
+    }
+
+    public void setDataCadastroLabel(JLabel dataCadastroLabel) {
+        this.dataCadastroLabel = dataCadastroLabel;
+    }
+
+    public JTextField getEmailField() {
+        return emailField;
+    }
+
+    public void setEmailField(JTextField emailField) {
+        this.emailField = emailField;
+    }
+
+    public JLabel getEmailLabel() {
+        return emailLabel;
+    }
+
+    public void setEmailLabel(JLabel emailLabel) {
+        this.emailLabel = emailLabel;
+    }
+
+    public JTextField getFone1Field() {
+        return fone1Field;
+    }
+
+    public void setFone1Field(JTextField fone1Field) {
+        this.fone1Field = fone1Field;
+    }
+
+    public JLabel getFone1Label() {
+        return fone1Label;
+    }
+
+    public void setFone1Label(JLabel fone1Label) {
+        this.fone1Label = fone1Label;
+    }
+
+    public JTextField getFone2Field() {
+        return fone2Field;
+    }
+
+    public void setFone2Field(JTextField fone2Field) {
+        this.fone2Field = fone2Field;
+    }
+
+    public JLabel getFone2Label() {
+        return fone2Label;
+    }
+
+    public void setFone2Label(JLabel fone2Label) {
+        this.fone2Label = fone2Label;
+    }
+
+    public JTextField getIdField() {
+        return idField;
+    }
+
+    public void setIdField(JTextField idField) {
+        this.idField = idField;
+    }
+
+    public JLabel getIdLabel() {
+        return idLabel;
+    }
+
+    public void setIdLabel(JLabel idLabel) {
+        this.idLabel = idLabel;
+    }
+
+    public JButton getjButtonBuscar() {
+        return jButtonBuscar;
+    }
+
+    public void setjButtonBuscar(JButton jButtonBuscar) {
+        this.jButtonBuscar = jButtonBuscar;
+    }
+
+    public JButton getjButtonCancelar() {
+        return jButtonCancelar;
+    }
+
+    public void setjButtonCancelar(JButton jButtonCancelar) {
+        this.jButtonCancelar = jButtonCancelar;
+    }
+
+    public JButton getjButtonGravar() {
+        return jButtonGravar;
+    }
+
+    public void setjButtonGravar(JButton jButtonGravar) {
+        this.jButtonGravar = jButtonGravar;
+    }
+
+    public JButton getjButtonNovo() {
+        return jButtonNovo;
+    }
+
+    public void setjButtonNovo(JButton jButtonNovo) {
+        this.jButtonNovo = jButtonNovo;
+    }
+
+    public JButton getjButtonSair() {
+        return jButtonSair;
+    }
+
+    public void setjButtonSair(JButton jButtonSair) {
+        this.jButtonSair = jButtonSair;
+    }
+
+    public JLabel getjLabelTitulo() {
+        return jLabelTitulo;
+    }
+
+    public void setjLabelTitulo(JLabel jLabelTitulo) {
+        this.jLabelTitulo = jLabelTitulo;
+    }
+
+    public JPanel getjPanelBotoes() {
+        return jPanelBotoes;
+    }
+
+    public void setjPanelBotoes(JPanel jPanelBotoes) {
+        this.jPanelBotoes = jPanelBotoes;
+    }
+
+    public JPanel getjPanelDados() {
+        return jPanelDados;
+    }
+
+    public void setjPanelDados(JPanel jPanelDados) {
+        this.jPanelDados = jPanelDados;
+    }
+
+    public JPanel getjPaneltitulo() {
+        return jPaneltitulo;
+    }
+
+    public void setjPaneltitulo(JPanel jPaneltitulo) {
+        this.jPaneltitulo = jPaneltitulo;
+    }
+
+    public JScrollPane getjScrollPane1() {
+        return jScrollPane1;
+    }
+
+    public void setjScrollPane1(JScrollPane jScrollPane1) {
+        this.jScrollPane1 = jScrollPane1;
+    }
+
+    public JTextArea getjTextArea1() {
+        return jTextArea1;
+    }
+
+    public void setjTextArea1(JTextArea jTextArea1) {
+        this.jTextArea1 = jTextArea1;
+    }
+
+    public JTextField getLoginField() {
+        return loginField;
+    }
+
+    public void setLoginField(JTextField loginField) {
+        this.loginField = loginField;
+    }
+
+    public JLabel getLoginLabel() {
+        return loginLabel;
+    }
+
+    public void setLoginLabel(JLabel loginLabel) {
+        this.loginLabel = loginLabel;
+    }
+
+    public JTextField getLogradouroField() {
+        return logradouroField;
+    }
+
+    public void setLogradouroField(JTextField logradouroField) {
+        this.logradouroField = logradouroField;
+    }
+
+    public JLabel getLogradouroLabel() {
+        return logradouroLabel;
+    }
+
+    public void setLogradouroLabel(JLabel logradouroLabel) {
+        this.logradouroLabel = logradouroLabel;
+    }
+
+    public JTextField getNomeField() {
+        return nomeField;
+    }
+
+    public void setNomeField(JTextField nomeField) {
+        this.nomeField = nomeField;
+    }
+
+    public JLabel getNomeLabel() {
+        return nomeLabel;
+    }
+
+    public void setNomeLabel(JLabel nomeLabel) {
+        this.nomeLabel = nomeLabel;
+    }
+
+    public JTextField getNomeSocialField() {
+        return nomeSocialField;
+    }
+
+    public void setNomeSocialField(JTextField nomeSocialField) {
+        this.nomeSocialField = nomeSocialField;
+    }
+
+    public JLabel getNomeSocialLabel() {
+        return nomeSocialLabel;
+    }
+
+    public void setNomeSocialLabel(JLabel nomeSocialLabel) {
+        this.nomeSocialLabel = nomeSocialLabel;
+    }
+
+    public JTextField getRgField() {
+        return rgField;
+    }
+
+    public void setRgField(JTextField rgField) {
+        this.rgField = rgField;
+    }
+
+    public JLabel getRgInscricaoEstadualLabel() {
+        return rgInscricaoEstadualLabel;
+    }
+
+    public void setRgInscricaoEstadualLabel(JLabel rgInscricaoEstadualLabel) {
+        this.rgInscricaoEstadualLabel = rgInscricaoEstadualLabel;
+    }
+
+    public JTextField getSenhaField() {
+        return senhaField;
+    }
+
+    public void setSenhaField(JTextField senhaField) {
+        this.senhaField = senhaField;
+    }
+
+    public JLabel getSenhaLabel() {
+        return senhaLabel;
+    }
+
+    public void setSenhaLabel(JLabel senhaLabel) {
+        this.senhaLabel = senhaLabel;
+    }
+
+    
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -69,7 +436,6 @@ public class TelaCadastroFarmaceutico extends javax.swing.JDialog {
         loginField = new javax.swing.JTextField();
         senhaLabel = new javax.swing.JLabel();
         senhaField = new javax.swing.JTextField();
-        jButton1 = new javax.swing.JButton();
         jPanelBotoes = new javax.swing.JPanel();
         jButtonNovo = new javax.swing.JButton();
         jButtonCancelar = new javax.swing.JButton();
@@ -222,14 +588,6 @@ public class TelaCadastroFarmaceutico extends javax.swing.JDialog {
         });
         jPanelDados.add(senhaField, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 380, 172, 30));
 
-        jButton1.setText("Adicionar jonada de trabalho");
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
-            }
-        });
-        jPanelDados.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(530, 380, 220, 30));
-
         getContentPane().add(jPanelDados, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 50, 760, 430));
 
         jPanelBotoes.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
@@ -329,11 +687,6 @@ public class TelaCadastroFarmaceutico extends javax.swing.JDialog {
         // TODO add your handling code here:
     }//GEN-LAST:event_senhaFieldActionPerformed
 
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        TelaCadastroJornadaTrabalho telaCadastroJornada = new TelaCadastroJornadaTrabalho(null, true);
-        telaCadastroJornada.setVisible(true);
-    }//GEN-LAST:event_jButton1ActionPerformed
-
     /**
      * @param args the command line arguments
      */
@@ -399,7 +752,6 @@ public class TelaCadastroFarmaceutico extends javax.swing.JDialog {
     private javax.swing.JLabel fone2Label;
     private javax.swing.JTextField idField;
     private javax.swing.JLabel idLabel;
-    private javax.swing.JButton jButton1;
     private javax.swing.JButton jButtonBuscar;
     private javax.swing.JButton jButtonCancelar;
     private javax.swing.JButton jButtonGravar;

@@ -13,7 +13,11 @@ public class ClasseDadosGravacao {
    public static ArrayList<Quarto> listaQuarto = new ArrayList<>();
    public static ArrayList<Paciente> listaPaciente = new ArrayList<>();
    public static ArrayList<Enfermeiro> listaEnfermeiro = new ArrayList<>();
-
+   public static ArrayList<Usuario> listaUsuario = new ArrayList<>();
+   public static ArrayList<Fornecedor> listaFornecedor = new ArrayList<>();
+   public static ArrayList<Medico> listaMedico = new ArrayList<>();
+   public static ArrayList<Farmaceutico> listaFarmaceutico = new ArrayList<>();
+   
     private ClasseDadosGravacao() {
     }
 

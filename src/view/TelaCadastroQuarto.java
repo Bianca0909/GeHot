@@ -14,17 +14,11 @@ import javax.swing.JPanel;
 import javax.swing.JScrollPane;
 import javax.swing.JTextArea;
 import javax.swing.JTextField;
-import utilities.Utilities;
+import model.bo.Ala;
+import model.bo.ClasseDadosGravacao;
 
-/**
- *
- * @author professor
- */
 public class TelaCadastroQuarto extends javax.swing.JDialog {
 
-    /**
-     * Creates new form ModeloCadastral_2024
-     */
     public TelaCadastroQuarto(java.awt.Frame parent, boolean modal) {
         super(parent, modal);
         initComponents();
@@ -167,7 +161,14 @@ public class TelaCadastroQuarto extends javax.swing.JDialog {
         this.statusLabel = statusLabel;
     }
 
-    
+    public JComboBox<Ala> getAlaComboBox() {
+        return alaComboBox;
+    }
+
+    public void setAlaComboBox(JComboBox<Ala> alaComboBox) {
+        this.alaComboBox = alaComboBox;
+    }
+
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -188,6 +189,8 @@ public class TelaCadastroQuarto extends javax.swing.JDialog {
         descricaoField = new javax.swing.JTextField();
         statusLabel = new javax.swing.JLabel();
         statusComboBox = new javax.swing.JComboBox<>();
+        alaComboBox = new javax.swing.JComboBox<>();
+        jLabel1 = new javax.swing.JLabel();
         jPanelBotoes = new javax.swing.JPanel();
         jButtonNovo = new javax.swing.JButton();
         jButtonCancelar = new javax.swing.JButton();
@@ -242,6 +245,14 @@ public class TelaCadastroQuarto extends javax.swing.JDialog {
 
         statusLabel.setText("Status");
 
+        alaComboBox.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                alaComboBoxActionPerformed(evt);
+            }
+        });
+
+        jLabel1.setText("Ala");
+
         javax.swing.GroupLayout jPanelDadosLayout = new javax.swing.GroupLayout(jPanelDados);
         jPanelDados.setLayout(jPanelDadosLayout);
         jPanelDadosLayout.setHorizontalGroup(
@@ -249,6 +260,7 @@ public class TelaCadastroQuarto extends javax.swing.JDialog {
             .addGroup(jPanelDadosLayout.createSequentialGroup()
                 .addGap(6, 6, 6)
                 .addGroup(jPanelDadosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel1)
                     .addComponent(idLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(idField, javax.swing.GroupLayout.PREFERRED_SIZE, 49, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(jPanelDadosLayout.createSequentialGroup()
@@ -258,7 +270,8 @@ public class TelaCadastroQuarto extends javax.swing.JDialog {
                     .addGroup(jPanelDadosLayout.createSequentialGroup()
                         .addComponent(descricaoField, javax.swing.GroupLayout.PREFERRED_SIZE, 612, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(12, 12, 12)
-                        .addComponent(statusComboBox, javax.swing.GroupLayout.PREFERRED_SIZE, 122, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                        .addComponent(statusComboBox, javax.swing.GroupLayout.PREFERRED_SIZE, 122, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(alaComboBox, javax.swing.GroupLayout.PREFERRED_SIZE, 171, javax.swing.GroupLayout.PREFERRED_SIZE)))
         );
         jPanelDadosLayout.setVerticalGroup(
             jPanelDadosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -274,10 +287,15 @@ public class TelaCadastroQuarto extends javax.swing.JDialog {
                 .addGap(6, 6, 6)
                 .addGroup(jPanelDadosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addComponent(statusComboBox, javax.swing.GroupLayout.DEFAULT_SIZE, 30, Short.MAX_VALUE)
-                    .addComponent(descricaoField)))
+                    .addComponent(descricaoField))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jLabel1)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(alaComboBox, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
-        getContentPane().add(jPanelDados, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 49, 762, 120));
+        getContentPane().add(jPanelDados, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 49, 762, 180));
 
         jPanelBotoes.setBorder(javax.swing.BorderFactory.createEtchedBorder());
 
@@ -334,7 +352,7 @@ public class TelaCadastroQuarto extends javax.swing.JDialog {
         });
         jPanelBotoes.add(jButtonSair);
 
-        getContentPane().add(jPanelBotoes, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 170, 762, -1));
+        getContentPane().add(jPanelBotoes, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 230, 762, -1));
 
         pack();
         setLocationRelativeTo(null);
@@ -360,7 +378,15 @@ public class TelaCadastroQuarto extends javax.swing.JDialog {
         // TODO add your handling code here:
     }//GEN-LAST:event_idFieldActionPerformed
 
+    private void alaComboBoxActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_alaComboBoxActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_alaComboBoxActionPerformed
+
       private void loadComboBox() {
+          for (Ala ala : ClasseDadosGravacao.listaAla) {
+               alaComboBox.addItem(ala);
+        }
+          
         statusComboBox.setModel(new DefaultComboBoxModel<>(StatusCadastroEnum.values()));
     }
     /**
@@ -406,6 +432,7 @@ public class TelaCadastroQuarto extends javax.swing.JDialog {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JComboBox<Ala> alaComboBox;
     private javax.swing.JTextField descricaoField;
     private javax.swing.JLabel descricaoLabel;
     private javax.swing.JTextField idField;
@@ -415,6 +442,7 @@ public class TelaCadastroQuarto extends javax.swing.JDialog {
     private javax.swing.JButton jButtonGravar;
     private javax.swing.JButton jButtonNovo;
     private javax.swing.JButton jButtonSair;
+    private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabelTitulo;
     private javax.swing.JPanel jPanelBotoes;
     private javax.swing.JPanel jPanelDados;

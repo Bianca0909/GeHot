@@ -191,14 +191,6 @@ public class TelaCadastroEnfermeiro extends javax.swing.JDialog {
         this.idLabel = idLabel;
     }
 
-    public JButton getjButton1() {
-        return jButton1;
-    }
-
-    public void setjButton1(JButton jButton1) {
-        this.jButton1 = jButton1;
-    }
-
     public JButton getjButtonBuscar() {
         return jButtonBuscar;
     }
@@ -432,7 +424,6 @@ public class TelaCadastroEnfermeiro extends javax.swing.JDialog {
         senhaLabel = new javax.swing.JLabel();
         senhaField = new javax.swing.JTextField();
         dataNascimentoLabel = new javax.swing.JLabel();
-        jButton1 = new javax.swing.JButton();
         jPanelBotoes = new javax.swing.JPanel();
         jButtonNovo = new javax.swing.JButton();
         jButtonCancelar = new javax.swing.JButton();
@@ -593,14 +584,6 @@ public class TelaCadastroEnfermeiro extends javax.swing.JDialog {
         dataNascimentoLabel.setText("Data de nascimento");
         jPanelDados.add(dataNascimentoLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(610, 60, -1, -1));
 
-        jButton1.setText("Adicionar jonada de trabalho");
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
-            }
-        });
-        jPanelDados.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(510, 380, 230, 30));
-
         getContentPane().add(jPanelDados, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 49, 750, 424));
 
         jPanelBotoes.setBorder(javax.swing.BorderFactory.createEtchedBorder());
@@ -708,11 +691,6 @@ public class TelaCadastroEnfermeiro extends javax.swing.JDialog {
         // TODO add your handling code here:
     }//GEN-LAST:event_loginFieldActionPerformed
 
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        TelaCadastroJornadaTrabalho telaCadastroJornada = new TelaCadastroJornadaTrabalho(null, true);
-        telaCadastroJornada.setVisible(true);
-    }//GEN-LAST:event_jButton1ActionPerformed
-
     /**
      * @param args the command line arguments
      */
@@ -778,7 +756,6 @@ public class TelaCadastroEnfermeiro extends javax.swing.JDialog {
     private javax.swing.JLabel fone2Label;
     private javax.swing.JTextField idField;
     private javax.swing.JLabel idLabel;
-    private javax.swing.JButton jButton1;
     private javax.swing.JButton jButtonBuscar;
     private javax.swing.JButton jButtonCancelar;
     private javax.swing.JButton jButtonGravar;
