@@ -183,9 +183,17 @@ public class TelaBuscaLaboratorio extends javax.swing.JDialog {
 
             },
             new String [] {
-                "Title 1", "Title 2", "Title 3", "null"
+                "Id", "Descrição", "Contato", "Status"
             }
-        ));
+        ) {
+            Class[] types = new Class [] {
+                java.lang.Integer.class, java.lang.String.class, java.lang.String.class, java.lang.String.class
+            };
+
+            public Class getColumnClass(int columnIndex) {
+                return types [columnIndex];
+            }
+        });
         JTableDados.setColumnSelectionAllowed(true);
         jScrollPane1.setViewportView(JTableDados);
         JTableDados.getColumnModel().getSelectionModel().setSelectionMode(javax.swing.ListSelectionModel.SINGLE_SELECTION);
@@ -220,6 +228,13 @@ public class TelaBuscaLaboratorio extends javax.swing.JDialog {
         getContentPane().add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 640, -1));
 
         jPanel5.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+
+        filtroComboBox.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "ID", "Nome", "Contato", "Status" }));
+        filtroComboBox.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                filtroComboBoxActionPerformed(evt);
+            }
+        });
 
         jLabel1.setText("Filtrar por");
 
@@ -279,9 +294,8 @@ public class TelaBuscaLaboratorio extends javax.swing.JDialog {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addComponent(buttonFiltrar, javax.swing.GroupLayout.DEFAULT_SIZE, 30, Short.MAX_VALUE)
-                    .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                        .addComponent(valorField)
-                        .addComponent(filtroComboBox, javax.swing.GroupLayout.DEFAULT_SIZE, 30, Short.MAX_VALUE)))
+                    .addComponent(valorField)
+                    .addComponent(filtroComboBox, javax.swing.GroupLayout.DEFAULT_SIZE, 30, Short.MAX_VALUE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 27, Short.MAX_VALUE)
                 .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(buttonFechar, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -301,6 +315,10 @@ public class TelaBuscaLaboratorio extends javax.swing.JDialog {
     private void carregarButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_carregarButtonActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_carregarButtonActionPerformed
+
+    private void filtroComboBoxActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_filtroComboBoxActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_filtroComboBoxActionPerformed
 
     /**
      * @param args the command line arguments
