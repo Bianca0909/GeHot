@@ -45,7 +45,6 @@ public class ControllerCadastroMedicamento implements ActionListener {
             medicamento.setQtdMinima(Float.parseFloat(this.telaCadastroMedicamento.getQuantidadeMinimaField().getText()));
             medicamento.setStatus(this.telaCadastroMedicamento.getStatusComboBox().getSelectedItem() + "");
             medicamento.setCodigoBarras(this.telaCadastroMedicamento.getCodigoBarrasField().getText());
-            medicamento.setLaboratorio((Laboratorio) this.telaCadastroMedicamento.getLaboratorioField().getSelectedItem());
             
             model.bo.ClasseDadosGravacao.listaMedicamento.add(medicamento);
 

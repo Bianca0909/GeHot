@@ -21,7 +21,7 @@ public class InternacaoDAO implements InterfaceDAO<Internacao>{
     }
 
     @Override
-    public List<Internacao> retrieve(String parametro) {
+    public List<Internacao> retrieve(String parametro, String atributo) {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 

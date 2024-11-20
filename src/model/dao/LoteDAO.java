@@ -21,7 +21,7 @@ public class LoteDAO implements InterfaceDAO<Lote>{
     }
 
     @Override
-    public List<Lote> retrieve(String parametro) {
+    public List<Lote> retrieve(String parametro, String atributo) {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 

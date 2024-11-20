@@ -21,7 +21,7 @@ public class ProntuarioDAO implements InterfaceDAO<Prontuario>{
     }
 
     @Override
-    public List<Prontuario> retrieve(String parametro) {
+    public List<Prontuario> retrieve(String parametro, String atributo) {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 

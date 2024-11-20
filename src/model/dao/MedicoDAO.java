@@ -21,7 +21,7 @@ public class MedicoDAO implements InterfaceDAO<Medico> {
     }
 
     @Override
-    public List<Medico> retrieve(String parametro) {
+    public List<Medico> retrieve(String parametro, String atributo) {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 

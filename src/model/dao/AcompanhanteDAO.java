@@ -21,7 +21,7 @@ public class AcompanhanteDAO implements InterfaceDAO<Acompanhante> {
     }
 
     @Override
-    public List<Acompanhante> retrieve(String parametro) {
+    public List<Acompanhante> retrieve(String parametro, String atributo) {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 

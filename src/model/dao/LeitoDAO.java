@@ -21,7 +21,7 @@ public class LeitoDAO implements InterfaceDAO<Leito>{
     }
 
     @Override
-    public List<Leito> retrieve(String parametro) {
+    public List<Leito> retrieve(String parametro, String atributo) {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 

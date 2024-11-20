@@ -21,7 +21,7 @@ public class LaboratorioDAO implements InterfaceDAO<Laboratorio> {
     }
 
     @Override
-    public List<Laboratorio> retrieve(String parametro) {
+    public List<Laboratorio> retrieve(String parametro, String atributo) {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 

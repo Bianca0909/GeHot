@@ -21,7 +21,7 @@ public class FornecedorDAO implements InterfaceDAO<Fornecedor>{
     }
 
     @Override
-    public List<Fornecedor> retrieve(String parametro) {
+    public List<Fornecedor> retrieve(String parametro, String atributo) {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 

@@ -21,7 +21,7 @@ public class AtendimentoDAO implements InterfaceDAO<Atendimento>{
     }
 
     @Override
-    public List<Atendimento> retrieve(String parametro) {
+    public List<Atendimento> retrieve(String parametro, String atributo) {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 

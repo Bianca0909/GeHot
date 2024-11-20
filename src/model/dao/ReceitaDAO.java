@@ -21,7 +21,7 @@ public class ReceitaDAO implements InterfaceDAO<Receita> {
     }
 
     @Override
-    public List<Receita> retrieve(String parametro) {
+    public List<Receita> retrieve(String parametro, String atributo) {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 

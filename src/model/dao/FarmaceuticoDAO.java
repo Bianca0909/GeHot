@@ -21,7 +21,7 @@ public class FarmaceuticoDAO implements InterfaceDAO<Farmaceutico>{
     }
 
     @Override
-    public List<Farmaceutico> retrieve(String parametro) {
+    public List<Farmaceutico> retrieve(String parametro, String atributo) {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 

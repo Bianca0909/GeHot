@@ -21,7 +21,7 @@ public class QuartoDAO implements InterfaceDAO<Quarto>{
     }
 
     @Override
-    public List<Quarto> retrieve(String parametro) {
+    public List<Quarto> retrieve(String parametro, String atributo) {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
