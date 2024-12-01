@@ -29,10 +29,4 @@ public class JornadaDAO implements InterfaceDAO<Jornada> {
     public void update(Jornada objeto) {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
-
-    @Override
-    public void delete(Jornada objeto) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
-    
 }

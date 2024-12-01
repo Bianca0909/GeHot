@@ -9,7 +9,6 @@ import javax.swing.JPanel;
 import javax.swing.JScrollPane;
 import javax.swing.JTextArea;
 import javax.swing.JTextField;
-import model.bo.ClasseDadosGravacao;
 import model.bo.Quarto;
 
 public class TelaCadastroLeito extends javax.swing.JDialog {
@@ -371,11 +370,7 @@ public class TelaCadastroLeito extends javax.swing.JDialog {
 
     
     private void loadComboBox() {
-       for (Quarto quarto : ClasseDadosGravacao.listaQuarto) {
-               quartoComboBox.addItem(quarto.toString());
-        }
-       
-       statusComboBox.setModel(new DefaultComboBoxModel<>(StatusCadastroEnum.values()));
+    
     }
     
     

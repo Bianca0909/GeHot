@@ -29,10 +29,4 @@ public class MedicoDAO implements InterfaceDAO<Medico> {
     public void update(Medico objeto) {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
-
-    @Override
-    public void delete(Medico objeto) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
-    
 }

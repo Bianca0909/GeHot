@@ -12,6 +12,7 @@ import controller.ControllerCadastroPaciente;
 import controller.ControllerCadastroQuarto;
 import controller.ControllerCadastroUsuario;
 import controller.ControllerTelaCadastroLeito;
+import model.dao.ConnectionFactory;
 
 public class Menu extends javax.swing.JFrame {
 
@@ -20,7 +21,7 @@ public class Menu extends javax.swing.JFrame {
      */
     public Menu() {
         initComponents();
-        model.bo.ClasseDadosGravacao.getInstance();
+ 
     }
 
     @SuppressWarnings("unchecked")

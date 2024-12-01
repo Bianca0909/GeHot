@@ -29,10 +29,4 @@ public class FarmaceuticoDAO implements InterfaceDAO<Farmaceutico>{
     public void update(Farmaceutico objeto) {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
-
-    @Override
-    public void delete(Farmaceutico objeto) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
-    
 }

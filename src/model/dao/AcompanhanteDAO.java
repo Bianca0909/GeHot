@@ -29,10 +29,4 @@ public class AcompanhanteDAO implements InterfaceDAO<Acompanhante> {
     public void update(Acompanhante objeto) {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
-
-    @Override
-    public void delete(Acompanhante objeto) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
-    
 }

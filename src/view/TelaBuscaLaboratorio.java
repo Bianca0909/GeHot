@@ -240,7 +240,7 @@ public class TelaBuscaLaboratorio extends javax.swing.JDialog {
 
         jPanel5.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
 
-        filtroComboBox.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "ID", "Nome", "Contato", "Status" }));
+        filtroComboBox.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "ID", "DESCRIÇÃO", "CONTATO", "STATUS" }));
         filtroComboBox.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 filtroComboBoxActionPerformed(evt);

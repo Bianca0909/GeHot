@@ -2,8 +2,10 @@ package controller;
 
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import javax.swing.JOptionPane;
 import javax.swing.table.DefaultTableModel;
 import model.bo.Laboratorio;
+import service.ServiceLaboratorio;
 import view.TelaBuscaLaboratorio;
 
 public class ControllerBuscaLaboratorio implements ActionListener {
@@ -22,31 +24,48 @@ public class ControllerBuscaLaboratorio implements ActionListener {
     public void actionPerformed(ActionEvent evento) {
 
         if (evento.getSource() == this.telaBuscaLaboratorio.getCarregarButton()) {
-
-            ControllerCadastroLaboratorio.codigo = (int) this.telaBuscaLaboratorio.getJTableDados().
-                    getValueAt(this.telaBuscaLaboratorio.getJTableDados().getSelectedRow(), 0);
-
-            this.telaBuscaLaboratorio.dispose();
-
-        } else if (evento.getSource() == this.telaBuscaLaboratorio.getButtonFiltrar()) {
-
-//           if(this.telaBuscaLaboratorio.getFiltroComboBox().getSelectedIndex() == 0){
-//           }else if(this.telaBuscaLaboratorio.getFiltroComboBox().getSelectedIndex() == 1){
-//           }else if(this.telaBuscaLaboratorio.getFiltroComboBox().getSelectedIndex() == 2){
-//           }else if(this.telaBuscaLaboratorio.getFiltroComboBox().getSelectedIndex() == 3){
-//           }
-            
-               
             DefaultTableModel tabela = (DefaultTableModel) this.telaBuscaLaboratorio.getJTableDados().getModel();
             tabela.setRowCount(0);
-
-            for (Laboratorio objetoAtualDaLista : model.bo.ClasseDadosGravacao.listaLaboratorio) {
+            for (Laboratorio objetoAtualDaLista : service.ServiceLaboratorio.ler()) {
                 tabela.addRow(new Object[]{objetoAtualDaLista.getId(), objetoAtualDaLista.getNomeFantasia(),
                     objetoAtualDaLista.getContato(), objetoAtualDaLista.getStatus()});
             }
-
         } else if (evento.getSource() == this.telaBuscaLaboratorio.getButtonFechar()) {
             this.telaBuscaLaboratorio.dispose();
+        } else if (evento.getSource() == this.telaBuscaLaboratorio.getButtonFiltrar()) {
+            if (this.telaBuscaLaboratorio.getValorField().getText().trim().equals("")) {
+                JOptionPane.showMessageDialog(null, "É obrigatório o preenchimento de algum caracter....");
+                this.telaBuscaLaboratorio.getValorField().requestFocus();
+            } else {
+                if (this.telaBuscaLaboratorio.getFiltroComboBox().getSelectedItem().equals("ID")) {
+                    DefaultTableModel tabela = (DefaultTableModel) this.telaBuscaLaboratorio.getJTableDados().getModel();
+                    tabela.setRowCount(0);
+                    Laboratorio laboratorio = ServiceLaboratorio.ler(Integer.parseInt(this.telaBuscaLaboratorio.getValorField().getText()));
+                    tabela.addRow(new Object[]{laboratorio.getId(), laboratorio.getNomeFantasia(), laboratorio.getContato(), laboratorio.getStatus()});
+                } else if (this.telaBuscaLaboratorio.getFiltroComboBox().getSelectedItem().equals("DESCRIÇÃO")) {
+
+                    DefaultTableModel tabela = (DefaultTableModel) this.telaBuscaLaboratorio.getJTableDados().getModel();
+                    tabela.setRowCount(0);
+                    for (Laboratorio objetoAtualDaLista : service.ServiceLaboratorio.ler(this.telaBuscaLaboratorio.getValorField().getText(), "nomeFantasia")) {
+                        tabela.addRow(new Object[]{objetoAtualDaLista.getId(), objetoAtualDaLista.getNomeFantasia(),
+                            objetoAtualDaLista.getContato(), objetoAtualDaLista.getStatus()});
+                    }
+                } else if (this.telaBuscaLaboratorio.getFiltroComboBox().getSelectedItem().equals("CONTATO")) {
+                    DefaultTableModel tabela = (DefaultTableModel) this.telaBuscaLaboratorio.getJTableDados().getModel();
+                    tabela.setRowCount(0);
+                    for (Laboratorio objetoAtualDaLista : service.ServiceLaboratorio.ler(this.telaBuscaLaboratorio.getValorField().getText(), "contato")) {
+                        tabela.addRow(new Object[]{objetoAtualDaLista.getId(), objetoAtualDaLista.getNomeFantasia(),
+                            objetoAtualDaLista.getContato(), objetoAtualDaLista.getStatus()});
+                    }
+                } else if (this.telaBuscaLaboratorio.getFiltroComboBox().getSelectedItem().equals("STATUS")) {
+                    DefaultTableModel tabela = (DefaultTableModel) this.telaBuscaLaboratorio.getJTableDados().getModel();
+                    tabela.setRowCount(0);
+                    for (Laboratorio objetoAtualDaLista : service.ServiceLaboratorio.ler(this.telaBuscaLaboratorio.getValorField().getText(), "status")) {
+                        tabela.addRow(new Object[]{objetoAtualDaLista.getId(), objetoAtualDaLista.getNomeFantasia(),
+                            objetoAtualDaLista.getContato(), objetoAtualDaLista.getStatus()});
+                    }
+                }
+            }
         }
     }
 }

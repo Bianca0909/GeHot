@@ -46,11 +46,10 @@ public class ControllerCadastroLaboratorio implements ActionListener {
             laboratorio.setStatus(this.telaCadastroLaboratorio.getjComboStatus().getSelectedItem() + "");
 
             if (this.telaCadastroLaboratorio.getIdField().getText().equals("")) {
-                laboratorio.setId(model.bo.ClasseDadosGravacao.listaLaboratorio.size() + 1);
-                model.bo.ClasseDadosGravacao.listaLaboratorio.add(laboratorio);
+                service.ServiceLaboratorio.adicionar(laboratorio);
             } else {
                 laboratorio.setId(Integer.parseInt(this.telaCadastroLaboratorio.getIdField().getText()));
-                ClasseDadosGravacao.listaLaboratorio.set(codigo - 1, laboratorio);
+                service.ServiceLaboratorio.atualizar(laboratorio);
             }
 
             Utilities.ativaDesativa(false, this.telaCadastroLaboratorio.getjPanelBotoes());
@@ -65,7 +64,7 @@ public class ControllerCadastroLaboratorio implements ActionListener {
 
             if (codigo != 0) {
                 Laboratorio laboratorio = new Laboratorio();
-                laboratorio = model.bo.ClasseDadosGravacao.listaLaboratorio.get(codigo - 1);
+                laboratorio = service.ServiceLaboratorio.ler(codigo);
 
                 utilities.Utilities.ativaDesativa(true, this.telaCadastroLaboratorio.getjPanelBotoes());
                 utilities.Utilities.limpaComponentes(true, this.telaCadastroLaboratorio.getjPanelDados());

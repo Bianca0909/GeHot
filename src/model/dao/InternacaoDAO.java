@@ -29,10 +29,4 @@ public class InternacaoDAO implements InterfaceDAO<Internacao>{
     public void update(Internacao objeto) {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
-
-    @Override
-    public void delete(Internacao objeto) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
-    
 }

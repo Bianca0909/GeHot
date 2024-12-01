@@ -29,10 +29,4 @@ public class PacienteDAO implements InterfaceDAO<Paciente> {
     public void update(Paciente objeto) {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
-
-    @Override
-    public void delete(Paciente objeto) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
-    
 }

@@ -29,10 +29,4 @@ public class QuartoDAO implements InterfaceDAO<Quarto>{
     public void update(Quarto objeto) {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
-
-    @Override
-    public void delete(Quarto objeto) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
-    
 }

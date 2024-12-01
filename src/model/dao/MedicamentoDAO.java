@@ -165,10 +165,4 @@ public class MedicamentoDAO implements InterfaceDAO<Medicamento> {
             ConnectionFactory.closeConnection(conexao, pstm, null);
         }
     }
-
-    @Override
-    public void delete(Medicamento objeto) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
-    
 }

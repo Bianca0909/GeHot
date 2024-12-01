@@ -29,10 +29,4 @@ public class ProntuarioDAO implements InterfaceDAO<Prontuario>{
     public void update(Prontuario objeto) {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
-
-    @Override
-    public void delete(Prontuario objeto) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
-    
 }

@@ -15,7 +15,6 @@ import javax.swing.JScrollPane;
 import javax.swing.JTextArea;
 import javax.swing.JTextField;
 import model.bo.Ala;
-import model.bo.ClasseDadosGravacao;
 
 public class TelaCadastroQuarto extends javax.swing.JDialog {
 
@@ -383,11 +382,7 @@ public class TelaCadastroQuarto extends javax.swing.JDialog {
     }//GEN-LAST:event_alaComboBoxActionPerformed
 
       private void loadComboBox() {
-          for (Ala ala : ClasseDadosGravacao.listaAla) {
-               alaComboBox.addItem(ala);
-        }
-          
-        statusComboBox.setModel(new DefaultComboBoxModel<>(StatusCadastroEnum.values()));
+       
     }
     /**
      * @param args the command line arguments
