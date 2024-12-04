@@ -119,7 +119,7 @@ public class TelaBuscaMedico extends javax.swing.JDialog {
 
         jPanel5.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
 
-        filtroComboBox.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "ID", "NOME", "GRAU DE PARENTESCO", "CPF", "TELEFONE", "EMAIL", "STATUS" }));
+        filtroComboBox.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "ID", "NOME", "CRM", "DATA", "EMAIL", "TELEFONE" }));
 
         jLabel1.setText("Filtrar por");
 

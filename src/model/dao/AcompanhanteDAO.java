@@ -14,7 +14,7 @@ public class AcompanhanteDAO implements InterfaceDAO<Acompanhante> {
     public void create(Acompanhante objeto) {
         Connection conexao = ConnectionFactory.getConnection();
         PreparedStatement pstm = null;
-        String sqlInstrucao = "INSERT INTO acompanhante(nome, grau_parentesco, cpf, fone, email, status) values(?, ?, ?, ?, ?, ?)";
+        String sqlInstrucao = "INSERT INTO acompanhante(nome, grau_parentesco, cpf, fone, email, status) VALUES(?, ?, ?, ?, ?, ?)";
         
         try {
             pstm = conexao.prepareStatement(sqlInstrucao);

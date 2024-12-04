@@ -6,6 +6,7 @@
 package view;
 
 import javax.swing.JButton;
+import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JList;
 import javax.swing.JPanel;
@@ -452,6 +453,7 @@ public class TelaCadastroMedico extends javax.swing.JDialog {
         loginField = new javax.swing.JTextField();
         senhaLabel = new javax.swing.JLabel();
         senhaField = new javax.swing.JTextField();
+        jButton1 = new javax.swing.JButton();
         jPanelBotoes = new javax.swing.JPanel();
         jButtonNovo = new javax.swing.JButton();
         jButtonCancelar = new javax.swing.JButton();
@@ -608,6 +610,14 @@ public class TelaCadastroMedico extends javax.swing.JDialog {
         });
         jPanelDados.add(senhaField, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 390, 150, 30));
 
+        jButton1.setText("Cadastrar jornada");
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
+        jPanelDados.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(590, 390, 160, 30));
+
         getContentPane().add(jPanelDados, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 49, 762, 430));
 
         jPanelBotoes.setBorder(javax.swing.BorderFactory.createEtchedBorder());
@@ -707,6 +717,12 @@ public class TelaCadastroMedico extends javax.swing.JDialog {
         // TODO add your handling code here:
     }//GEN-LAST:event_senhaFieldActionPerformed
 
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        JFrame frame = new JFrame();
+        TelaCadastroJornadaTrabalho telaCadastroJornadaTrabalho = new TelaCadastroJornadaTrabalho(frame, true);
+        telaCadastroJornadaTrabalho.setVisible(true);
+    }//GEN-LAST:event_jButton1ActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -772,6 +788,7 @@ public class TelaCadastroMedico extends javax.swing.JDialog {
     private javax.swing.JLabel fone2Label;
     private javax.swing.JTextField idField;
     private javax.swing.JLabel idLabel;
+    private javax.swing.JButton jButton1;
     private javax.swing.JButton jButtonBuscar;
     private javax.swing.JButton jButtonCancelar;
     private javax.swing.JButton jButtonGravar;

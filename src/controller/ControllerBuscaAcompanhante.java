@@ -13,7 +13,6 @@ public class ControllerBuscaAcompanhante implements ActionListener {
     TelaBuscaAcompanhante telaBuscaAcompanhante;
 
     public ControllerBuscaAcompanhante(TelaBuscaAcompanhante telaBuscaAcompanhante) {
-
         this.telaBuscaAcompanhante = telaBuscaAcompanhante;
         this.telaBuscaAcompanhante.getCarregarButton().addActionListener(this);
         this.telaBuscaAcompanhante.getButtonFechar().addActionListener(this);

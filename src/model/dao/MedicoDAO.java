@@ -49,8 +49,7 @@ public class MedicoDAO implements InterfaceDAO<Medico> {
         PreparedStatement pstm = null;
         ResultSet resultado = null;
 
-        String sqlInstrucao = "SELECT id, nome, fone1, fone2, email, cpfCnpj, rgInscricaoEstadual, dataCadastro, cep, "
-                + "cidade, bairro, logradouro, complemento, crm, senha, login, nomeSocial FROM hospital.medico";
+        String sqlInstrucao = "SELECT id, nome, crm, dataCadastro, email, fone1 FROM hospital.medico";
 
         List<Medico> medicos = new ArrayList<>();
 
@@ -78,8 +77,7 @@ public class MedicoDAO implements InterfaceDAO<Medico> {
         Connection conexao = ConnectionFactory.getConnection();
         PreparedStatement pstm = null;
         ResultSet resultado = null;
-        String sqlInstrucao = "SELECT id, nome, fone1, fone2, email, cpfCnpj, rgInscricaoEstadual, dataCadastro, cep, "
-                + "cidade, bairro, logradouro, complemento, crm, senha, login, nomeSocial FROM hospital.medico WHERE id = ?";
+        String sqlInstrucao = "SELECT id, nome, crm, dataCadastro, email, fone1 FROM hospital.medico WHERE id = ?";
         Medico medico = new Medico();
 
         try {

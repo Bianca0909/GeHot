@@ -1,32 +1,71 @@
 package model.dao;
 
-import java.util.List;
+import java.sql.Connection;
+import java.sql.Date;
+import java.sql.PreparedStatement;
+import java.sql.SQLException;
 import model.bo.Jornada;
 
-public class JornadaDAO implements InterfaceDAO<Jornada> {
+public class JornadaDAO {
 
-    @Override
     public void create(Jornada objeto) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        Connection conexao = ConnectionFactory.getConnection();
+        PreparedStatement pstm = null;
+        
+        String sqlInstrucao = "INSERT INTO jornada(dataInicial, dataFinal, cargaHoraria, profissionalId) VALUES(?, ?, ?)";
+        
+        try {
+            pstm = conexao.prepareStatement(sqlInstrucao);
+            pstm.setDate(1, Date.valueOf(objeto.getDataInicial()));
+            pstm.setDate(2, Date.valueOf(objeto.getDataFinal()));
+            pstm.setInt(3, objeto.getCargaHoraria());
+            pstm.setInt(4, objeto.getProfissionalId());
+            pstm.execute();
+            
+        } catch (SQLException ex) {
+            ex.printStackTrace();
+        } finally {
+            ConnectionFactory.closeConnection(conexao, pstm, null);
+        }
     }
-
-    @Override
-    public List<Jornada> retrieve() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
-
-    @Override
-    public Jornada retrieve(int pk) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
-
-    @Override
-    public List<Jornada> retrieve(String parametro, String atributo) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
-
-    @Override
+    
     public void update(Jornada objeto) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        Connection conexao = ConnectionFactory.getConnection();
+        PreparedStatement pstm = null;
+        
+        String sqlInstrucao = "UPDATE jornada SET"
+                + "dataInicial = ?, "
+                + "dataFinal = ?, "
+                + "cargaHoraria = ?, "
+                + "profissionalId = ?"
+                + "WHERE jornada.id = ?";
+        
+        try {
+            pstm = conexao.prepareStatement(sqlInstrucao);
+            pstm.setDate(1, Date.valueOf(objeto.getDataInicial()));
+            pstm.setInt(2, objeto.getCargaHoraria());
+            pstm.setInt(3, objeto.getProfissionalId());
+            pstm.execute();
+            
+        } catch (SQLException ex) {
+           ex.printStackTrace();
+        } finally {
+            ConnectionFactory.closeConnection(conexao, pstm, null);
+        }
+    }
+    
+    public void delete(Jornada objeto) {
+        Connection conexao = ConnectionFactory.getConnection();
+        PreparedStatement pstm = null;
+        
+        String sqlInstrucao = "DELETE hospital.jornada WHERE id = ?";
+        
+        try {
+            pstm = conexao.prepareStatement(sqlInstrucao);
+        } catch (SQLException ex) {
+            ex.printStackTrace();
+        } finally {
+            ConnectionFactory.closeConnection(conexao, pstm, null);
+        }
     }
 }

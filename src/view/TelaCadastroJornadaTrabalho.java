@@ -74,19 +74,19 @@ public class TelaCadastroJornadaTrabalho extends javax.swing.JDialog {
 
     
     public JFormattedTextField getjFormattedTextField1() {
-        return jFormattedTextField1;
+        return dataInicialField;
     }
 
     public void setjFormattedTextField1(JFormattedTextField jFormattedTextField1) {
-        this.jFormattedTextField1 = jFormattedTextField1;
+        this.dataInicialField = jFormattedTextField1;
     }
 
     public JFormattedTextField getjFormattedTextField2() {
-        return jFormattedTextField2;
+        return dataFinalField;
     }
 
     public void setjFormattedTextField2(JFormattedTextField jFormattedTextField2) {
-        this.jFormattedTextField2 = jFormattedTextField2;
+        this.dataFinalField = jFormattedTextField2;
     }
 
     public JLabel getjLabel1() {
@@ -146,19 +146,59 @@ public class TelaCadastroJornadaTrabalho extends javax.swing.JDialog {
     }
 
     public JTextField getjTextField1() {
-        return jTextField1;
+        return idField;
     }
 
     public void setjTextField1(JTextField jTextField1) {
-        this.jTextField1 = jTextField1;
+        this.idField = jTextField1;
     }
 
     public JTextField getjTextField2() {
-        return jTextField2;
+        return cargaHorariaField;
     }
 
     public void setjTextField2(JTextField jTextField2) {
-        this.jTextField2 = jTextField2;
+        this.cargaHorariaField = jTextField2;
+    }
+
+    public JPanel getjPanelDados() {
+        return jPanelDados;
+    }
+
+    public void setjPanelDados(JPanel jPanelDados) {
+        this.jPanelDados = jPanelDados;
+    }
+
+    public JTextField getIdField() {
+        return idField;
+    }
+
+    public void setIdField(JTextField idField) {
+        this.idField = idField;
+    }
+
+    public JTextField getCargaHorariaField() {
+        return cargaHorariaField;
+    }
+
+    public void setCargaHorariaField(JTextField cargaHorariaField) {
+        this.cargaHorariaField = cargaHorariaField;
+    }
+
+    public JFormattedTextField getDataFinalField() {
+        return dataFinalField;
+    }
+
+    public void setDataFinalField(JFormattedTextField dataFinalField) {
+        this.dataFinalField = dataFinalField;
+    }
+
+    public JFormattedTextField getDataInicialField() {
+        return dataInicialField;
+    }
+
+    public void setDataInicialField(JFormattedTextField dataInicialField) {
+        this.dataInicialField = dataInicialField;
     }
 
     
@@ -176,12 +216,12 @@ public class TelaCadastroJornadaTrabalho extends javax.swing.JDialog {
         jLabelTitulo = new javax.swing.JLabel();
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
-        jTextField1 = new javax.swing.JTextField();
-        jFormattedTextField1 = new javax.swing.JFormattedTextField();
+        idField = new javax.swing.JTextField();
+        dataInicialField = new javax.swing.JFormattedTextField();
         jLabel3 = new javax.swing.JLabel();
-        jFormattedTextField2 = new javax.swing.JFormattedTextField();
+        dataFinalField = new javax.swing.JFormattedTextField();
         jLabel4 = new javax.swing.JLabel();
-        jTextField2 = new javax.swing.JTextField();
+        cargaHorariaField = new javax.swing.JTextField();
         jPanelBotoes = new javax.swing.JPanel();
         jButtonNovo = new javax.swing.JButton();
         jButtonCancelar = new javax.swing.JButton();
@@ -222,21 +262,17 @@ public class TelaCadastroJornadaTrabalho extends javax.swing.JDialog {
         jLabel2.setText("Id");
         jPanelDados.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 60, -1, -1));
 
-        jTextField1.setEditable(false);
-        jPanelDados.add(jTextField1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 80, 30, 30));
-
-        jFormattedTextField1.setText("  /  /");
-        jPanelDados.add(jFormattedTextField1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 140, 60, 30));
+        idField.setEditable(false);
+        jPanelDados.add(idField, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 80, 30, 30));
+        jPanelDados.add(dataInicialField, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 140, 60, 30));
 
         jLabel3.setText("Data final");
         jPanelDados.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 120, -1, -1));
-
-        jFormattedTextField2.setText("  /  /");
-        jPanelDados.add(jFormattedTextField2, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 140, 60, 30));
+        jPanelDados.add(dataFinalField, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 140, 60, 30));
 
         jLabel4.setText("Carga horária");
         jPanelDados.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 120, -1, -1));
-        jPanelDados.add(jTextField2, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 140, 60, 30));
+        jPanelDados.add(cargaHorariaField, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 140, 60, 30));
 
         jPanelBotoes.setBorder(javax.swing.BorderFactory.createEtchedBorder());
 
@@ -370,13 +406,15 @@ public class TelaCadastroJornadaTrabalho extends javax.swing.JDialog {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JTextField cargaHorariaField;
+    private javax.swing.JFormattedTextField dataFinalField;
+    private javax.swing.JFormattedTextField dataInicialField;
+    private javax.swing.JTextField idField;
     private javax.swing.JButton jButtonBuscar;
     private javax.swing.JButton jButtonCancelar;
     private javax.swing.JButton jButtonGravar;
     private javax.swing.JButton jButtonNovo;
     private javax.swing.JButton jButtonSair;
-    private javax.swing.JFormattedTextField jFormattedTextField1;
-    private javax.swing.JFormattedTextField jFormattedTextField2;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
@@ -385,7 +423,5 @@ public class TelaCadastroJornadaTrabalho extends javax.swing.JDialog {
     private javax.swing.JPanel jPanelBotoes;
     private javax.swing.JPanel jPanelDados;
     private javax.swing.JPanel jPaneltitulo;
-    private javax.swing.JTextField jTextField1;
-    private javax.swing.JTextField jTextField2;
     // End of variables declaration//GEN-END:variables
 }
