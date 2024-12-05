@@ -28,7 +28,7 @@ public class ControllerBuscaMedico implements ActionListener {
 
             for (Medico objetoAtualDaLista : service.ServiceMedico.ler()) {
                 tabela.addRow(new Object[]{objetoAtualDaLista.getId(), objetoAtualDaLista.getNome(),
-                    objetoAtualDaLista.getCrm(), objetoAtualDaLista.getCrm(), objetoAtualDaLista.getDataCadastro(),
+                    objetoAtualDaLista.getCrm(), objetoAtualDaLista.getDataCadastro(),
                     objetoAtualDaLista.getEmail(), objetoAtualDaLista.getFone1()});
             }
         } else if (evento.getSource() == this.telaBuscaMedico.getButtonFechar()) {

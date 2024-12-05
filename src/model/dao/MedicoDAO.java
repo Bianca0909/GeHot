@@ -21,21 +21,22 @@ public class MedicoDAO implements InterfaceDAO<Medico> {
             pstm = conexao.prepareStatement(sqlInstrucao);
             pstm.setString(1, objeto.getNome());
             pstm.setString(2, objeto.getFone1());
-            pstm.setString(2, objeto.getFone2());
-            pstm.setString(3, objeto.getEmail());
-            pstm.setString(4, objeto.getCpfCnpj());
-            pstm.setString(5, objeto.getRgInscricaoEstadual());
-            pstm.setString(6, objeto.getDataCadastro());
-            pstm.setString(7, objeto.getCep());
-            pstm.setString(8, objeto.getCidade());
-            pstm.setString(9, objeto.getBairro());
-            pstm.setString(10, objeto.getLogradouro());
-            pstm.setString(11, objeto.getComplemento());
-            pstm.setString(12, objeto.getCrm());
-            pstm.setString(13, objeto.getSenha());
-            pstm.setString(14, objeto.getLogin());
-            pstm.setString(15, objeto.getNomeSocial());
-
+            pstm.setString(3, objeto.getFone2());
+            pstm.setString(4, objeto.getEmail());
+            pstm.setString(5, objeto.getCpfCnpj());
+            pstm.setString(6, objeto.getRgInscricaoEstadual());
+            pstm.setString(7, objeto.getDataCadastro());
+            pstm.setString(8, objeto.getCep());
+            pstm.setString(9, objeto.getCidade());
+            pstm.setString(10, objeto.getBairro());
+            pstm.setString(11, objeto.getLogradouro());
+            pstm.setString(12, objeto.getComplemento());
+            pstm.setString(13, objeto.getCrm());
+            pstm.setString(14, objeto.getSenha());
+            pstm.setString(15, objeto.getLogin());
+            pstm.setString(16, objeto.getNomeSocial());
+            pstm.execute();
+            
         } catch (SQLException ex) {
             ex.printStackTrace();
         } finally {
@@ -60,7 +61,11 @@ public class MedicoDAO implements InterfaceDAO<Medico> {
             while (resultado.next()) {
                 Medico medico = new Medico();
                 medico.setId(resultado.getInt("id"));
-
+                medico.setNome(resultado.getString("nome"));
+                medico.setCrm(resultado.getString("crm"));
+                medico.setDataCadastro(resultado.getString("dataCadastro"));
+                medico.setEmail(resultado.getString("email"));
+                medico.setFone1(resultado.getString("fone1"));
                 medicos.add(medico);
             }
         } catch (SQLException ex) {
