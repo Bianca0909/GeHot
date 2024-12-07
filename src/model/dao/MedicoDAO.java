@@ -122,7 +122,7 @@ public class MedicoDAO implements InterfaceDAO<Medico> {
         Connection conexao = ConnectionFactory.getConnection();
         PreparedStatement pstm = null;
         ResultSet resultado = null;
-        String sqlInstrucao = "SELECT id, nome, grau_parentesco, cpf, fone, email, status FROM hospital.acompanhante WHERE " + atributo + " LIKE ?";
+        String sqlInstrucao = "SELECT id, nome, crm, dataCadastro, email, fone1 FROM hospital.medico WHERE " + atributo + " LIKE ?";
 
         List<Medico> medicos = new ArrayList<>();
 

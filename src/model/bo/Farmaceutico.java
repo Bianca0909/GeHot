@@ -2,7 +2,7 @@ package model.bo;
 
 public class Farmaceutico extends Pessoa {
 
-    private String cfr;
+    private String crf;
     private String senha;
     private String login;
     private String nomeSocial;
@@ -12,21 +12,21 @@ public class Farmaceutico extends Pessoa {
 
     public Farmaceutico(Integer id, String nome, String fone1, String fone2, String email, String cpfCnpj,
             String rgInscricaoEstadual, String dataCadastro, String cep, String cidade, String bairro,
-            String logradouro, String complemento, String cfr, String senha, String login, String nomeSocial) {
+            String logradouro, String complemento, String crf, String senha, String login, String nomeSocial) {
         super(id, nome, fone1, fone2, email, cpfCnpj, rgInscricaoEstadual, dataCadastro, cep, cidade, bairro,
                 logradouro, complemento);
-        this.cfr = cfr;
+        this.crf = crf;
         this.senha = senha;
         this.login = login;
         this.nomeSocial = nomeSocial;
     }
 
-    public String getCfr() {
-        return cfr;
+    public String getCrf() {
+        return crf;
     }
 
-    public void setCfr(String cfr) {
-        this.cfr = cfr;
+    public void setCrf(String crf) {
+        this.crf = crf;
     }
 
     public String getSenha() {
@@ -55,7 +55,7 @@ public class Farmaceutico extends Pessoa {
 
     @Override
     public String toString() {
-        return "Farmaceutico{" + "cfr=" + cfr + ", senha=" + senha + ", login=" + login + ", nomeSocial=" + nomeSocial + '}';
+        return "Farmaceutico{" + "crf=" + crf + ", senha=" + senha + ", login=" + login + ", nomeSocial=" + nomeSocial + '}';
     }
 
 }

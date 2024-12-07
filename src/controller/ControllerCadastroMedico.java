@@ -42,7 +42,6 @@ public class ControllerCadastroMedico implements ActionListener {
         } else if (evento.getSource() == this.telaCadastroMedico.getjButtonGravar()) {
 
             Medico medico = new Medico();
-            medico.setId(model.bo.ClasseDadosGravacao.listaMedico.size() + 1);
             medico.setNome(this.telaCadastroMedico.getNomeField().getText());
             medico.setFone1(this.telaCadastroMedico.getFone1Field().getText());
             medico.setFone2(this.telaCadastroMedico.getFone2Field().getText());
