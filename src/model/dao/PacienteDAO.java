@@ -55,11 +55,9 @@ public class PacienteDAO implements InterfaceDAO<Paciente> {
         Connection conexao = ConnectionFactory.getConnection();
         PreparedStatement pstm = null;
         ResultSet resultado = null;
-         String sqlInstrucao = "SELECT id, nome, fone1, fone2, email, cpfCnpj, rgInscricaoEstadual, dataCadastro, cep, cidade, bairro, "
-                + "logradouro, complemento, tipoSanguineo, sexo, nomeSocial FROM paciente";
+         String sqlInstrucao = "SELECT id, nome, fone1, fone2, email, cpf_cnpj, rg_inscricao_estadual, data_cadastro, cep, cidade, bairro, "
+                + "logradouro, complemento, tipo_sanguineo, sexo, nome_social FROM hospital.paciente";
          List<Paciente> pacientes = new ArrayList<>();
-
-        
                 
         try {
             pstm = conexao.prepareStatement(sqlInstrucao);
@@ -72,17 +70,17 @@ public class PacienteDAO implements InterfaceDAO<Paciente> {
                 paciente.setFone1(resultado.getString("fone1"));
                 paciente.setFone2(resultado.getString("fone2"));
                 paciente.setEmail(resultado.getString("email"));
-                paciente.setCpfCnpj(resultado.getString("cpfCnpj"));
-                paciente.setRgInscricaoEstadual(resultado.getString("rgInscricaoEstadual"));
-                paciente.setDataCadastro(resultado.getString("dataCadastro"));
+                paciente.setCpfCnpj(resultado.getString("cpf_cnpj"));
+                paciente.setRgInscricaoEstadual(resultado.getString("rg_inscricao_estadual"));
+                paciente.setDataCadastro(resultado.getString("data_cadastro"));
                 paciente.setCep(resultado.getString("cep"));
                 paciente.setCidade(resultado.getString("cidade"));
                 paciente.setBairro(resultado.getString("bairro"));
                 paciente.setLogradouro(resultado.getString("logradouro"));
                 paciente.setComplemento(resultado.getString("complemento"));
-                paciente.setTipoSanguineo(resultado.getString("tipoSanguineo"));
+                paciente.setTipoSanguineo(resultado.getString("tipo_sanguineo"));
                 paciente.setSexo(resultado.getString("sexo"));
-                paciente.setNomeSocial(resultado.getString("nomeSocial"));
+                paciente.setNomeSocial(resultado.getString("nome_social"));
                 
                 pacientes.add(paciente);
             }
@@ -101,8 +99,8 @@ public class PacienteDAO implements InterfaceDAO<Paciente> {
         Connection conexao = ConnectionFactory.getConnection();
         PreparedStatement pstm = null;
         ResultSet resultado = null;
-        String sqlInstrucao = "SELECT id, nome, fone1, fone2, email, cpfCnpj, rgInscricaoEstadual, dataCadastro, cep, cidade, bairro, "
-                + "logradouro, complemento, tipoSanguineo, sexo, nomeSocial FROM paciente WHERE id = ?";
+        String sqlInstrucao = "SELECT id, nome, fone1, fone2, email, cpf_cnpj, rg_inscricao_estadual, data_cadastro, cep, cidade, bairro, "
+                + "logradouro, complemento, tipo_sanguineo, sexo, nome_social FROM hospital.paciente WHERE id = ?";
         Paciente paciente = new Paciente();
         
                 try {
@@ -146,8 +144,8 @@ public class PacienteDAO implements InterfaceDAO<Paciente> {
         Connection conexao = ConnectionFactory.getConnection();
         PreparedStatement pstm = null;
         ResultSet resultado = null;
-        String sqlInstrucao = "SELECT id, nome, fone1, fone2, email, cpfCnpj, rgInscricaoEstadual, dataCadastro, cep, cidade, bairro, "
-                + "logradouro, complemento, tipoSanguineo, sexo, nomeSocial FROM paciente WHERE " + atributo + " LIKE ?";
+        String sqlInstrucao = "SELECT id, nome, fone1, fone2, email, cpf_cnpj, rg_inscricao_estadual, data_cadastro, cep, cidade, bairro, "
+                + "logradouro, complemento, tipo_sanguineo, sexo, nome_social FROM hospital.paciente WHERE " + atributo + " LIKE ?";
 
         List<Paciente> pacientes = new ArrayList<>();
         
@@ -193,8 +191,8 @@ public class PacienteDAO implements InterfaceDAO<Paciente> {
     public void update(Paciente objeto) {
         Connection conexao = ConnectionFactory.getConnection();
         PreparedStatement pstm = null;
-        String sqlInstrucao = "UPDATE paciente SET nome = ?, fone1 = ?, fone2 = ?, email = ?, cpfCnpj = ?, rgInscricaoEstadual = ?, "
-                + "dataCadastro = ?, cep = ?, cidade = ?, bairro = ?, logradouro = ?, complemento = ?, tipoSanguineo = ?, sexo = ?, nomeSocial = ? "
+        String sqlInstrucao = "UPDATE paciente SET nome = ?, fone1 = ?, fone2 = ?, email = ?, cpf_cnpj = ?, rg_inscricao_estadual = ?, "
+                + "data_cadastro = ?, cep = ?, cidade = ?, bairro = ?, logradouro = ?, complemento = ?, tipo_sanguineo = ?, sexo = ?, nome_social = ? "
                 + "WHERE id = ?";
         
         try {

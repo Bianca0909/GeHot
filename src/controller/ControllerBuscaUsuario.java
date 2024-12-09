@@ -29,9 +29,6 @@ public class ControllerBuscaUsuario implements ActionListener {
             for (Usuario objetoAtualDaLista : service.ServiceUsuario.ler()) {
                 tabela.addRow(new Object[]{
                     objetoAtualDaLista.getId(),
-                    objetoAtualDaLista.getNome(),
-                    objetoAtualDaLista.getCpfCnpj(),
-                    objetoAtualDaLista.getEmail(),
                     objetoAtualDaLista.getLogin()
                 });
             }
@@ -51,41 +48,13 @@ public class ControllerBuscaUsuario implements ActionListener {
                     Usuario usuario = service.ServiceUsuario.ler(Integer.parseInt(this.telaBuscaUsuario.getValorField().getText()));
                     tabela.addRow(new Object[]{
                         usuario.getId(),
-                        usuario.getNome(),
-                        usuario.getCpfCnpj(),
-                        usuario.getEmail(),
                         usuario.getLogin()
                     });
 
-                } else if (this.telaBuscaUsuario.getFiltroComboBox().getSelectedItem().equals("NOME")) {
-                    for (Usuario objetoAtualDaLista : service.ServiceUsuario.ler(this.telaBuscaUsuario.getValorField().getText(), "nome")) {
+                } else if (this.telaBuscaUsuario.getFiltroComboBox().getSelectedItem().equals("LOGIN")) {
+                    for (Usuario objetoAtualDaLista : service.ServiceUsuario.ler(this.telaBuscaUsuario.getValorField().getText(), "login")) {
                         tabela.addRow(new Object[]{
                             objetoAtualDaLista.getId(),
-                            objetoAtualDaLista.getNome(),
-                            objetoAtualDaLista.getCpfCnpj(),
-                            objetoAtualDaLista.getEmail(),
-                            objetoAtualDaLista.getLogin()
-                        });
-                    }
-
-                } else if (this.telaBuscaUsuario.getFiltroComboBox().getSelectedItem().equals("CPF/CNPJ")) {
-                    for (Usuario objetoAtualDaLista : service.ServiceUsuario.ler(this.telaBuscaUsuario.getValorField().getText(), "cpfCnpj")) {
-                        tabela.addRow(new Object[]{
-                            objetoAtualDaLista.getId(),
-                            objetoAtualDaLista.getNome(),
-                            objetoAtualDaLista.getCpfCnpj(),
-                            objetoAtualDaLista.getEmail(),
-                            objetoAtualDaLista.getLogin()
-                        });
-                    }
-
-                } else if (this.telaBuscaUsuario.getFiltroComboBox().getSelectedItem().equals("EMAIL")) {
-                    for (Usuario objetoAtualDaLista : service.ServiceUsuario.ler(this.telaBuscaUsuario.getValorField().getText(), "email")) {
-                        tabela.addRow(new Object[]{
-                            objetoAtualDaLista.getId(),
-                            objetoAtualDaLista.getNome(),
-                            objetoAtualDaLista.getCpfCnpj(),
-                            objetoAtualDaLista.getEmail(),
                             objetoAtualDaLista.getLogin()
                         });
                     }

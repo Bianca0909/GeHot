@@ -40,22 +40,8 @@ public class ControllerCadastroUsuario implements ActionListener {
         } else if (evento.getSource() == this.telaCadastroUsuario.getjButtonGravar()) {
 
             Usuario usuario = new Usuario();
-            usuario.setId(model.bo.ClasseDadosGravacao.listaUsuario.size() + 1);
-            usuario.setNome(this.telaCadastroUsuario.getNomeField().getText());
-            usuario.setFone1(this.telaCadastroUsuario.getFone1Field().getText());
-            usuario.setFone2(this.telaCadastroUsuario.getFone2Field().getText());
-            usuario.setEmail(this.telaCadastroUsuario.getEmailField().getText());
-            usuario.setCpfCnpj(this.telaCadastroUsuario.getCpfField().getText());
-            usuario.setRgInscricaoEstadual(this.telaCadastroUsuario.getRgField().getText());
-            usuario.setDataCadastro(this.telaCadastroUsuario.getDataCadastroField().getText());
-            usuario.setCep(this.telaCadastroUsuario.getCepField().getText());
-            usuario.setCidade(this.telaCadastroUsuario.getCidadeField().getText());
-            usuario.setBairro(this.telaCadastroUsuario.getBairroField().getText());
-            usuario.setLogradouro(this.telaCadastroUsuario.getLogradouroField().getText());
-            usuario.setComplemento(this.telaCadastroUsuario.getComplementoField().getText());
             usuario.setLogin(this.telaCadastroUsuario.getLoginField().getText());
             usuario.setSenha(this.telaCadastroUsuario.getSenhaField().getText());
-            usuario.setNomeSocial(this.telaCadastroUsuario.getNomeSocialField().getText());
 
             if (this.telaCadastroUsuario.getIdField().getText().equals("")) {
                 service.ServiceUsuario.adicionar(usuario);
@@ -81,24 +67,11 @@ public class ControllerCadastroUsuario implements ActionListener {
                 Utilities.limpaComponentes(true, this.telaCadastroUsuario.getjPanelDados());
 
                 this.telaCadastroUsuario.getIdField().setText(usuario.getId() + "");
-                this.telaCadastroUsuario.getNomeField().setText(usuario.getNome());
-                this.telaCadastroUsuario.getNomeSocialField().setText(usuario.getNomeSocial());
-                this.telaCadastroUsuario.getFone1Field().setText(usuario.getFone1());
-                this.telaCadastroUsuario.getFone2Field().setText(usuario.getFone2());
-                this.telaCadastroUsuario.getEmailField().setText(usuario.getEmail());
-                this.telaCadastroUsuario.getCpfField().setText(usuario.getCpfCnpj());
-                this.telaCadastroUsuario.getRgField().setText(usuario.getRgInscricaoEstadual());
-                this.telaCadastroUsuario.getDataCadastroField().setText(usuario.getDataCadastro());
-                this.telaCadastroUsuario.getCepField().setText(usuario.getCep());
-                this.telaCadastroUsuario.getCidadeField().setText(usuario.getCidade());
-                this.telaCadastroUsuario.getBairroField().setText(usuario.getBairro());
-                this.telaCadastroUsuario.getLogradouroField().setText(usuario.getLogradouro());
-                this.telaCadastroUsuario.getComplementoField().setText(usuario.getComplemento());
                 this.telaCadastroUsuario.getLoginField().setText(usuario.getLogin());
                 this.telaCadastroUsuario.getSenhaField().setText(usuario.getSenha());
 
                 this.telaCadastroUsuario.getIdField().setEnabled(false);
-                this.telaCadastroUsuario.getNomeField().requestFocus();
+                this.telaCadastroUsuario.getLoginField().requestFocus();
             }
 
         } else if (evento.getSource() == this.telaCadastroUsuario.getjButtonSair()) {

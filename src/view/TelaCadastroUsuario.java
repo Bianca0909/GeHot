@@ -19,150 +19,6 @@ public class TelaCadastroUsuario extends javax.swing.JDialog {
         initComponents();
     }
 
-    public JLabel getBairroLabel() {
-        return BairroLabel;
-    }
-
-    public void setBairroLabel(JLabel BairroLabel) {
-        this.BairroLabel = BairroLabel;
-    }
-
-    public JLabel getCidadeLabel() {
-        return CidadeLabel;
-    }
-
-    public void setCidadeLabel(JLabel CidadeLabel) {
-        this.CidadeLabel = CidadeLabel;
-    }
-
-    public JTextField getBairroField() {
-        return bairroField;
-    }
-
-    public void setBairroField(JTextField bairroField) {
-        this.bairroField = bairroField;
-    }
-
-    public JTextField getCepField() {
-        return cepField;
-    }
-
-    public void setCepField(JTextField cepField) {
-        this.cepField = cepField;
-    }
-
-    public JLabel getCepLabel() {
-        return cepLabel;
-    }
-
-    public void setCepLabel(JLabel cepLabel) {
-        this.cepLabel = cepLabel;
-    }
-
-    public JTextField getCidadeField() {
-        return cidadeField;
-    }
-
-    public void setCidadeField(JTextField cidadeField) {
-        this.cidadeField = cidadeField;
-    }
-
-    public JTextField getComplementoField() {
-        return complementoField;
-    }
-
-    public void setComplementoField(JTextField complementoField) {
-        this.complementoField = complementoField;
-    }
-
-    public JLabel getComplementoLabel() {
-        return complementoLabel;
-    }
-
-    public void setComplementoLabel(JLabel complementoLabel) {
-        this.complementoLabel = complementoLabel;
-    }
-
-    public JLabel getCpfCnpjLabel() {
-        return cpfCnpjLabel;
-    }
-
-    public void setCpfCnpjLabel(JLabel cpfCnpjLabel) {
-        this.cpfCnpjLabel = cpfCnpjLabel;
-    }
-
-    public JTextField getCpfField() {
-        return cpfField;
-    }
-
-    public void setCpfField(JTextField cpfField) {
-        this.cpfField = cpfField;
-    }
-
-    public JTextField getDataCadastroField() {
-        return dataCadastroField;
-    }
-
-    public void setDataCadastroField(JTextField dataCadastroField) {
-        this.dataCadastroField = dataCadastroField;
-    }
-
-    public JLabel getDataCadastroLabel() {
-        return dataCadastroLabel;
-    }
-
-    public void setDataCadastroLabel(JLabel dataCadastroLabel) {
-        this.dataCadastroLabel = dataCadastroLabel;
-    }
-
-    public JTextField getEmailField() {
-        return emailField;
-    }
-
-    public void setEmailField(JTextField emailField) {
-        this.emailField = emailField;
-    }
-
-    public JLabel getEmailLabel() {
-        return emailLabel;
-    }
-
-    public void setEmailLabel(JLabel emailLabel) {
-        this.emailLabel = emailLabel;
-    }
-
-    public JTextField getFone1Field() {
-        return fone1Field;
-    }
-
-    public void setFone1Field(JTextField fone1Field) {
-        this.fone1Field = fone1Field;
-    }
-
-    public JLabel getFone1Label() {
-        return fone1Label;
-    }
-
-    public void setFone1Label(JLabel fone1Label) {
-        this.fone1Label = fone1Label;
-    }
-
-    public JTextField getFone2Field() {
-        return fone2Field;
-    }
-
-    public void setFone2Field(JTextField fone2Field) {
-        this.fone2Field = fone2Field;
-    }
-
-    public JLabel getFone2Label() {
-        return fone2Label;
-    }
-
-    public void setFone2Label(JLabel fone2Label) {
-        this.fone2Label = fone2Label;
-    }
-
     public JTextField getIdField() {
         return idField;
     }
@@ -283,70 +139,6 @@ public class TelaCadastroUsuario extends javax.swing.JDialog {
         this.loginLabel = loginLabel;
     }
 
-    public JTextField getLogradouroField() {
-        return logradouroField;
-    }
-
-    public void setLogradouroField(JTextField logradouroField) {
-        this.logradouroField = logradouroField;
-    }
-
-    public JLabel getLogradouroLabel() {
-        return logradouroLabel;
-    }
-
-    public void setLogradouroLabel(JLabel logradouroLabel) {
-        this.logradouroLabel = logradouroLabel;
-    }
-
-    public JTextField getNomeField() {
-        return nomeField;
-    }
-
-    public void setNomeField(JTextField nomeField) {
-        this.nomeField = nomeField;
-    }
-
-    public JLabel getNomeLabel() {
-        return nomeLabel;
-    }
-
-    public void setNomeLabel(JLabel nomeLabel) {
-        this.nomeLabel = nomeLabel;
-    }
-
-    public JTextField getNomeSocialField() {
-        return nomeSocialField;
-    }
-
-    public void setNomeSocialField(JTextField nomeSocialField) {
-        this.nomeSocialField = nomeSocialField;
-    }
-
-    public JLabel getNomeSocialLabel() {
-        return nomeSocialLabel;
-    }
-
-    public void setNomeSocialLabel(JLabel nomeSocialLabel) {
-        this.nomeSocialLabel = nomeSocialLabel;
-    }
-
-    public JTextField getRgField() {
-        return rgField;
-    }
-
-    public void setRgField(JTextField rgField) {
-        this.rgField = rgField;
-    }
-
-    public JLabel getRgInscricaoEstadualLabel() {
-        return rgInscricaoEstadualLabel;
-    }
-
-    public void setRgInscricaoEstadualLabel(JLabel rgInscricaoEstadualLabel) {
-        this.rgInscricaoEstadualLabel = rgInscricaoEstadualLabel;
-    }
-
     public JTextField getSenhaField() {
         return senhaField;
     }
@@ -362,7 +154,7 @@ public class TelaCadastroUsuario extends javax.swing.JDialog {
     public void setSenhaLabel(JLabel senhaLabel) {
         this.senhaLabel = senhaLabel;
     }
-
+    
     
     /**
      * This method is called from within the constructor to initialize the form.
@@ -378,34 +170,8 @@ public class TelaCadastroUsuario extends javax.swing.JDialog {
         jPaneltitulo = new javax.swing.JPanel();
         jLabelTitulo = new javax.swing.JLabel();
         jPanelDados = new javax.swing.JPanel();
-        nomeLabel = new javax.swing.JLabel();
         idLabel = new javax.swing.JLabel();
-        dataCadastroLabel = new javax.swing.JLabel();
         idField = new javax.swing.JTextField();
-        nomeField = new javax.swing.JTextField();
-        dataCadastroField = new javax.swing.JTextField();
-        cpfCnpjLabel = new javax.swing.JLabel();
-        cpfField = new javax.swing.JTextField();
-        rgField = new javax.swing.JTextField();
-        rgInscricaoEstadualLabel = new javax.swing.JLabel();
-        nomeSocialLabel = new javax.swing.JLabel();
-        nomeSocialField = new javax.swing.JTextField();
-        emailField = new javax.swing.JTextField();
-        emailLabel = new javax.swing.JLabel();
-        fone1Label = new javax.swing.JLabel();
-        fone1Field = new javax.swing.JTextField();
-        fone2Label = new javax.swing.JLabel();
-        fone2Field = new javax.swing.JTextField();
-        cepField = new javax.swing.JTextField();
-        cepLabel = new javax.swing.JLabel();
-        CidadeLabel = new javax.swing.JLabel();
-        cidadeField = new javax.swing.JTextField();
-        BairroLabel = new javax.swing.JLabel();
-        bairroField = new javax.swing.JTextField();
-        logradouroLabel = new javax.swing.JLabel();
-        logradouroField = new javax.swing.JTextField();
-        complementoLabel = new javax.swing.JLabel();
-        complementoField = new javax.swing.JTextField();
         loginLabel = new javax.swing.JLabel();
         loginField = new javax.swing.JTextField();
         senhaLabel = new javax.swing.JLabel();
@@ -451,14 +217,8 @@ public class TelaCadastroUsuario extends javax.swing.JDialog {
         jPanelDados.setBorder(javax.swing.BorderFactory.createEtchedBorder());
         jPanelDados.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        nomeLabel.setText("Nome");
-        jPanelDados.add(nomeLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(8, 62, 37, -1));
-
         idLabel.setText("Id");
-        jPanelDados.add(idLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(8, 8, 37, -1));
-
-        dataCadastroLabel.setText("Data de cadastro");
-        jPanelDados.add(dataCadastroLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(608, 62, -1, -1));
+        jPanelDados.add(idLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(7, 10, 50, -1));
 
         idField.setEditable(false);
         idField.addActionListener(new java.awt.event.ActionListener() {
@@ -466,102 +226,24 @@ public class TelaCadastroUsuario extends javax.swing.JDialog {
                 idFieldActionPerformed(evt);
             }
         });
-        jPanelDados.add(idField, new org.netbeans.lib.awtextra.AbsoluteConstraints(8, 28, 49, 28));
-
-        nomeField.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                nomeFieldActionPerformed(evt);
-            }
-        });
-        jPanelDados.add(nomeField, new org.netbeans.lib.awtextra.AbsoluteConstraints(8, 84, 594, 33));
-
-        dataCadastroField.setText("  /  /");
-        dataCadastroField.setToolTipText("");
-        jPanelDados.add(dataCadastroField, new org.netbeans.lib.awtextra.AbsoluteConstraints(608, 84, 139, 33));
-
-        cpfCnpjLabel.setText("CPF");
-        jPanelDados.add(cpfCnpjLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(608, 123, 65, -1));
-
-        cpfField.setText("   .   .   -");
-        jPanelDados.add(cpfField, new org.netbeans.lib.awtextra.AbsoluteConstraints(608, 145, 139, 31));
-        jPanelDados.add(rgField, new org.netbeans.lib.awtextra.AbsoluteConstraints(8, 210, 161, 31));
-
-        rgInscricaoEstadualLabel.setText("RG");
-        jPanelDados.add(rgInscricaoEstadualLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(8, 188, -1, -1));
-
-        nomeSocialLabel.setText("Nome social");
-        jPanelDados.add(nomeSocialLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(8, 123, 75, -1));
-        jPanelDados.add(nomeSocialField, new org.netbeans.lib.awtextra.AbsoluteConstraints(8, 145, 594, 31));
-        jPanelDados.add(emailField, new org.netbeans.lib.awtextra.AbsoluteConstraints(8, 269, 286, 30));
-
-        emailLabel.setText("E-mail");
-        jPanelDados.add(emailLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(8, 247, 37, -1));
-
-        fone1Label.setText("Fone 1");
-        jPanelDados.add(fone1Label, new org.netbeans.lib.awtextra.AbsoluteConstraints(447, 188, 43, -1));
-
-        fone1Field.setText("(  )     -     ");
-        jPanelDados.add(fone1Field, new org.netbeans.lib.awtextra.AbsoluteConstraints(447, 210, 148, 30));
-
-        fone2Label.setText("Fone 2");
-        jPanelDados.add(fone2Label, new org.netbeans.lib.awtextra.AbsoluteConstraints(607, 188, 43, -1));
-
-        fone2Field.setText("(  )     -     ");
-        fone2Field.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                fone2FieldActionPerformed(evt);
-            }
-        });
-        jPanelDados.add(fone2Field, new org.netbeans.lib.awtextra.AbsoluteConstraints(607, 210, 140, 30));
-        jPanelDados.add(cepField, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 270, 130, 30));
-
-        cepLabel.setText("CEP");
-        jPanelDados.add(cepLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(306, 247, 43, -1));
-
-        CidadeLabel.setText("Cidade");
-        jPanelDados.add(CidadeLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 250, 43, -1));
-
-        cidadeField.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                cidadeFieldActionPerformed(evt);
-            }
-        });
-        jPanelDados.add(cidadeField, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 270, 310, 30));
-
-        BairroLabel.setText("Bairro");
-        jPanelDados.add(BairroLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 310, 43, -1));
-        jPanelDados.add(bairroField, new org.netbeans.lib.awtextra.AbsoluteConstraints(8, 330, 166, 30));
-
-        logradouroLabel.setText("Logradouro");
-        jPanelDados.add(logradouroLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 310, 72, -1));
-
-        logradouroField.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                logradouroFieldActionPerformed(evt);
-            }
-        });
-        jPanelDados.add(logradouroField, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 330, 258, 30));
-
-        complementoLabel.setText("Complemento");
-        jPanelDados.add(complementoLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 310, 88, -1));
-        jPanelDados.add(complementoField, new org.netbeans.lib.awtextra.AbsoluteConstraints(444, 330, 310, 30));
+        jPanelDados.add(idField, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 30, 49, 28));
 
         loginLabel.setText("Login");
         loginLabel.setToolTipText("");
-        jPanelDados.add(loginLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 370, 37, -1));
-        jPanelDados.add(loginField, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 390, 160, 30));
+        jPanelDados.add(loginLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 10, 37, -1));
+        jPanelDados.add(loginField, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 30, 160, 30));
 
         senhaLabel.setText("Senha");
-        jPanelDados.add(senhaLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 370, 37, -1));
+        jPanelDados.add(senhaLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 10, 37, -1));
 
         senhaField.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 senhaFieldActionPerformed(evt);
             }
         });
-        jPanelDados.add(senhaField, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 390, 150, 30));
+        jPanelDados.add(senhaField, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 30, 150, 30));
 
-        getContentPane().add(jPanelDados, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 49, 760, 430));
+        getContentPane().add(jPanelDados, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 50, 760, 80));
 
         jPanelBotoes.setBorder(javax.swing.BorderFactory.createEtchedBorder());
 
@@ -618,7 +300,7 @@ public class TelaCadastroUsuario extends javax.swing.JDialog {
         });
         jPanelBotoes.add(jButtonSair);
 
-        getContentPane().add(jPanelBotoes, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 480, 762, -1));
+        getContentPane().add(jPanelBotoes, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 130, 762, -1));
 
         pack();
         setLocationRelativeTo(null);
@@ -644,25 +326,9 @@ public class TelaCadastroUsuario extends javax.swing.JDialog {
         // TODO add your handling code here:
     }//GEN-LAST:event_idFieldActionPerformed
 
-    private void nomeFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_nomeFieldActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_nomeFieldActionPerformed
-
-    private void cidadeFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cidadeFieldActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_cidadeFieldActionPerformed
-
-    private void fone2FieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_fone2FieldActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_fone2FieldActionPerformed
-
     private void senhaFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_senhaFieldActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_senhaFieldActionPerformed
-
-    private void logradouroFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_logradouroFieldActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_logradouroFieldActionPerformed
 
     /**
      * @param args the command line arguments
@@ -707,24 +373,6 @@ public class TelaCadastroUsuario extends javax.swing.JDialog {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JLabel BairroLabel;
-    private javax.swing.JLabel CidadeLabel;
-    private javax.swing.JTextField bairroField;
-    private javax.swing.JTextField cepField;
-    private javax.swing.JLabel cepLabel;
-    private javax.swing.JTextField cidadeField;
-    private javax.swing.JTextField complementoField;
-    private javax.swing.JLabel complementoLabel;
-    private javax.swing.JLabel cpfCnpjLabel;
-    private javax.swing.JTextField cpfField;
-    private javax.swing.JTextField dataCadastroField;
-    private javax.swing.JLabel dataCadastroLabel;
-    private javax.swing.JTextField emailField;
-    private javax.swing.JLabel emailLabel;
-    private javax.swing.JTextField fone1Field;
-    private javax.swing.JLabel fone1Label;
-    private javax.swing.JTextField fone2Field;
-    private javax.swing.JLabel fone2Label;
     private javax.swing.JTextField idField;
     private javax.swing.JLabel idLabel;
     private javax.swing.JButton jButtonBuscar;
@@ -740,14 +388,6 @@ public class TelaCadastroUsuario extends javax.swing.JDialog {
     private javax.swing.JTextArea jTextArea1;
     private javax.swing.JTextField loginField;
     private javax.swing.JLabel loginLabel;
-    private javax.swing.JTextField logradouroField;
-    private javax.swing.JLabel logradouroLabel;
-    private javax.swing.JTextField nomeField;
-    private javax.swing.JLabel nomeLabel;
-    private javax.swing.JTextField nomeSocialField;
-    private javax.swing.JLabel nomeSocialLabel;
-    private javax.swing.JTextField rgField;
-    private javax.swing.JLabel rgInscricaoEstadualLabel;
     private javax.swing.JTextField senhaField;
     private javax.swing.JLabel senhaLabel;
     // End of variables declaration//GEN-END:variables

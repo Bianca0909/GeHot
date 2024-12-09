@@ -187,11 +187,11 @@ public class TelaBuscaUsuario extends javax.swing.JDialog {
 
             },
             new String [] {
-                "ID", "Nome", "CPF", "Data Nascimento", "E-mail", "Telefone"
+                "ID", "Login"
             }
         ) {
             Class[] types = new Class [] {
-                java.lang.Integer.class, java.lang.String.class, java.lang.String.class, java.lang.Object.class, java.lang.String.class, java.lang.String.class
+                java.lang.Integer.class, java.lang.String.class
             };
 
             public Class getColumnClass(int columnIndex) {
@@ -211,8 +211,9 @@ public class TelaBuscaUsuario extends javax.swing.JDialog {
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                .addGap(0, 0, Short.MAX_VALUE)
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 298, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 283, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(15, 15, 15))
         );
 
         getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 60, 630, 290));
@@ -245,7 +246,7 @@ public class TelaBuscaUsuario extends javax.swing.JDialog {
 
         jPanel5.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
 
-        filtroComboBox.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "ID", "NOME", "CPF", "DATA NASCIMENTO", "EMAIL", "TELEFONE" }));
+        filtroComboBox.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "ID", "LOGIN" }));
 
         jLabel1.setText("Filtrar por");
 

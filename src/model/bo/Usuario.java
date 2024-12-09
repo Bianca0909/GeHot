@@ -1,22 +1,26 @@
 package model.bo;
 
-public class Usuario extends Pessoa {
+public class Usuario {
 
+    private Integer id;
     private String login;
     private String senha;
-    private String nomeSocial;
 
     public Usuario() {
     }
 
-    public Usuario(Integer id, String nome, String fone1, String fone2, String email, String cpfCnpj,
-            String rgInscricaoEstadual, String dataCadastro, String cep, String cidade, String bairro,
-            String logradouro, String complemento, String login, String senha, String nomeSocial) {
-        super(id, nome, fone1, fone2, email, cpfCnpj, rgInscricaoEstadual, dataCadastro, cep, cidade, bairro,
-                logradouro, complemento);
+    public Usuario(Integer id, String login, String senha) {
+        this.id = id;
         this.login = login;
         this.senha = senha;
-        this.nomeSocial = nomeSocial;
+    }
+
+    public Integer getId() {
+        return id;
+    }
+
+    public void setId(Integer id) {
+        this.id = id;
     }
 
     public String getLogin() {
@@ -35,16 +39,4 @@ public class Usuario extends Pessoa {
         this.senha = senha;
     }
 
-    public String getNomeSocial() {
-        return nomeSocial;
-    }
-
-    public void setNomeSocial(String nomeSocial) {
-        this.nomeSocial = nomeSocial;
-    }
-
-    @Override
-    public String toString() {
-        return "Usuario{" + "login=" + login + ", senha=" + senha + ", nomeSocial=" + nomeSocial + '}';
-    }
 }
