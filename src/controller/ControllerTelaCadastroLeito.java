@@ -45,7 +45,6 @@ public class ControllerTelaCadastroLeito implements ActionListener {
             
             leito.setDescricao(this.telaCadastroLeito.getDescricaoField().getText());
             leito.setStatus(this.telaCadastroLeito.getStatusComboBox().getSelectedItem() + "");
-            leito.setQuarto((Quarto)this.telaCadastroLeito.getQuartoComboBox().getSelectedItem());
             
             if (this.telaCadastroLeito.getIdField().getText().equals("")){
                 service.ServiceLeito.adicionar(leito);
@@ -74,7 +73,6 @@ public class ControllerTelaCadastroLeito implements ActionListener {
                 this.telaCadastroLeito.getIdField().setText(leito.getId() + "");
                 this.telaCadastroLeito.getDescricaoField().setText(leito.getDescricao());
                 this.telaCadastroLeito.getStatusComboBox().setSelectedItem(leito.getStatus());
-                this.telaCadastroLeito.getQuartoComboBox().setSelectedItem(leito.getQuarto().getDescricao());
                 
                 this.telaCadastroLeito.getIdField().setEnabled(false);
                 this.telaCadastroLeito.getDescricaoField().requestFocus();

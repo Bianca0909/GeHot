@@ -24,11 +24,11 @@ public class ControllerBuscaLaboratorio implements ActionListener {
     public void actionPerformed(ActionEvent evento) {
 
         if (evento.getSource() == this.telaBuscaLaboratorio.getCarregarButton()) {
-            DefaultTableModel tabela = (DefaultTableModel) this.telaBuscaLaboratorio.getJTableDados().getModel();
-            tabela.setRowCount(0);
-            for (Laboratorio objetoAtualDaLista : service.ServiceLaboratorio.ler()) {
-                tabela.addRow(new Object[]{objetoAtualDaLista.getId(), objetoAtualDaLista.getNomeFantasia(),
-                    objetoAtualDaLista.getContato(), objetoAtualDaLista.getStatus()});
+
+            if ((!this.telaBuscaLaboratorio.getJTableDados().getValueAt(this.telaBuscaLaboratorio.getJTableDados().getSelectedRow(), 0).equals("")) && 
+                    (this.telaBuscaLaboratorio.getJTableDados().getValueAt(this.telaBuscaLaboratorio.getJTableDados().getSelectedRow(), 3).equals("ATIVO"))) {
+                ControllerCadastroLaboratorio.codigo = (int) this.telaBuscaLaboratorio.getJTableDados().getValueAt(this.telaBuscaLaboratorio.getJTableDados().getSelectedRow(), 0);
+                this.telaBuscaLaboratorio.dispose();
             }
         } else if (evento.getSource() == this.telaBuscaLaboratorio.getButtonFechar()) {
             this.telaBuscaLaboratorio.dispose();

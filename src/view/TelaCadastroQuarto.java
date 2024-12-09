@@ -244,6 +244,12 @@ public class TelaCadastroQuarto extends javax.swing.JDialog {
 
         statusLabel.setText("Status");
 
+        statusComboBox.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                statusComboBoxActionPerformed(evt);
+            }
+        });
+
         alaComboBox.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 alaComboBoxActionPerformed(evt);
@@ -381,9 +387,15 @@ public class TelaCadastroQuarto extends javax.swing.JDialog {
         // TODO add your handling code here:
     }//GEN-LAST:event_alaComboBoxActionPerformed
 
-      private void loadComboBox() {
-       
+    private void statusComboBoxActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_statusComboBoxActionPerformed
+        
+    }//GEN-LAST:event_statusComboBoxActionPerformed
+
+    private void loadComboBox() {
+        statusComboBox.setModel(new DefaultComboBoxModel<>(StatusCadastroEnum.values()));
     }
+    
+    
     /**
      * @param args the command line arguments
      */

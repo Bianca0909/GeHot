@@ -45,7 +45,6 @@ public class ControllerCadastroQuarto implements ActionListener {
 
             quarto.setDescricao(this.telaCadastroQuarto.getDescricaoField().getText());
             quarto.setStatus(this.telaCadastroQuarto.getStatusComboBox().getSelectedItem() + "");
-            quarto.setAla((Ala) this.telaCadastroQuarto.getAlaComboBox().getSelectedItem());
 
             if (this.telaCadastroQuarto.getIdField().getText().equals("")) {
                 service.ServiceQuarto.adicionar(quarto);
@@ -74,8 +73,7 @@ public class ControllerCadastroQuarto implements ActionListener {
                 this.telaCadastroQuarto.getIdField().setText(quarto.getId() + "");
                 this.telaCadastroQuarto.getDescricaoField().setText(quarto.getDescricao());
                 this.telaCadastroQuarto.getStatusComboBox().setSelectedItem(quarto.getStatus());
-                this.telaCadastroQuarto.getAlaComboBox().setSelectedItem(quarto.getAla().getDescricao());
-
+                
                 this.telaCadastroQuarto.getIdField().setEnabled(false);
                 this.telaCadastroQuarto.getDescricaoField().requestFocus();
 

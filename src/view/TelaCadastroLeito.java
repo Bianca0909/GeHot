@@ -370,7 +370,7 @@ public class TelaCadastroLeito extends javax.swing.JDialog {
 
     
     private void loadComboBox() {
-    
+    statusComboBox.setModel(new DefaultComboBoxModel<>(StatusCadastroEnum.values()));
     }
     
     

@@ -35,7 +35,6 @@ public class ControllerBuscaLeito implements ActionListener {
                     objetoAtualDaLista.getId(), 
                     objetoAtualDaLista.getDescricao(),
                     objetoAtualDaLista.getStatus(), 
-                    objetoAtualDaLista.getQuarto().getDescricao()
                 });
             }
         } else if (evento.getSource() == this.telaBuscaLeito.getFecharButton()) {
@@ -52,7 +51,7 @@ public class ControllerBuscaLeito implements ActionListener {
                     tabela.setRowCount(0);
                     
                     Leito leito = service.ServiceLeito.ler(Integer.parseInt(this.telaBuscaLeito.getValorField().getText()));
-                    tabela.addRow(new Object[]{leito.getId(), leito.getDescricao(), leito.getStatus(), leito.getQuarto()});
+                    tabela.addRow(new Object[]{leito.getId(), leito.getDescricao(), leito.getStatus()});
                         
                     } else if (this.telaBuscaLeito.getFiltroComboBox().getSelectedItem().equals("DESCRIÇÃO")) {
                         DefaultTableModel tabela = (DefaultTableModel) this.telaBuscaLeito.getJTableDados().getModel();
@@ -73,13 +72,6 @@ public class ControllerBuscaLeito implements ActionListener {
                     }
                         
                         
-                    }else if (this.telaBuscaLeito.getFiltroComboBox().getSelectedItem().equals("QUARTO")){
-                        DefaultTableModel tabela = (DefaultTableModel) this.telaBuscaLeito.getJTableDados().getModel();
-                        tabela.setRowCount(0);
-                        for (Leito objetoAtualDaLista : service.ServiceLeito.ler(this.telaBuscaLeito.getValorField().getText(), "quarto")) {
-                        tabela.addRow(new Object[]{objetoAtualDaLista.getId(), objetoAtualDaLista.getStatus(),
-                            objetoAtualDaLista.getQuarto(), objetoAtualDaLista.getStatus()});
-                        }
                     }
                 }
             

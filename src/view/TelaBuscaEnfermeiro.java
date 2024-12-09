@@ -122,7 +122,7 @@ public class TelaBuscaEnfermeiro extends javax.swing.JDialog {
         jLabelTitulo.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
         jLabelTitulo.setForeground(new java.awt.Color(0, 51, 204));
         jLabelTitulo.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabelTitulo.setText("Medicamentos");
+        jLabelTitulo.setText("Enfermeiros");
         jLabelTitulo.setToolTipText("");
 
         javax.swing.GroupLayout jPaneltituloLayout = new javax.swing.GroupLayout(jPaneltitulo);
@@ -143,7 +143,7 @@ public class TelaBuscaEnfermeiro extends javax.swing.JDialog {
 
             },
             new String [] {
-                "ID", "Descrição", "Principio Ativo", "Status"
+                "ID", "Nome", "RG", "CPF"
             }
         ));
         jScrollPane1.setViewportView(jTableDados);

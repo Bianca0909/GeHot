@@ -258,6 +258,11 @@ public class TelaCadastroAla extends javax.swing.JDialog {
         statusLabel.setText("Status");
         jPanelDados.add(statusLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(636, 62, 37, -1));
 
+        statusComboBox.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                statusComboBoxActionPerformed(evt);
+            }
+        });
         jPanelDados.add(statusComboBox, new org.netbeans.lib.awtextra.AbsoluteConstraints(630, 84, 122, 30));
 
         getContentPane().add(jPanelDados, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 49, 760, 120));
@@ -346,6 +351,10 @@ public class TelaCadastroAla extends javax.swing.JDialog {
     private void descricaoFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_descricaoFieldActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_descricaoFieldActionPerformed
+
+    private void statusComboBoxActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_statusComboBoxActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_statusComboBoxActionPerformed
 
     /**
      * @param args the command line arguments

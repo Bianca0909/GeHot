@@ -16,13 +16,12 @@ public class QuartoDAO implements InterfaceDAO<Quarto>{
     public void create(Quarto objeto) {
         Connection conexao = ConnectionFactory.getConnection();
         PreparedStatement pstm = null;
-        String sqlInstrucao = "INSERT INTO quarto(descricao, status, idAla) VALUES(?, ?, ?)";
+        String sqlInstrucao = "INSERT INTO quarto(descricao, status) VALUES(?, ?)";
 
         try {
             pstm = conexao.prepareStatement(sqlInstrucao);
             pstm.setString(1, objeto.getDescricao());
             pstm.setString(2, objeto.getStatus());
-            pstm.setInt(3, objeto.getAla().getId());
             pstm.execute();
 
         } catch (SQLException ex) {
@@ -37,8 +36,7 @@ public class QuartoDAO implements InterfaceDAO<Quarto>{
         Connection conexao = ConnectionFactory.getConnection();
         PreparedStatement pstm = null;
         ResultSet resultado = null;
-        String sqlInstrucao = "SELECT q.id, q.descricao, q.status, a.id AS idAla, a.nome AS nomeAla FROM quarto q "
-                            + "JOIN ala a ON q.idAla = a.id";
+        String sqlInstrucao = "SELECT id, descricao, status FROM quarto";
         List<Quarto> quartos = new ArrayList<>();
 
         try {
@@ -50,11 +48,6 @@ public class QuartoDAO implements InterfaceDAO<Quarto>{
                 quarto.setId(resultado.getInt("id"));
                 quarto.setDescricao(resultado.getString("descricao"));
                 quarto.setStatus(resultado.getString("status"));
-
-                Ala ala = new Ala();
-                ala.setId(resultado.getInt("idAla"));
-                ala.setDescricao(resultado.getString("nomeAla"));
-                quarto.setAla(ala);
 
                 quartos.add(quarto);
             }
@@ -72,8 +65,7 @@ public class QuartoDAO implements InterfaceDAO<Quarto>{
         Connection conexao = ConnectionFactory.getConnection();
         PreparedStatement pstm = null;
         ResultSet resultado = null;
-        String sqlInstrucao = "SELECT q.id, q.descricao, q.status, a.id AS idAla, a.descricao AS descricaoAla FROM quarto q "
-                            + "JOIN ala a ON q.idAla = a.id WHERE q.id = ?";
+        String sqlInstrucao = "SELECT id, descricao, status FROM quarto WHERE id = ?";
         Quarto quarto = new Quarto();
 
         try {
@@ -85,11 +77,6 @@ public class QuartoDAO implements InterfaceDAO<Quarto>{
                 quarto.setId(resultado.getInt("id"));
                 quarto.setDescricao(resultado.getString("descricao"));
                 quarto.setStatus(resultado.getString("status"));
-
-                Ala ala = new Ala();
-                ala.setId(resultado.getInt("idAla"));
-                ala.setDescricao(resultado.getString("descricaoAla"));
-                quarto.setAla(ala);
             }
 
         } catch (SQLException ex) {
@@ -105,8 +92,8 @@ public class QuartoDAO implements InterfaceDAO<Quarto>{
         Connection conexao = ConnectionFactory.getConnection();
         PreparedStatement pstm = null;
         ResultSet resultado = null;
-        String sqlInstrucao = "SELECT q.id, q.descricao, q.status, a.id AS idAla, a.descricao AS descricaoAla FROM quarto q "
-                            + "JOIN ala a ON q.idAla = a.id WHERE " + atributo + " LIKE ?";
+        String sqlInstrucao = "SELECT id, descricao, status FROM quarto  "
+                            + " WHERE " + atributo + " LIKE ?";
 
         List<Quarto> quartos = new ArrayList<>();
 
@@ -120,11 +107,6 @@ public class QuartoDAO implements InterfaceDAO<Quarto>{
                 quarto.setId(resultado.getInt("id"));
                 quarto.setDescricao(resultado.getString("descricao"));
                 quarto.setStatus(resultado.getString("status"));
-
-                Ala ala = new Ala();
-                ala.setId(resultado.getInt("idAla"));
-                ala.setDescricao(resultado.getString("descricaoAla"));
-                quarto.setAla(ala);
 
                 quartos.add(quarto);
             }
@@ -144,15 +126,13 @@ public class QuartoDAO implements InterfaceDAO<Quarto>{
         String sqlInstrucao = "UPDATE quarto SET "
                             + "descricao = ?, "
                             + "status = ?, "
-                            + "idAla = ? "
                             + "WHERE id = ?";
 
         try {
             pstm = conexao.prepareStatement(sqlInstrucao);
             pstm.setString(1, objeto.getDescricao());
             pstm.setString(2, objeto.getStatus());
-            pstm.setInt(3, objeto.getAla().getId());
-            pstm.setInt(4, objeto.getId());
+            pstm.setInt(3, objeto.getId());
             pstm.execute();
 
         } catch (SQLException ex) {

@@ -33,7 +33,6 @@ public class ControllerBuscaQuarto implements ActionListener {
                     objetoAtualDaLista.getId(),
                     objetoAtualDaLista.getDescricao(),
                     objetoAtualDaLista.getStatus(),
-                    objetoAtualDaLista.getAla().getDescricao()
                 });
             }
         } else if (evento.getSource() == this.telaBuscaQuarto.getFecharButton()) {
@@ -50,7 +49,7 @@ public class ControllerBuscaQuarto implements ActionListener {
                     tabela.setRowCount(0);
 
                     Quarto quarto = service.ServiceQuarto.ler(Integer.parseInt(this.telaBuscaQuarto.getValorField().getText()));
-                    tabela.addRow(new Object[]{quarto.getId(), quarto.getDescricao(), quarto.getStatus(), quarto.getAla().getDescricao()});
+                    tabela.addRow(new Object[]{quarto.getId(), quarto.getDescricao(), quarto.getStatus()});
 
                 } else if (this.telaBuscaQuarto.getFiltroComboBox().getSelectedItem().equals("DESCRIÇÃO")) {
                     DefaultTableModel tabela = (DefaultTableModel) this.telaBuscaQuarto.getJTableDados().getModel();
@@ -61,7 +60,6 @@ public class ControllerBuscaQuarto implements ActionListener {
                             objetoAtualDaLista.getId(),
                             objetoAtualDaLista.getDescricao(),
                             objetoAtualDaLista.getStatus(),
-                            objetoAtualDaLista.getAla().getDescricao()
                         });
                     }
 
@@ -74,7 +72,6 @@ public class ControllerBuscaQuarto implements ActionListener {
                             objetoAtualDaLista.getId(),
                             objetoAtualDaLista.getDescricao(),
                             objetoAtualDaLista.getStatus(),
-                            objetoAtualDaLista.getAla().getDescricao()
                         });
                     }
 
@@ -87,7 +84,6 @@ public class ControllerBuscaQuarto implements ActionListener {
                             objetoAtualDaLista.getId(),
                             objetoAtualDaLista.getDescricao(),
                             objetoAtualDaLista.getStatus(),
-                            objetoAtualDaLista.getAla().getDescricao()
                         });
                     }
                 }

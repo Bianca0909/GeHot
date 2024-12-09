@@ -8,21 +8,18 @@ import java.sql.SQLException;
 import java.sql.ResultSet;
 import java.util.ArrayList;
 
-import model.bo.Quarto;
-
 public class LeitoDAO implements InterfaceDAO<Leito>{
 
     @Override
     public void create(Leito objeto) {
         Connection conexao = ConnectionFactory.getConnection();
         PreparedStatement pstm = null;
-        String sqlInstrucao = "INSERT INTO leito(descricao, status, idQuarto) VALUES(?, ?, ?)";
+        String sqlInstrucao = "INSERT INTO leito(descricao, status) VALUES(?, ?)";
         
         try {
             pstm = conexao.prepareStatement(sqlInstrucao);
             pstm.setString(1, objeto.getDescricao());
             pstm.setString(2, objeto.getStatus());
-            pstm.setInt(3, objeto.getQuarto().getId());
             pstm.execute();
             
             
@@ -39,8 +36,7 @@ public class LeitoDAO implements InterfaceDAO<Leito>{
         Connection conexao = ConnectionFactory.getConnection();
         PreparedStatement pstm = null;
         ResultSet resultado = null;
-        String sqlInstrucao = "SELECT l.id, l.descricao, l.status, q.id AS idQuarto, q.nome AS nomeQuarto FROM leito l "
-                            + "JOIN quarto q ON l.idQuarto = q.id";
+        String sqlInstrucao = "SELECT id, descricao, status FROM leito";
         List<Leito> leitos = new ArrayList<>();
         
         try {
@@ -52,11 +48,6 @@ public class LeitoDAO implements InterfaceDAO<Leito>{
                 leito.setId(resultado.getInt("id"));
                 leito.setDescricao(resultado.getString("descricao"));
                 leito.setStatus(resultado.getString("status"));
-                
-                Quarto quarto = new Quarto();
-                quarto.setId(resultado.getInt("idQuarto"));
-                quarto.setDescricao(resultado.getString("descricaoQuarto"));
-                leito.setQuarto(quarto);
                 
                 leitos.add(leito);
             }
@@ -77,8 +68,7 @@ public class LeitoDAO implements InterfaceDAO<Leito>{
         Connection conexao = ConnectionFactory.getConnection();
         PreparedStatement pstm = null;
         ResultSet resultado = null;
-        String sqlInstrucao = "SELECT l.id, l.descricao, l.status, q.id AS idQuarto, q.descricao AS descricaoQuarto FROM leito l "
-                            + "JOIN quarto q ON l.idQuarto = q.id WHERE l.id = ?";
+        String sqlInstrucao = "SELECT id, descricao, status FROM leito WHERE id = ?";
         Leito leito = new Leito();
         
         try { 
@@ -90,12 +80,6 @@ public class LeitoDAO implements InterfaceDAO<Leito>{
                 leito.setId(resultado.getInt("id"));
                 leito.setDescricao(resultado.getString("descricao"));
                 leito.setStatus(resultado.getString("status"));
-                
-                Quarto quarto = new Quarto();
-                quarto.setId(resultado.getInt("idQuarto"));
-                quarto.setDescricao(resultado.getString("descricaoQuarto"));
-                leito.setQuarto(quarto);
-                
             }
             
             
@@ -116,8 +100,8 @@ public class LeitoDAO implements InterfaceDAO<Leito>{
         Connection conexao = ConnectionFactory.getConnection();
         PreparedStatement pstm = null;
         ResultSet resultado = null;
-        String sqlInstrucao = "SELECT l.id, l.descricao, l.status, q.id AS idQuarto, q.descricao AS descricaoQuarto FROM leito l "
-                            + "JOIN quarto q ON l.idQuarto = q.id WHERE " + atributo + " LIKE ?";
+        String sqlInstrucao = "SELECT id, descricao, status FROM leito "
+                            + "WHERE " + atributo + " LIKE ?";
         
         List<Leito> leitos = new ArrayList<>();
         
@@ -131,11 +115,6 @@ public class LeitoDAO implements InterfaceDAO<Leito>{
                 leito.setId(resultado.getInt("id"));
                 leito.setDescricao(resultado.getString("descricao"));
                 leito.setStatus(resultado.getString("status"));
-                
-                Quarto quarto = new Quarto();
-                quarto.setId(resultado.getInt("idQuarto"));
-                quarto.setDescricao(resultado.getString("descricaoQuarto"));
-                leito.setQuarto(quarto);
                 
                 leitos.add(leito);
                 
@@ -156,14 +135,12 @@ public class LeitoDAO implements InterfaceDAO<Leito>{
         String sqlInstrucao = "UPDATE leito SET "
                 + "descricao = ?, "
                 + "status = ?, "
-                + "idQuarto = ? "
                 + "WHERE id = ?";
         
         try {
             pstm = conexao.prepareStatement(sqlInstrucao);
             pstm.setString(1, objeto.getDescricao());
             pstm.setString(2, objeto.getStatus());
-            pstm.setInt(3, objeto.getQuarto().getId());
             pstm.setInt(4, objeto.getId());
             pstm.execute();
             

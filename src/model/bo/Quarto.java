@@ -5,14 +5,12 @@ public class Quarto {
 	private Integer id;
 	private String descricao;
 	private String status;
-	private Ala ala;
 	
-	public Quarto(Integer id, String descricao, String status, Ala ala) {
+	public Quarto(Integer id, String descricao, String status) {
 		super();
 		this.id = id;
 		this.descricao = descricao;
 		this.status = status;
-		this.ala = ala;
 	}
 	
 	public Quarto() {
@@ -42,19 +40,5 @@ public class Quarto {
 	public void setStatus(String status) {
 		this.status = status;
 	}
-
-	public Ala getAla() {
-		return ala;
-	}
-
-	public void setAla(Ala ala) {
-		this.ala = ala;
-	}
-
-    @Override
-    public String toString() {
-        return "Quarto{" + "id=" + id + ", descricao=" + descricao + ", status=" + status + ", ala=" + ala + "}\n";
-    }
-	
         
 }
