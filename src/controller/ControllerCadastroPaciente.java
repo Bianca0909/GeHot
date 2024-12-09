@@ -5,9 +5,12 @@ import java.awt.event.ActionListener;
 import javax.swing.JOptionPane;
 import model.bo.Paciente;
 import utilities.Utilities;
+import view.TelaBuscaPaciente;
 import view.TelaCadastroPaciente;
 
 public class ControllerCadastroPaciente implements ActionListener {
+    
+    public static int codigo;
     
     TelaCadastroPaciente telaCadastroPaciente;
     
@@ -56,14 +59,50 @@ public class ControllerCadastroPaciente implements ActionListener {
             paciente.setLogradouro(this.telaCadastroPaciente.getLogradouroField().getText());
             paciente.setComplemento(this.telaCadastroPaciente.getComplementoField().getText());
             
-            model.bo.ClasseDadosGravacao.listaPaciente.add(paciente);
+            if (this.telaCadastroPaciente.getIdField().getText().equals("")) {
+                service.ServicePaciente.adicionar(paciente);
+                
+            } else {
+                paciente.setId(Integer.parseInt(this.telaCadastroPaciente.getIdField().getText()));
+                service.ServicePaciente.atualizar(paciente);
+            }
 
             Utilities.ativaDesativa(false, this.telaCadastroPaciente.getjPanelBotoes());
             Utilities.limpaComponentes(false, this.telaCadastroPaciente.getjPanelDados());
 
         } else if (evento.getSource() == this.telaCadastroPaciente.getjButtonBuscar()) {
+            codigo = 0;
+            TelaBuscaPaciente telaBuscaPaciente = new TelaBuscaPaciente(null, true);
+            ControllerBuscaPaciente controllerBuscaPaciente = new ControllerBuscaPaciente(telaBuscaPaciente); 
+            telaBuscaPaciente.setVisible(true);
+            
+            if (codigo != 0) {
+                Paciente paciente = new Paciente();
+                paciente = service.ServicePaciente.ler(codigo);
+                
+                utilities.Utilities.ativaDesativa(true, this.telaCadastroPaciente.getjPanelBotoes());
+                utilities.Utilities.limpaComponentes(true, this.telaCadastroPaciente.getjPanelDados());
+                
+                this.telaCadastroPaciente.getIdField().setText(paciente.getId() + "");
+                this.telaCadastroPaciente.getNomeField().setText(paciente.getNome());
+                this.telaCadastroPaciente.getNomeSocialField().setText(paciente.getNomeSocial());
+                this.telaCadastroPaciente.getFone1Field().setText(paciente.getFone1());
+                this.telaCadastroPaciente.getFone2Field().setText(paciente.getFone2());
+                this.telaCadastroPaciente.getEmailField().setText(paciente.getEmail());
+                this.telaCadastroPaciente.getCpfCnpjField().setText(paciente.getCpfCnpj());
+                this.telaCadastroPaciente.getDataCadastroField().setText(paciente.getDataCadastro());
+                this.telaCadastroPaciente.getCepField().setText(paciente.getCep());
+                this.telaCadastroPaciente.getCidadeField().setText(paciente.getCidade());
+                this.telaCadastroPaciente.getBairroField().setText(paciente.getBairro());
+                this.telaCadastroPaciente.getLogradouroField().setText(paciente.getLogradouro());
+                this.telaCadastroPaciente.getComplementoField().setText(paciente.getComplemento());
+                
+                
+                
+                this.telaCadastroPaciente.getIdField().setEnabled(false);
+                this.telaCadastroPaciente.getNomeField().requestFocus();
+            }
 
-            JOptionPane.showMessageDialog(null, model.bo.ClasseDadosGravacao.listaPaciente.toString());
         } else if (evento.getSource() == this.telaCadastroPaciente.getjButtonSair()) {
             this.telaCadastroPaciente.dispose();
         }
