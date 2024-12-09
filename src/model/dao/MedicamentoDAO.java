@@ -1,4 +1,5 @@
 package model.dao;
+
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
@@ -13,15 +14,10 @@ public class MedicamentoDAO implements InterfaceDAO<Medicamento> {
     public void create(Medicamento objeto) {
         Connection conexao = ConnectionFactory.getConnection();
         PreparedStatement pstm = null;
+        String sqlInstrucao = "INSERT INTO medicamento (descricao_medicamento, principio_ativo, qtd_minima, status, codigo_barras) "
+                + "VALUES (?, ?, ?, ?, ?)";
 
         try {
-            String sqlInstrucao = "Insert Into medicamento (descricaoMedicamento,"
-                    + "principioAtivo,"
-                    + "qtdMinima,"
-                    + "status, "
-                    + "codigoBarras"
-                    + "Values(?,?,?,?,?) ";
-
             pstm = conexao.prepareStatement(sqlInstrucao);
             pstm.setString(1, objeto.getDescricaoMedicamento());
             pstm.setString(2, objeto.getPrincipioAtivo());
@@ -34,7 +30,6 @@ public class MedicamentoDAO implements InterfaceDAO<Medicamento> {
         } finally {
             ConnectionFactory.closeConnection(conexao, pstm, null);
         }
-        
     }
 
     @Override
@@ -42,14 +37,9 @@ public class MedicamentoDAO implements InterfaceDAO<Medicamento> {
         Connection conexao = ConnectionFactory.getConnection();
         PreparedStatement pstm = null;
         ResultSet resultado = null;
-        List<Medicamento> listaMedicamento = new ArrayList<>();
+        List<Medicamento> listaMedicamentos = new ArrayList<>();
 
-        String sqlInstrucao = " Select descricaoMedicamento,"
-                + " principioAtivo,"
-                + " quantidadeMinima,"
-                + " status, "
-                + "codigoBarras"
-                + " From medicamento ";
+        String sqlInstrucao = "SELECT id, descricao_medicamento, principio_ativo, qtd_minima, status, codigo_barras FROM medicamento";
 
         try {
             pstm = conexao.prepareStatement(sqlInstrucao);
@@ -57,19 +47,19 @@ public class MedicamentoDAO implements InterfaceDAO<Medicamento> {
             while (resultado.next()) {
                 Medicamento medicamento = new Medicamento();
                 medicamento.setId(resultado.getInt("id"));
-                medicamento.setDescricaoMedicamento(resultado.getString("descricaoMedicamento"));
-                medicamento.setPrincipioAtivo(resultado.getString("principioAtivo"));
-                medicamento.setQtdMinima(resultado.getFloat("quantidadeMinima"));
+                medicamento.setDescricaoMedicamento(resultado.getString("descricao_medicamento"));
+                medicamento.setPrincipioAtivo(resultado.getString("principio_ativo"));
+                medicamento.setQtdMinima(resultado.getFloat("qtd_minima"));
                 medicamento.setStatus(resultado.getString("status"));
-                medicamento.setCodigoBarras(resultado.getString(""));
-                listaMedicamento.add(medicamento);
+                medicamento.setCodigoBarras(resultado.getString("codigo_barras"));
+                listaMedicamentos.add(medicamento);
             }
         } catch (SQLException ex) {
             ex.printStackTrace();
         } finally {
             ConnectionFactory.closeConnection(conexao, pstm, resultado);
-            return listaMedicamento;
-        }        
+        }
+        return listaMedicamentos;
     }
 
     @Override
@@ -79,39 +69,37 @@ public class MedicamentoDAO implements InterfaceDAO<Medicamento> {
         ResultSet resultado = null;
         Medicamento medicamento = new Medicamento();
 
-        String sqlInstrucao = " Select descricaoMedicamento, principioAtivo, quantidadeMinima, status"
-                + " From medicamento Where medicamento.id = ?";
+        String sqlInstrucao = "SELECT id, descricao_medicamento, principio_ativo, qtd_minima, status, codigo_barras FROM medicamento WHERE id = ?";
 
         try {
             pstm = conexao.prepareStatement(sqlInstrucao);
             pstm.setInt(1, pk);
             resultado = pstm.executeQuery();
-            while (resultado.next()) {
+            if (resultado.next()) {
                 medicamento.setId(resultado.getInt("id"));
-                medicamento.setDescricaoMedicamento(resultado.getString("descricaoMedicamento"));
-                medicamento.setPrincipioAtivo(resultado.getString("principioAtivo"));
-                medicamento.setQtdMinima(resultado.getFloat("quantidadeMinima"));
+                medicamento.setDescricaoMedicamento(resultado.getString("descricao_medicamento"));
+                medicamento.setPrincipioAtivo(resultado.getString("principio_ativo"));
+                medicamento.setQtdMinima(resultado.getFloat("qtd_minima"));
                 medicamento.setStatus(resultado.getString("status"));
-                medicamento.setCodigoBarras(resultado.getString("codigoBarras"));
+                medicamento.setCodigoBarras(resultado.getString("codigo_barras"));
             }
         } catch (SQLException ex) {
             ex.printStackTrace();
         } finally {
             ConnectionFactory.closeConnection(conexao, pstm, resultado);
-            return medicamento;
         }
+        return medicamento;
     }
 
-     @Override
+    @Override
     public List<Medicamento> retrieve(String parametro, String atributo) {
-
         Connection conexao = ConnectionFactory.getConnection();
         PreparedStatement pstm = null;
         ResultSet resultado = null;
-        List<Medicamento> listaMedicamento = new ArrayList<>();
+        List<Medicamento> listaMedicamentos = new ArrayList<>();
 
-        String sqlInstrucao = " Select descricaoMedicamento, principioAtivo, quantidadeMinima, status, codigoBarras"
-                + " From medicamento Where " + atributo + " like ?";
+        String sqlInstrucao = "SELECT id, descricao_medicamento, principio_ativo, qtd_minima, status, codigo_barras FROM medicamento "
+                + "WHERE " + atributo + " LIKE ?";
 
         try {
             pstm = conexao.prepareStatement(sqlInstrucao);
@@ -120,35 +108,28 @@ public class MedicamentoDAO implements InterfaceDAO<Medicamento> {
             while (resultado.next()) {
                 Medicamento medicamento = new Medicamento();
                 medicamento.setId(resultado.getInt("id"));
-                medicamento.setDescricaoMedicamento(resultado.getString("descricaoMedicamento"));
-                medicamento.setPrincipioAtivo(resultado.getString("principioAtivo"));
-                medicamento.setQtdMinima(resultado.getFloat("quantidadeMinima"));
+                medicamento.setDescricaoMedicamento(resultado.getString("descricao_medicamento"));
+                medicamento.setPrincipioAtivo(resultado.getString("principio_ativo"));
+                medicamento.setQtdMinima(resultado.getFloat("qtd_minima"));
                 medicamento.setStatus(resultado.getString("status"));
-                medicamento.setCodigoBarras(resultado.getString("codigoBarras"));
-                listaMedicamento.add(medicamento);
+                medicamento.setCodigoBarras(resultado.getString("codigo_barras"));
+                listaMedicamentos.add(medicamento);
             }
         } catch (SQLException ex) {
             ex.printStackTrace();
         } finally {
             ConnectionFactory.closeConnection(conexao, pstm, resultado);
-            return listaMedicamento;
         }
+        return listaMedicamentos;
     }
 
-     @Override
+    @Override
     public void update(Medicamento objeto) {
-
         Connection conexao = ConnectionFactory.getConnection();
-        String sqlInstrucao = " Update medicamento "
-                + " set "
-                + " medicamento.descricaoMedicamento = ? , "
-                + " medicamento.principioAtivo = ? , "
-                + " medicamento.quantidadeMinima = ? , "
-                + " medicamento.status = ?, "
-                + "medicamento.codigoBarras = ? "
-                + " Where medicamento.id = ?";
-        
         PreparedStatement pstm = null;
+        String sqlInstrucao = "UPDATE medicamento SET descricao_medicamento = ?, principio_ativo = ?, qtd_minima = ?, "
+                + "status = ?, codigo_barras = ? WHERE id = ?";
+
         try {
             pstm = conexao.prepareStatement(sqlInstrucao);
             pstm.setString(1, objeto.getDescricaoMedicamento());
@@ -158,10 +139,9 @@ public class MedicamentoDAO implements InterfaceDAO<Medicamento> {
             pstm.setString(5, objeto.getCodigoBarras());
             pstm.setInt(6, objeto.getId());
             pstm.execute();
-
         } catch (SQLException ex) {
             ex.printStackTrace();
-        }finally{
+        } finally {
             ConnectionFactory.closeConnection(conexao, pstm, null);
         }
     }

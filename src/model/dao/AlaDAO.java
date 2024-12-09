@@ -7,7 +7,6 @@ import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
 import model.bo.Ala;
-import model.bo.Medicamento;
 
 public class AlaDAO implements InterfaceDAO<Ala> {
 
@@ -15,14 +14,9 @@ public class AlaDAO implements InterfaceDAO<Ala> {
     public void create(Ala objeto) {
         Connection conexao = ConnectionFactory.getConnection();
         PreparedStatement pstm = null;
-
+        String sqlInstrucao = "INSERT INTO ala (descricao, status) VALUES(?,?) ";
         try {
-            String sqlInstrucao = "Insert Into medicamento (descricao, "
-                    + "status)"
-                    + "Values(?,?) ";
-
             pstm = conexao.prepareStatement(sqlInstrucao);
-
             pstm.setString(1, objeto.getDescricao());
             pstm.setString(2, objeto.getStatus());
             pstm.execute();
@@ -40,9 +34,9 @@ public class AlaDAO implements InterfaceDAO<Ala> {
         ResultSet resultado = null;
         List<Ala> listaAla = new ArrayList<>();
 
-        String sqlInstrucao = " Select descricao,"
+        String sqlInstrucao = " SELECT id, descricao,"
                 + " status"
-                + " From ala ";
+                + " FROM ala ";
 
         try {
             pstm = conexao.prepareStatement(sqlInstrucao);
@@ -70,7 +64,7 @@ public class AlaDAO implements InterfaceDAO<Ala> {
         ResultSet resultado = null;
         Ala ala = new Ala();
 
-        String sqlInstrucao = " Select descricao, status"
+        String sqlInstrucao = " Select id, descricao, status"
                 + " from ala where ala.id = ?";
 
         try {
@@ -97,8 +91,8 @@ public class AlaDAO implements InterfaceDAO<Ala> {
         ResultSet resultado = null;
         List<Ala> listaAla = new ArrayList<>();
 
-        String sqlInstrucao = " Select descricaoMedicamento, principioAtivo, quantidadeMinima, status, codigoBarras"
-                + " From medicamento Where " + atributo + " like ?";
+        String sqlInstrucao = "Select id, descricao, status"
+                + " from ala Where " + atributo + " like ?";
 
         try {
             pstm = conexao.prepareStatement(sqlInstrucao);
@@ -121,6 +115,25 @@ public class AlaDAO implements InterfaceDAO<Ala> {
 
     @Override
     public void update(Ala objeto) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        Connection conexao = ConnectionFactory.getConnection();
+        PreparedStatement pstm = null;
+        String sqlInstrucao = "UPDATE ala SET "
+                + "ala.descricao = ?, "
+                + "ala.status = ?, "
+                + " WHERE acompanhante.id = ?";
+        
+        try {
+            pstm = conexao.prepareStatement(sqlInstrucao);
+            pstm.setString(1, objeto.getDescricao());
+            pstm.setString(2, objeto.getStatus());
+            pstm.setInt(3, objeto.getId());
+            
+            pstm.execute();
+            
+        } catch (SQLException ex) {
+            ex.printStackTrace();
+        } finally {
+            ConnectionFactory.closeConnection(conexao, pstm, null);
+        }
     } 
 }

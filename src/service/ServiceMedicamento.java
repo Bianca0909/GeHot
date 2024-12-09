@@ -5,6 +5,7 @@ import model.bo.Medicamento;
 import model.dao.MedicamentoDAO;
 
 public class ServiceMedicamento {
+    
        public static void adicionar(Medicamento objeto) {
         MedicamentoDAO medicamentoDAO = new MedicamentoDAO();
         medicamentoDAO.create(objeto);
