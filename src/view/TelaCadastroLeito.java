@@ -9,6 +9,7 @@ import javax.swing.JPanel;
 import javax.swing.JScrollPane;
 import javax.swing.JTextArea;
 import javax.swing.JTextField;
+import model.bo.Ala;
 import model.bo.Quarto;
 
 public class TelaCadastroLeito extends javax.swing.JDialog {
@@ -163,11 +164,11 @@ public class TelaCadastroLeito extends javax.swing.JDialog {
         this.jLabel1 = jLabel1;
     }
 
-    public JComboBox<String> getQuartoComboBox() {
+    public JComboBox<Quarto> getQuartoComboBox() {
         return quartoComboBox;
     }
 
-    public void setQuartoComboBox(JComboBox<String> quartoComboBox) {
+    public void setQuartoComboBox(JComboBox<Quarto> quartoComboBox) {
         this.quartoComboBox = quartoComboBox;
     }
 
@@ -371,6 +372,9 @@ public class TelaCadastroLeito extends javax.swing.JDialog {
     
     private void loadComboBox() {
     statusComboBox.setModel(new DefaultComboBoxModel<>(StatusCadastroEnum.values()));
+        for (Quarto quarto : service.ServiceQuarto.ler()) {
+            quartoComboBox.addItem(quarto);
+        }
     }
     
     
@@ -435,7 +439,7 @@ public class TelaCadastroLeito extends javax.swing.JDialog {
     private javax.swing.JPanel jPaneltitulo;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JTextArea jTextArea1;
-    private javax.swing.JComboBox<String> quartoComboBox;
+    private javax.swing.JComboBox<Quarto> quartoComboBox;
     private javax.swing.JComboBox<StatusCadastroEnum> statusComboBox;
     private javax.swing.JLabel statusLabel;
     // End of variables declaration//GEN-END:variables

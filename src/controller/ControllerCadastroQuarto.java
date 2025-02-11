@@ -45,7 +45,10 @@ public class ControllerCadastroQuarto implements ActionListener {
 
             quarto.setDescricao(this.telaCadastroQuarto.getDescricaoField().getText());
             quarto.setStatus(this.telaCadastroQuarto.getStatusComboBox().getSelectedItem() + "");
-
+            
+            Ala alaSelecionada = (Ala) this.telaCadastroQuarto.getAlaComboBox().getSelectedItem();
+            quarto.setAla_id(alaSelecionada.getId());
+            
             if (this.telaCadastroQuarto.getIdField().getText().equals("")) {
                 service.ServiceQuarto.adicionar(quarto);
             } else {

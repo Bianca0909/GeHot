@@ -7,7 +7,6 @@ import java.sql.Connection;
 import java.sql.SQLException;
 import java.sql.ResultSet;
 import java.util.ArrayList;
-import model.bo.Ala;
 
 
 public class QuartoDAO implements InterfaceDAO<Quarto>{
@@ -16,12 +15,13 @@ public class QuartoDAO implements InterfaceDAO<Quarto>{
     public void create(Quarto objeto) {
         Connection conexao = ConnectionFactory.getConnection();
         PreparedStatement pstm = null;
-        String sqlInstrucao = "INSERT INTO quarto(descricao, status) VALUES(?, ?)";
+        String sqlInstrucao = "INSERT INTO quarto(descricao, status, ala_id) VALUES(?, ?, ?)";
 
         try {
             pstm = conexao.prepareStatement(sqlInstrucao);
             pstm.setString(1, objeto.getDescricao());
             pstm.setString(2, objeto.getStatus());
+            pstm.setInt(3, objeto.getAla_id());
             pstm.execute();
 
         } catch (SQLException ex) {

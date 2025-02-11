@@ -14,13 +14,14 @@ import javax.swing.JPanel;
 import javax.swing.JScrollPane;
 import javax.swing.JTextArea;
 import javax.swing.JTextField;
-
+import model.bo.Laboratorio;
 /**
  *
  * @author Bianca
  */
 public class TelaCadastroMedicamento extends javax.swing.JDialog {
 
+   
     /**
      * Creates new form TelaCadastroMedicamento1
      */
@@ -28,6 +29,14 @@ public class TelaCadastroMedicamento extends javax.swing.JDialog {
         super(parent, modal);
         initComponents();
         loadComboBox();
+    }
+
+     public JComboBox<Laboratorio> getLaboratorioComboBox() {
+        return laboratorioComboBox;
+    }
+
+    public void setLaboratorioComboBox(JComboBox<Laboratorio> LaboratorioComboBox) {
+        this.laboratorioComboBox = LaboratorioComboBox;
     }
 
     public JTextField getCodigoBarrasField() {
@@ -206,14 +215,6 @@ public class TelaCadastroMedicamento extends javax.swing.JDialog {
         this.jbuttonAddLaboratorio = jbuttonAddLaboratorio;
     }
 
-    public JComboBox<String> getLaboratorioField() {
-        return laboratorioField;
-    }
-
-    public void setLaboratorioField(JComboBox<String> laboratorioField) {
-        this.laboratorioField = laboratorioField;
-    }
-
     public JTextArea getObservacaoField() {
         return observacaoField;
     }
@@ -263,7 +264,7 @@ public class TelaCadastroMedicamento extends javax.swing.JDialog {
         principioAtivoField = new javax.swing.JTextField();
         jLabel9 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
-        laboratorioField = new javax.swing.JComboBox<>();
+        laboratorioComboBox = new javax.swing.JComboBox<>();
         jLabel4 = new javax.swing.JLabel();
         codigoBarrasField = new javax.swing.JTextField();
         jLabel6 = new javax.swing.JLabel();
@@ -331,9 +332,9 @@ public class TelaCadastroMedicamento extends javax.swing.JDialog {
 
         jLabel2.setText("Laboratório");
 
-        laboratorioField.addActionListener(new java.awt.event.ActionListener() {
+        laboratorioComboBox.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                laboratorioFieldActionPerformed(evt);
+                laboratorioComboBoxActionPerformed(evt);
             }
         });
 
@@ -383,7 +384,7 @@ public class TelaCadastroMedicamento extends javax.swing.JDialog {
                             .addComponent(jLabel9))
                         .addGroup(jPanelDadosLayout.createSequentialGroup()
                             .addGap(8, 8, 8)
-                            .addComponent(laboratorioField, javax.swing.GroupLayout.PREFERRED_SIZE, 750, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(laboratorioComboBox, javax.swing.GroupLayout.PREFERRED_SIZE, 750, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addGap(10, 10, 10)
                             .addComponent(jbuttonAddLaboratorio, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGroup(jPanelDadosLayout.createSequentialGroup()
@@ -434,7 +435,7 @@ public class TelaCadastroMedicamento extends javax.swing.JDialog {
                 .addComponent(jLabel2)
                 .addGap(4, 4, 4)
                 .addGroup(jPanelDadosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(laboratorioField, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(laboratorioComboBox, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jbuttonAddLaboratorio, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(17, 17, 17)
                 .addComponent(jLabel6)
@@ -533,12 +534,15 @@ public class TelaCadastroMedicamento extends javax.swing.JDialog {
         // TODO add your handling code here:
     }//GEN-LAST:event_statusComboBoxActionPerformed
 
-    private void laboratorioFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_laboratorioFieldActionPerformed
+    private void laboratorioComboBoxActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_laboratorioComboBoxActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_laboratorioFieldActionPerformed
+    }//GEN-LAST:event_laboratorioComboBoxActionPerformed
 
     private void loadComboBox() {
         statusComboBox.setModel(new DefaultComboBoxModel<>(StatusCadastroEnum.values()));
+        for (Laboratorio laboratorio : service.ServiceLaboratorio.ler()) {
+                laboratorioComboBox.addItem(laboratorio);
+        }
     }
     /**
      * @param args the command line arguments
@@ -606,7 +610,7 @@ public class TelaCadastroMedicamento extends javax.swing.JDialog {
     private javax.swing.JPanel jPaneltitulo;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JButton jbuttonAddLaboratorio;
-    private javax.swing.JComboBox<String> laboratorioField;
+    private javax.swing.JComboBox<Laboratorio> laboratorioComboBox;
     private javax.swing.JTextArea observacaoField;
     private javax.swing.JTextField principioAtivoField;
     private javax.swing.JTextField quantidadeMinimaField;

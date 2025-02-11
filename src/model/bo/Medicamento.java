@@ -9,7 +9,8 @@ public class Medicamento {
     private float qtdMinima;
     private String status;
     private String codigoBarras;
-    
+    private Integer laboratorio_id;
+            
     public Medicamento(){
         
     }
@@ -69,5 +70,13 @@ public class Medicamento {
 
     public void setCodigoBarras(String codigoBarras) {
         this.codigoBarras = codigoBarras;
+    }
+
+    public Integer getLaboratorio_id() {
+        return laboratorio_id;
+    }
+
+    public void setLaboratorio_id(Integer laboratorio_id) {
+        this.laboratorio_id = laboratorio_id;
     }
 }

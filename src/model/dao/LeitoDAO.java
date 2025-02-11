@@ -14,12 +14,13 @@ public class LeitoDAO implements InterfaceDAO<Leito>{
     public void create(Leito objeto) {
         Connection conexao = ConnectionFactory.getConnection();
         PreparedStatement pstm = null;
-        String sqlInstrucao = "INSERT INTO leito(descricao, status) VALUES(?, ?)";
+        String sqlInstrucao = "INSERT INTO leito(descricao, status, quarto_id) VALUES(?, ?, ?)";
         
         try {
             pstm = conexao.prepareStatement(sqlInstrucao);
             pstm.setString(1, objeto.getDescricao());
             pstm.setString(2, objeto.getStatus());
+            pstm.setInt(3, objeto.getQuarto_id());
             pstm.execute();
             
             
@@ -57,10 +58,8 @@ public class LeitoDAO implements InterfaceDAO<Leito>{
             
         }finally {
             ConnectionFactory.closeConnection(conexao, pstm, resultado);
-            return leitos;
         }
-        
-        
+        return leitos;        
     }
 
     @Override

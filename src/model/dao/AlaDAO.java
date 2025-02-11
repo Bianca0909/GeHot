@@ -53,8 +53,8 @@ public class AlaDAO implements InterfaceDAO<Ala> {
             ex.printStackTrace();
         } finally {
             ConnectionFactory.closeConnection(conexao, pstm, resultado);
-            return listaAla;
-        }        
+        }    
+        return listaAla;
     }
 
     @Override

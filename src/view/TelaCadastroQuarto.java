@@ -6,6 +6,7 @@
 package view;
 
 import enums.StatusCadastroEnum;
+import java.util.ArrayList;
 import javax.swing.DefaultComboBoxModel;
 import javax.swing.JButton;
 import javax.swing.JComboBox;
@@ -15,6 +16,7 @@ import javax.swing.JScrollPane;
 import javax.swing.JTextArea;
 import javax.swing.JTextField;
 import model.bo.Ala;
+import java.util.List;
 
 public class TelaCadastroQuarto extends javax.swing.JDialog {
 
@@ -384,7 +386,7 @@ public class TelaCadastroQuarto extends javax.swing.JDialog {
     }//GEN-LAST:event_idFieldActionPerformed
 
     private void alaComboBoxActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_alaComboBoxActionPerformed
-        // TODO add your handling code here:
+        
     }//GEN-LAST:event_alaComboBoxActionPerformed
 
     private void statusComboBoxActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_statusComboBoxActionPerformed
@@ -393,6 +395,9 @@ public class TelaCadastroQuarto extends javax.swing.JDialog {
 
     private void loadComboBox() {
         statusComboBox.setModel(new DefaultComboBoxModel<>(StatusCadastroEnum.values()));
+          for (Ala ala : service.ServiceAla.ler()) {
+              alaComboBox.addItem(ala);
+            }
     }
     
     

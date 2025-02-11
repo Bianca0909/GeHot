@@ -2,6 +2,7 @@ package controller;
 
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import model.bo.Ala;
 import model.bo.Leito;
 import model.bo.Quarto;
 import utilities.Utilities;
@@ -45,6 +46,9 @@ public class ControllerTelaCadastroLeito implements ActionListener {
             
             leito.setDescricao(this.telaCadastroLeito.getDescricaoField().getText());
             leito.setStatus(this.telaCadastroLeito.getStatusComboBox().getSelectedItem() + "");
+            
+            Quarto quartoSelecionado = (Quarto) this.telaCadastroLeito.getQuartoComboBox().getSelectedItem();
+            leito.setQuarto_id(quartoSelecionado.getId());
             
             if (this.telaCadastroLeito.getIdField().getText().equals("")){
                 service.ServiceLeito.adicionar(leito);
